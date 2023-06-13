@@ -16,6 +16,18 @@ const required = value => {
   }
 };
 
+
+//회원가입 아이디
+const vusername = vusername => {
+  if (vusername.length < 3 || vusername.length > 20) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        The usersId must be between 3 and 20 characters.
+      </div>
+    );
+  }
+};
+
 const email = value => {
   if (!isEmail(value)) {
     return (
@@ -26,25 +38,89 @@ const email = value => {
   }
 };
 
-const vusername = value => {
-  if (value.length < 3 || value.length > 20) {
+const password = password => {
+  if (password.length < 6 || password.length > 40) {
     return (
       <div className="alert alert-danger" role="alert">
-        The username must be between 3 and 20 characters.
+        비밀번호를 입력해주세요
       </div>
     );
   }
 };
+//회원가입 성명
+const vusersId = vusersId => {
+  if(vusersId.length < 2 || vusersId.length > 9) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        성명을 입력해주세요
+      </div>
+    );
+  }
+}
+const vnickname = vnickname => {
+  if(vnickname.length < 2 || vnickname.length > 20) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        The usernickname must be between 10 and 20 characters.
+      </div>
+    );
+  }
+}
+const vzoneCode = vzoneCode => {
+  if(vzoneCode.length < 2 || vzoneCode.length > 20) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        The zonecode must be between 10 and 20 characters.
+      </div>
+    );
+  }
+}
+const vaddress = vaddress => {
+  if(vaddress.length < 2 || vaddress.length > 20) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        The address must be between 10 and 20 characters.
+      </div>
+    );
+  }
+}
+const vdetailaddress = vdetailaddress => {
+  if(vdetailaddress.length < 2 || vdetailaddress.length > 20) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        The detailAddress must be between 10 and 20 characters.
+      </div>
+    );
+  }
+}
+const vlegalDong = vlegalDong => {
+  if(vlegalDong.length < 2 || vlegalDong.length > 20) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        The legalDong must be between 10 and 20 characters.
+      </div>
+    );
+  }
+}
+const vphonenumber  = vphonenumber => {
+  if(vphonenumber.length < 5 || vphonenumber.length > 20) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        "000-0000-0000" 입력해주세요 
+      </div>
+    );
+  }
+}
+const vresidentnumber = vresidentnumber => {
+  if(vresidentnumber.length < 12 || vresidentnumber.length > 14) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        "-" 없이 13자리 입력해주세요
+      </div>
+    );
+  }
+}
 
-const vpassword = value => {
-  if (value.length < 6 || value.length > 40) {
-    return (
-      <div className="alert alert-danger" role="alert">
-        The password must be between 6 and 40 characters.
-      </div>
-    );
-  }
-};
 
 export default class Register extends Component {
   constructor(props) {
@@ -53,11 +129,30 @@ export default class Register extends Component {
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
+    this.onChangeUsersId = this.onChangeUsersId.bind(this);
+    this.onChangeNickname = this.onChangeNickname.bind(this);
+    this.onChangeZoneCode = this.onChangeZoneCode.bind(this);
+    this.onChangeAddress = this.onChangeAddress.bind(this);
+    this.onChangeDetailaddress = this.onChangeDetailaddress.bind(this);
+    this.onChangeLegalDong = this.onChangeLegalDong.bind(this);
+    this.onChangePhonenumber = this.onChangePhonenumber.bind(this);
+    this.onChangeResidentnumber = this.onChangeResidentnumber.bind(this);
+
+    
+    
 
     this.state = {
       username: "",
       email: "",
       password: "",
+      usersId: "",
+      nickname: "",
+      zoneCode: "",
+      address: "",
+      detailaddress: "",
+      legalDong: "",
+      phonenumber: "",
+      residentnumber: "",
       successful: false,
       message: ""
     };
@@ -80,6 +175,47 @@ export default class Register extends Component {
       password: e.target.value
     });
   }
+  onChangeUsersId(e) {
+    this.setState({
+      usersId: e.target.value
+    });
+  }
+  onChangeNickname(e) {
+    this.setState({
+      nickname: e.target.value
+    });
+  }
+  onChangeZoneCode(e) {
+    this.setState({
+      zoneCode: e.target.value
+    });
+  }
+  onChangeAddress(e) {
+    this.setState({
+      address: e.target.value
+    });
+  }
+  onChangeDetailaddress(e) {
+    this.setState({
+      detailaddress: e.target.value
+    });
+  }
+  onChangeLegalDong(e) {
+    this.setState({
+      legalDong: e.target.value
+    });
+  }
+  onChangePhonenumber(e) {
+    this.setState({
+      phonenumber: e.target.value
+    });
+  }
+  onChangeResidentnumber(e) {
+    this.setState({
+      residentnumber: e.target.value
+    });
+  }
+       
 
   handleRegister(e) {
     e.preventDefault();
@@ -95,7 +231,15 @@ export default class Register extends Component {
       AuthService.register(
         this.state.username,
         this.state.email,
-        this.state.password
+        this.state.password,
+        this.state.usersId,
+        this.state.nickname,
+        this.state.zoneCode,
+        this.state.address,
+        this.state.detailaddress,
+        this.state.legalDong,
+        this.state.phonenumber,
+        this.state.residentnumber                
       ).then(
         response => {
           this.setState({
@@ -139,7 +283,7 @@ export default class Register extends Component {
             {!this.state.successful && (
               <div>
                 <div className="form-group">
-                  <label htmlFor="username">Username</label>
+                  <label htmlFor="username">아이디</label>
                   <Input
                     type="text"
                     className="form-control"
@@ -150,8 +294,22 @@ export default class Register extends Component {
                   />
                 </div>
 
+                
+
                 <div className="form-group">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="password">비밀번호</label>
+                  <Input
+                    type="password"
+                    className="form-control"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.onChangePassword}
+                    validations={[required, password]}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="email">이메일</label>
                   <Input
                     type="text"
                     className="form-control"
@@ -163,17 +321,103 @@ export default class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="password">Password</label>
-                  <Input
-                    type="password"
-                    className="form-control"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.onChangePassword}
-                    validations={[required, vpassword]}
+                 <label htmlFor="usersId">성명</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="usersId"
+                  value={this.state.usersId}
+                  onChange={this.onChangeUsersId}
+                  validations={[required, vusersId]}
                   />
                 </div>
 
+                <div className="form-group">
+                 <label htmlFor="nickname">닉네임 </label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="nickname"
+                  value={this.state.nickname}
+                  onChange={this.onChangeNickname}
+                  validations={[required, vnickname]}
+                  />
+                </div>
+
+                <div className="form-group">
+                 <label htmlFor="zoneCode">지번</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="zoneCode"
+                  value={this.state.zoneCode}
+                  onChange={this.onChangeZoneCode}
+                  validations={[required, vzoneCode]}
+                  />
+                </div>
+
+                <div className="form-group">
+                 <label htmlFor="address">주소</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="address"
+                  value={this.state.address}
+                  onChange={this.onChangeAddress}
+                  validations={[required, vaddress]}
+                  />
+                </div>
+
+                <div className="form-group">
+                 <label htmlFor="detailaddress">상세주소</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="detailaddress"
+                  value={this.state.detailaddress}
+                  onChange={this.onChangeDetailaddress}
+                  validations={[required, vdetailaddress]}
+                  />
+                </div>
+
+                <div className="form-group">
+                 <label htmlFor="legalDong">법정동</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="legalDong"
+                  value={this.state.legalDong}
+                  onChange={this.onChangeLegalDong}
+                  validations={[required, vlegalDong]}
+                  />
+                </div>
+
+                <div className="form-group">
+                 <label htmlFor="phonenumber">핸드폰번호</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="phonenumber"
+                  value={this.state.phonenumber}
+                  onChange={this.onChangePhonenumber}
+                  validations={[required, vphonenumber]}
+                  />
+                </div>
+
+                <div className="form-group">
+                 <label htmlFor="residentnumber">주민등록번호</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="residentnumber"
+                  value={this.state.residentnumber}
+                  onChange={this.onChangeResidentnumber}
+                  validations={[required, vresidentnumber]}
+                  />
+                </div>
+
+               
+               
                 <div className="form-group">
                   <button className="btn btn-primary btn-block">Sign Up</button>
                 </div>

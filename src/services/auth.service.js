@@ -22,11 +22,21 @@ class AuthService {
     localStorage.removeItem("user");
   }
 
-  register(username, email, password) {
+  register( username, email, password, usersId, nickname, zoneCode, address,
+    detailaddress, legalDong, phonenumber, residentnumber
+      ) {
     return axios.post(API_URL + "signup", {
       username,
       email,
-      password
+      password,
+      usersId,
+      nickname,
+      zoneCode,
+      address,
+      detailaddress,
+      legalDong,
+      phonenumber,
+      residentnumber   
     });
   }
 
@@ -45,7 +55,8 @@ class AuthService {
     return axios.delete(API_URL + `delete/${user.id}`, config);
   }
 
-  updateProfile(username, email, password) {
+  updateProfile(username, email, password, usersId, nickname, zoneCode,
+    address, detailaddress, legalDong, phonenumber) {
     const user = JSON.parse(localStorage.getItem("user"));
     const config = {
       headers: {
@@ -56,7 +67,14 @@ class AuthService {
     return axios.put(API_URL + `update/${user.id}`, {
       username,
       email,
-      password
+      password,
+      usersId,
+      nickname,
+      zoneCode,
+      address,
+      detailaddress,
+      legalDong,
+      phonenumber
     }, config);
   }
   

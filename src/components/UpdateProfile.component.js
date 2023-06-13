@@ -8,7 +8,16 @@ export default function UpdateProfile() {
   const [state, setState] = useState({
     username: "",
     email: "",
-    password: ""
+    password: "",
+    usersId: "",
+    nickname: "",
+    zoneCode: "",
+    address: "",
+    detailaddress: "",
+    legalDong: "",
+    phonenumber: ""
+    
+
   });
 
   // 회원정보 수정
@@ -28,9 +37,11 @@ export default function UpdateProfile() {
   const handleUpdateProfile = (event) => {
     event.preventDefault();
 
-    const { username, email, password } = state;
+    const { username, email, password, usersId, nickname, zoneCode,
+    address, detailaddress, legalDong, phonenumber } = state;
 
-    AuthService.updateProfile(username, email, password)
+    AuthService.updateProfile(username, email, password, usersId, nickname, zoneCode,
+      address, detailaddress, legalDong, phonenumber )
       .then(response => {
         handleConfirmation();
         console.log(response.data); // Success message
@@ -54,7 +65,14 @@ export default function UpdateProfile() {
       setState({
         username: "",
         email: "",
-        password: ""
+        password: "",
+        usersId: "",
+        nickname: "",
+        zoneCode: "",
+        address: "",
+        detailaddress: "",
+        legalDong: "",
+        phonenumber: ""
       });
     }
   };
@@ -73,7 +91,7 @@ export default function UpdateProfile() {
       </header>
       <form onSubmit={handleUpdateProfile}>
         <div className="form-group">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">아이디</label>
           <input
             type="text"
             className="form-control"
@@ -105,6 +123,83 @@ export default function UpdateProfile() {
             onChange={handleInputChange}
           />
         </div>
+        <div className="form-group">
+          <label htmlFor="usersId">성명</label>
+          <input
+            type="text"
+            className="form-control"
+            id="usersId"
+            name="usersId"
+            value={state.usersId}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="nickname">닉네임</label>
+          <input
+            type="text"
+            className="form-control"
+            id="nickname"
+            name="nickname"
+            value={state.nickname}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="zoneCode">지번</label>
+          <input
+            type="text"
+            className="form-control"
+            id="zoneCode"
+            name="zoneCode"
+            value={state.zoneCode}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="address">주소</label>
+          <input
+            type="text"
+            className="form-control"
+            id="address"
+            name="address"
+            value={state.address}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="detailaddress">상세주소</label>
+          <input
+            type="text"
+            className="form-control"
+            id="detailaddress"
+            name="detailaddress"
+            value={state.detailaddress}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="legalDong">법정동</label>
+          <input
+            type="text"
+            className="form-control"
+            id="legalDong"
+            name="legalDong"
+            value={state.legalDong}
+            onChange={handleInputChange}
+          />
+        </div> 
+        <div className="form-group">
+          <label htmlFor="phonenumber">핸드폰번호</label>
+          <input
+            type="text"
+            className="form-control"
+            id="phonenumber"
+            name="phonenumber"
+            value={state.phonenumber}
+            onChange={handleInputChange}
+          />
+        </div>   
         <button type="submit" className="btn btn-primary" onClick={handleUpdateProfile}>
           수정
         </button>
