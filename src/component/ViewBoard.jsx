@@ -192,6 +192,11 @@ const ViewBoard = () => {
     setIsButtonDisabled(true);
     setCancelButtonClicked(true);
   };
+  const formatDate = (date) => {
+    const adjustedDate = new Date(date);
+    adjustedDate.setHours(adjustedDate.getHours() + 9); // +9시간 조정
+    return adjustedDate.toLocaleString("ko-KR");
+  };
 
 
   if (loading) {
@@ -340,23 +345,9 @@ const ViewBoard = () => {
                           {line}
                         </p>
                       ))}
-                      <p>
-                        {new Date(comment.createdAt).toLocaleDateString(
-                          "ko-KR",
-                          {
-                            year: "numeric",
-                            month: "2-digit",
-                            day: "2-digit",
-                          }
-                        )}{" "}
-                        {new Date(comment.createdAt).toLocaleTimeString(
-                          "ko-KR",
-                          {
-                            hour: "numeric",
-                            minute: "numeric",
-                          }
-                        )}
-                      </p>
+                   <p>
+                {formatDate(comment.createdAt)}
+              </p>
                     </div>
                     {currentUser &&
                       currentUser.username === comment.username && (
