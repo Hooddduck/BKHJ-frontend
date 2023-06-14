@@ -19,6 +19,7 @@ const AddBoard = () => {
   const [, setMessage] = useState([]);
   const [, setImageInfos] = useState([]);
   const progressInfosRef = useRef(null);
+  
 
   const [board, setBoard] = useState({
     title: "",
@@ -37,7 +38,8 @@ const AddBoard = () => {
     const data = editor.getData();
     setBoard({ ...board, content: data });
   };
-  const BoardRegsiter = (e) => {
+
+  const BoardRegister = (e) => {
     e.preventDefault();
 
     const files = Array.from(selectedFiles);
@@ -51,17 +53,16 @@ const AddBoard = () => {
       val: _progressInfos,
     };
 
-    const uploadPromises = files.map((file, i) => upload(i, file));
-
-    Promise.all(uploadPromises)
-      .then(() => UploadService.getFiles())
-      .then((files) => {
-        setImageInfos(files.data);
-
-        // Continue with saving the board after uploading images
-        return BoardService.saveBoard(board);
+    // 게시판 등록 요청
+    BoardService.saveBoard(board)
+      .then((response) => {
+        const boardId = response.data; // 서버에서 받은 게시판 ID
+        const uploadPromises = files.map((file, i) =>
+          upload(i, file, boardId) // 서버에서 받은 게시판 ID를 전달
+        );
+        return Promise.all(uploadPromises);
       })
-      .then((res) => {
+      .then(() => {
         console.log("Board Added Successfully");
         setMsg("게시판 생성완료");
         setBoard({
@@ -98,9 +99,9 @@ const AddBoard = () => {
     setMessage([]);
   };
 
-  const upload = (idx, file) => {
+  const upload = (idx, file, boardId) => {
     let _progressInfos = [...progressInfosRef.current.val];
-    return UploadService.upload(file, (event) => {
+    return UploadService.upload(file, boardId, (event) => {
       _progressInfos[idx].percentage = Math.round(
         (100 * event.loaded) / event.total
       );
@@ -131,7 +132,9 @@ const AddBoard = () => {
             <div className="col-md-10">
               <div className="card">
                 <div className="card-header fs-3 text-center">게시글 등록</div>
-                {msg && <p className="fs-4-text-center text-success">{msg}</p>}
+                {msg && (
+                  <p className="fs-4-text-center text-success">{msg}</p>
+                )}
                 <div className="card-body"></div>
                 {/* 파일업로드 start */}
 
@@ -157,7 +160,7 @@ const AddBoard = () => {
                     </div>
                   ))}
 
-                <form onSubmit={(e) => BoardRegsiter(e)}>
+                <form onSubmit={(e) => BoardRegister(e)}>
                   <div className="mb-3">
                     <label>제목</label>
                     <input

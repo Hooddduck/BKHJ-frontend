@@ -9,6 +9,7 @@ import TextField from "@mui/material/TextField";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
+import FileUploadService from "../services/FileUploadService";
 
 const ViewBoard = () => {
   const { id } = useParams();
@@ -25,10 +26,13 @@ const ViewBoard = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [cancelButtonClicked, setCancelButtonClicked] = useState(false);
   const [commentsCount, setCommentsCount] = useState(0);
+  const [files, setFiles] = useState([]);
+  const [imagePreviews, setImagePreviews] = useState([]);
 
   useEffect(() => {
     fetchBoard();
     fetchComments();
+    fetchFiles();
   }, []);
 
   const fetchBoard = () => {
@@ -41,6 +45,23 @@ const ViewBoard = () => {
       .catch((error) => {
         console.log(error);
         setLoading(false);
+      });
+  };
+
+
+
+  const fetchFiles = () => {
+    boardService
+      .getBoardById(id)
+      .then((res) => {
+        const boardId = res.data.id;
+        return FileUploadService.getFilesByBoardId(boardId);
+      })
+      .then((res) => {
+        setFiles(res.data); // 파일 목록 업데이트
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -58,6 +79,7 @@ const ViewBoard = () => {
     confirmAlert({
       title: "게시물 삭제",
       message: "게시물을 삭제하시겠습니까?",
+ 
       buttons: [
         {
           label: "삭제",
@@ -204,6 +226,31 @@ const ViewBoard = () => {
             </div>
           </div>
 
+        {/* 이미지 미리보기 start */}
+        {files && (
+          <div>
+             {files.map((file, i) => (
+      <div key={file.id}>
+        <p> 파일이름: {file.name}</p>
+      
+        {file.type.startsWith('image/') ? (
+          <img
+            className="preview"
+            src={`data:${file.type};base64,${file.data}`}
+            alt={'image-' + i}
+          />
+        ) : (
+          <a href={file.url} target="_blank" rel="noopener noreferrer">
+            파일 보기
+          </a>
+        )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+          {/* 이미지 미리보기 end */}
+
           <div className="ViewComment-wrapper">
             <div className="ViewComment-container">
               <div className="commentcount">
@@ -275,18 +322,18 @@ const ViewBoard = () => {
                 </button>
               </ReactModal>
             </div>
-            <div className="ViewCommentList-container">
-            <div className="ViewCommentList">
-  {comments.map((comment) => (
-    <div key={comment.id}>
-      <div className="user-info">
-        <AccountCircle style={{ fontSize: "3rem" }} />
-        {comment.username ? (
-          <span>{comment.username}</span>
-        ) : (
-          <span>비회원</span>
-        )}
-      </div>
+                <div className="ViewCommentList-container">
+                   <div className="ViewCommentList">
+                      {comments.map((comment) => (
+                        <div key={comment.id}>
+                         <div className="user-info">
+                          <AccountCircle style={{ fontSize: "3rem" }} />
+                            {comment.username ? (
+                            <span>{comment.username}</span>
+                                ) : (
+                            <span>비회원</span>
+                                    )}
+                        </div>
                     <div className="comment-content">
                       {comment.content.split("\n").map((line, index) => (
                         <p key={index} style={{ color: "black" }}>

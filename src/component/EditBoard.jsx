@@ -48,18 +48,17 @@ const EditBoard = () => {
 
   return (
     <>
-      <div className="EditBoard-wrapper">
       <div className="container mt-3">
         <div className="row">
-        <div className="col-md-10">
+          <div className="col-md-6 offset-md-3">
             <div className="card">
-              <div className="card-header fs-3 text-center">게시글 수정</div>
+              <div className="card-header fs-3 text-center">Edit Product</div>
               {msg && <p className="fs-4 text-center text-success">{msg}</p>}
 
               <div className="card-body">
                 <form onSubmit={(e) => BoardUpdate(e)}>
                   <div className="mb-3">
-                    <label>제목</label>
+                    <label>게시판</label>
                     <input
                       type="text"
                       name="title"
@@ -70,7 +69,7 @@ const EditBoard = () => {
                   </div>
 
                   <div className="mb-3">
-                    <label>내용</label>
+                    <label>제목</label>
                     <input
                       type="text"
                       name="content"
@@ -95,7 +94,6 @@ const EditBoard = () => {
             </div>
           </div>
         </div>
-      </div>
       </div>
     </>
   );

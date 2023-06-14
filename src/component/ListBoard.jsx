@@ -33,6 +33,12 @@ const ListBoard = () => {
         const sortedList = res.data.sort((a, b) => {
           const dateA = new Date(a.regdate).getTime();
           const dateB = new Date(b.regdate).getTime();
+          if (dateA === dateB) {
+            // 시간까지 비교
+            const timeA = new Date(a.regdate).getTime();
+            const timeB = new Date(b.regdate).getTime();
+            return timeB - timeA;
+          }
           return dateB - dateA;
         });
 
