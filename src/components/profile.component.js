@@ -64,7 +64,7 @@ export default class Profile extends Component {
         </p>
         <p>
           <strong>Id:</strong>{" "}
-          {currentUser.id}
+          {currentUser.username}
         </p>
         <p>
           <strong>Email:</strong>{" "}

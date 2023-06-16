@@ -10,6 +10,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import FileUploadService from "../services/FileUploadService";
+import ReactQuill from 'react-quill';
 
 const ViewBoard = () => {
   const { id } = useParams();
@@ -218,11 +219,11 @@ const ViewBoard = () => {
                   <div className="d-flex justify-content-start">
                     <Link
                       to={`/editBoard/${board.id}`}
-                      className="btn btn-primary me-2"
+                      className="btn btn-primary btn-comment"
                     >
                       수정
                     </Link>
-                    <button onClick={deleteBoard} className="btn btn-danger">
+                    <button onClick={deleteBoard} className="btn btn-danger btn-comment">
                       삭제
                     </button>
                   </div>

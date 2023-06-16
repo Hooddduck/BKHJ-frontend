@@ -29,6 +29,7 @@
     "react-outside-click-handler": "^1.3.0",
     "react-paginate": "^8.2.0",
     "react-paginating": "^1.4.0",
+    "react-quill": "^2.0.0",
     "react-router": "^6.11.2",
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
