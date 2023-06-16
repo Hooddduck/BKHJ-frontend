@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import boardService from "../services/board.service";
 import "./EditBoard.css";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
 
 const EditBoard = () => {
   const [board, setBoard] = useState({
@@ -48,17 +50,18 @@ const EditBoard = () => {
 
   return (
     <>
+    <div className="EditBoard-wrapper">
       <div className="container mt-3">
         <div className="row">
-          <div className="col-md-6 offset-md-3">
+        <div className="col-md-10">
             <div className="card">
-              <div className="card-header fs-3 text-center">Edit Product</div>
+            <div className="card-header fs-3 text-center">게시글 수정</div>
               {msg && <p className="fs-4 text-center text-success">{msg}</p>}
 
               <div className="card-body">
                 <form onSubmit={(e) => BoardUpdate(e)}>
                   <div className="mb-3">
-                    <label>게시판</label>
+                    <label>제목</label>
                     <input
                       type="text"
                       name="title"
@@ -69,7 +72,7 @@ const EditBoard = () => {
                   </div>
 
                   <div className="mb-3">
-                    <label>제목</label>
+                    <label>내용</label>
                     <input
                       type="text"
                       name="content"
@@ -94,6 +97,7 @@ const EditBoard = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

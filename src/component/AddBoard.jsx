@@ -136,10 +136,6 @@ const AddBoard = () => {
                   <p className="fs-4-text-center text-success">{msg}</p>
                 )}
                 <div className="card-body"></div>
-                {/* 파일업로드 start */}
-
-                {/* 파일업로드 end */}
-                {/* 파일업로드 렌더링 start*/}
                 {progressInfos &&
                   progressInfos.val.length > 0 &&
                   progressInfos.val.map((progressInfo, index) => (
