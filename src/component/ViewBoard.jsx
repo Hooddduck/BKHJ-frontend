@@ -215,8 +215,6 @@ const ViewBoard = () => {
       <section className="ViewBoard-wrapper">
         <div className="ViewBoard-container">
           <div className="ViewContent">
-            <div className="card">
-              <div className="card-body">
                 <div className="ContentHeader">
                   <h3>{board.title}</h3>
                   <div
@@ -261,8 +259,6 @@ const ViewBoard = () => {
                   </div>
                 )}
               </div>
-            </div>
-          </div>
 
           {/* 이미지 미리보기 start */}
           {files && (
@@ -290,7 +286,6 @@ const ViewBoard = () => {
               ))}
             </div>
           )}
-
           {/* 이미지 미리보기 end */}
 
           <div className="ViewComment-wrapper">

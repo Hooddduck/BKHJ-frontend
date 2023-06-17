@@ -168,7 +168,8 @@
 
 .ContentHeader {
   padding: 10px;
-  margin-bottom: 20px;
+  margin-top: 5%;
+  margin-bottom: 10px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -182,4 +183,8 @@
   color: #666;
   font-size: 14px;
   margin-bottom: 3px;
+}
+
+.ViewContent{
+  margin: 10px;
 }
