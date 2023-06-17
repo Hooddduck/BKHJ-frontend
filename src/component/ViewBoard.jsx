@@ -195,6 +195,16 @@ const ViewBoard = () => {
     adjustedDate.setHours(adjustedDate.getHours() + 9); // +9시간 조정
     return adjustedDate.toLocaleString("ko-KR");
   };
+  const formatBoardDate = (date) => {
+    const adjustedDate = new Date(date);
+    const year = adjustedDate.getFullYear();
+    const month = (adjustedDate.getMonth() + 1).toString().padStart(2, "0");
+    const day = adjustedDate.getDate().toString().padStart(2, "0");
+    const hours = adjustedDate.getHours().toString().padStart(2, "0");
+    const minutes = adjustedDate.getMinutes().toString().padStart(2, "0");
+    const seconds = adjustedDate.getSeconds().toString().padStart(2, "0");
+    return `${year}.${month}.${day} ${hours}:${minutes}:${seconds}`;
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -225,7 +235,7 @@ const ViewBoard = () => {
                       }}
                     ></span>
                     <p style={{ marginLeft: "4px" }}>
-                     {new Date(board.regdate).toLocaleDateString()}
+                      {formatBoardDate(board.regdate)}
                     </p>
                   </div>
                 </div>

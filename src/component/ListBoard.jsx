@@ -89,7 +89,13 @@ const ListBoard = () => {
 
     return false;
   });
-
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
   const getTotalPages = () => {
     return Math.ceil(filteredBoardList.length / itemsPerPage);
   };
@@ -180,7 +186,7 @@ const ListBoard = () => {
                             </StyledLink>
                           </td>
                           <td>{b.writer}</td>
-                          <td className="short-date">{b.regdate}</td>
+                          <td className="short-date">{formatDate(b.regdate)}</td>
                           <td>{viewCounts[b.id] || 0}</td>
                         </tr>
                       );

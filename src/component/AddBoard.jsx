@@ -9,8 +9,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 
 const AddBoard = () => {
   const navigate = useNavigate();
-  let today = new Date();
-  today = today.toISOString().split("T")[0];
+  const today = new Date().toISOString();
   const currentUser = authService.getCurrentUser();
   //UploadImages
   const [selectedFiles, setSelectedFiles] = useState([]);
