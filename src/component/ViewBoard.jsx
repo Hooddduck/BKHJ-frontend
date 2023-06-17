@@ -19,7 +19,6 @@ const ViewBoard = () => {
   const [loading, setLoading] = useState(true);
   const [comments, setComments] = useState([]);
   const [commentContent, setCommentContent] = useState("");
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [editedCommentId, setEditedCommentId] = useState(null);
   const [editedCommentContent, setEditedCommentContent] = useState("");
   const navigate = useNavigate();
@@ -136,6 +135,8 @@ const ViewBoard = () => {
     CommentService.updateComment(commentId, updatedComment)
       .then((res) => {
         fetchComments();
+        setEditedCommentId(null); // 편집 상태 종료
+        setEditedCommentContent("");
       })
       .catch((error) => {
         console.log(error);
@@ -167,24 +168,8 @@ const ViewBoard = () => {
     });
   };
 
-  const openModal = (commentId, commentContent) => {
-    setModalIsOpen(true);
-    setEditedCommentId(commentId);
-    setEditedCommentContent(commentContent);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-    setEditedCommentId(null);
-    setEditedCommentContent("");
-  };
   const handleEditedCommentChange = (e) => {
     setEditedCommentContent(e.target.value);
-  };
-
-  const saveEditedComment = () => {
-    updateComment(editedCommentId, editedCommentContent);
-    closeModal();
   };
 
   const handleCancelButtonClick = () => {
@@ -346,31 +331,6 @@ const ViewBoard = () => {
                   <p>로그인 후에 댓글을 작성할 수 있습니다.😊</p>
                 )}
               </div>
-              <ReactModal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                contentLabel="Edit Comment Modal"
-              >
-                <h2>댓글 수정</h2>
-                <textarea
-                  rows="3"
-                  className="form-control"
-                  value={editedCommentContent}
-                  onChange={(e) => setEditedCommentContent(e.target.value)}
-                ></textarea>
-                <button
-                  className="btn btn-primary mt-2"
-                  onClick={() => {
-                    updateComment(editedCommentId, editedCommentContent);
-                    closeModal();
-                  }}
-                >
-                  저장
-                </button>
-                <button className="btn btn-secondary mt-2" onClick={closeModal}>
-                  취소
-                </button>
-              </ReactModal>
             </div>
             <div className="ViewCommentList-container">
               <div className="ViewCommentList">
@@ -384,29 +344,51 @@ const ViewBoard = () => {
                         <span>비회원</span>
                       )}
                     </div>
-                    <div className="comment-content">
-                      {comment.content.split("\n").map((line, index) => (
-                        <p key={index} style={{ color: "black" }}>
-                          {line}
-                        </p>
-                      ))}
-                      <p>{formatDate(comment.createdAt)}</p>
-                    </div>
+                    {comment.id === editedCommentId ? (
+                      <div className="comment-content">
+                        <TextField
+                          id="comment-edit-field"
+                          multiline
+                          variant="standard"
+                          rows={2}
+                          value={editedCommentContent}
+                          className="edit-comment"
+                          onChange={(e) =>
+                            setEditedCommentContent(e.target.value)
+                          }
+                        />
+                        <button
+                          className="btn btn-primary btn-comment"
+                          onClick={() =>
+                            updateComment(comment.id, editedCommentContent)
+                          }
+                        >
+                          저장
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="comment-content">
+                        {comment.content.split("\n").map((line, index) => (
+                          <p key={index} style={{ color: "black" }}>
+                            {line}
+                          </p>
+                        ))}
+                        <p>{formatDate(comment.createdAt)}</p>
+                      </div>
+                    )}
                     {currentUser &&
                       currentUser.username === comment.username && (
                         <div className="actions">
                           <button
                             className="btn btn-primary btn-comment"
-                            onClick={() =>
-                              openModal(comment.id, comment.content)
-                            }
+                            onClick={() => {
+                              setEditedCommentId(comment.id);
+                              setEditedCommentContent(comment.content);
+                            }}
                           >
                             수정
                           </button>
-                          <button
-                            className="btn btn-danger btn-comment"
-                            onClick={() => deleteComment(comment.id)}
-                          >
+                          <button className="btn btn-danger btn-comment">
                             삭제
                           </button>
                         </div>
