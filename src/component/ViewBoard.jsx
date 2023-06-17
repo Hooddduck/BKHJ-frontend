@@ -237,6 +237,7 @@ const ViewBoard = () => {
                     <p style={{ marginLeft: "4px" }}>
                       {formatBoardDate(board.regdate)}
                     </p>
+                    <p>조회: {board.viewCount}</p>
                   </div>
                 </div>
                 <p>{board.content}</p>
