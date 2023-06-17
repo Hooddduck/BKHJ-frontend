@@ -10,6 +10,9 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import FileUploadService from "../services/FileUploadService";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import { Margin } from "@mui/icons-material";
 
 const ViewBoard = () => {
   const { id } = useParams();
@@ -215,50 +218,60 @@ const ViewBoard = () => {
       <section className="ViewBoard-wrapper">
         <div className="ViewBoard-container">
           <div className="ViewContent">
-                <div className="ContentHeader">
-                  <h3>{board.title}</h3>
+            <div className="ContentHeader">
+              <h3>{board.title}</h3>
+              <div
+                className="author-info"
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <AccountCircle
+                  style={{ fontSize: "2rem", marginRight: "8px" }}
+                />
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <span>{board.writer}</span>
                   <div
-                    className="author-info"
+                    className="regCount"
                     style={{ display: "flex", alignItems: "center" }}
                   >
-                    <AccountCircle
-                      style={{ fontSize: "2rem", marginRight: "4px" }}
-                    />
-                    <div style={{ display: "flex", flexDirection: "column" }}>
-                      <span>{board.writer}</span>
-                      <div
-                        className="regCount"
-                        style={{ display: "flex", alignItems: "center" }}
-                      >
-                        <span style={{ height: "16px" }}></span>
-                        <p style={{ marginRight: "4px" }}>
-                          {formatBoardDate(board.regdate)}
-                        </p>
-                        <p style={{ marginRight: "4px" }}>
-                          조회 {board.viewCount}
-                        </p>
-                      </div>
-                    </div>
+                    <span style={{ height: "16px" }}></span>
+                    <p style={{ marginRight: "4px" }}>
+                      {formatBoardDate(board.regdate)}
+                    </p>
+                    <p>조회 {board.viewCount}</p>
                   </div>
                 </div>
-                <p>{board.content}</p>
-                {currentUser && currentUser.username === board.writer && (
-                  <div className="d-flex justify-content-start">
-                    <Link
-                      to={`/editBoard/${board.id}`}
-                      className="btn btn-primary btn-comment"
-                    >
-                      수정
-                    </Link>
-                    <button
-                      onClick={deleteBoard}
-                      className="btn btn-danger btn-comment"
-                    >
-                      삭제
-                    </button>
-                  </div>
-                )}
               </div>
+              {/* 게시글 내용 */}
+              <hr className="content-divider"></hr>
+              <div className="mb-3">
+                <CKEditor
+                  editor={ClassicEditor}
+                  data={board.content}
+                  config={{
+                    toolbar: [],
+                    readOnly: true,
+                  }}
+                />
+              </div>
+            </div>
+
+            {currentUser && currentUser.username === board.writer && (
+              <div className="d-flex justify-content-end">
+                <Link
+                  to={`/editBoard/${board.id}`}
+                  className="btn btn-primary btn-comment"
+                >
+                  수정
+                </Link>
+                <button
+                  onClick={deleteBoard}
+                  className="btn btn-danger btn-comment"
+                >
+                  삭제
+                </button>
+              </div>
+            )}
+          </div>
 
           {/* 이미지 미리보기 start */}
           {files && (
