@@ -224,20 +224,23 @@ const ViewBoard = () => {
                     style={{ display: "flex", alignItems: "center" }}
                   >
                     <AccountCircle
-                      style={{ fontSize: "1.5rem", marginRight: "4px" }}
+                      style={{ fontSize: "2rem", marginRight: "4px" }}
                     />
-                    <p>{board.writer}</p>
-                    <span
-                      style={{
-                        margin: "0 8px",
-                        borderLeft: "1px solid #ccc",
-                        height: "16px",
-                      }}
-                    ></span>
-                    <p style={{ marginLeft: "4px" }}>
-                      {formatBoardDate(board.regdate)}
-                    </p>
-                    <p>조회: {board.viewCount}</p>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                      <span>{board.writer}</span>
+                      <div
+                        className="regCount"
+                        style={{ display: "flex", alignItems: "center" }}
+                      >
+                        <span style={{ height: "16px" }}></span>
+                        <p style={{ marginRight: "4px" }}>
+                          {formatBoardDate(board.regdate)}
+                        </p>
+                        <p style={{ marginRight: "4px" }}>
+                          조회 {board.viewCount}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <p>{board.content}</p>
