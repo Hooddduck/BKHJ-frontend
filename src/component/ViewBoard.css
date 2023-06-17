@@ -2,6 +2,13 @@
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 5%;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .full-width {
@@ -56,14 +63,6 @@
   padding-top: 10px;
 }
 
-.ViewComment-wrapper {
-  border: 1px solid #ccc;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
 .ViewComment {
   border: 1px solid #ccc;
@@ -150,11 +149,39 @@
 
 
 .card{
-  border-radius: 10px; /* 동그랗게 만들기 위한 테두리 반경 설정 */
-  background-color: #ffffff; /* 하얀색 배경색 설정 */
+  border-radius: 10px;
+  background-color: #ffffff; 
 }
 
 .comment-input-container{
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.comment-divider {
+  width: 95%;
+  margin-left: 22px;
+  margin-right: 22px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.ContentHeader {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  /* 추가적인 스타일 속성을 여기에 작성하세요 */
+}
+
+.ContentHeader h4 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.ContentHeader p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 3px;
 }

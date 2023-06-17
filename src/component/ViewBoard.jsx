@@ -7,10 +7,9 @@ import CommentService from "../services/CommentService";
 import "./ViewBoard.css";
 import TextField from "@mui/material/TextField";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css';
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 import FileUploadService from "../services/FileUploadService";
-import ReactQuill from 'react-quill';
 
 const ViewBoard = () => {
   const { id } = useParams();
@@ -49,8 +48,6 @@ const ViewBoard = () => {
       });
   };
 
-
-
   const fetchFiles = () => {
     boardService
       .getBoardById(id)
@@ -80,7 +77,7 @@ const ViewBoard = () => {
     confirmAlert({
       title: "게시물 삭제",
       message: "게시물을 삭제하시겠습니까?",
- 
+
       buttons: [
         {
           label: "삭제",
@@ -145,11 +142,11 @@ const ViewBoard = () => {
 
   const deleteComment = (commentId) => {
     confirmAlert({
-      title: '댓글 삭제',
-      message: '댓글을 삭제하시겠습니까?',
+      title: "댓글 삭제",
+      message: "댓글을 삭제하시겠습니까?",
       buttons: [
         {
-          label: '확인',
+          label: "확인",
           onClick: () => {
             CommentService.deleteComment(commentId)
               .then((res) => {
@@ -158,13 +155,13 @@ const ViewBoard = () => {
               .catch((error) => {
                 console.log(error);
               });
-          }
+          },
         },
         {
-          label: '취소',
-          onClick: () => {}
-        }
-      ]
+          label: "취소",
+          onClick: () => {},
+        },
+      ],
     });
   };
 
@@ -199,7 +196,6 @@ const ViewBoard = () => {
     return adjustedDate.toLocaleString("ko-KR");
   };
 
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -210,11 +206,30 @@ const ViewBoard = () => {
         <div className="ViewBoard-container">
           <div className="ViewContent">
             <div className="card">
-              <div className="card-header fs-3 text-center">{board.title}</div>
               <div className="card-body">
+                <div className="ContentHeader">
+                  <h3>{board.title}</h3>
+                  <div
+                    className="author-info"
+                    style={{ display: "flex", alignItems: "center" }}
+                  >
+                    <AccountCircle
+                      style={{ fontSize: "1.5rem", marginRight: "4px" }}
+                    />
+                    <p>{board.writer}</p>
+                    <span
+                      style={{
+                        margin: "0 8px",
+                        borderLeft: "1px solid #ccc",
+                        height: "16px",
+                      }}
+                    ></span>
+                    <p style={{ marginLeft: "4px" }}>
+                     {new Date(board.regdate).toLocaleDateString()}
+                    </p>
+                  </div>
+                </div>
                 <p>{board.content}</p>
-                <p>작성자: {board.writer}</p>
-                <p>작성일: {new Date(board.regdate).toLocaleDateString()}</p>
                 {currentUser && currentUser.username === board.writer && (
                   <div className="d-flex justify-content-start">
                     <Link
@@ -223,7 +238,10 @@ const ViewBoard = () => {
                     >
                       수정
                     </Link>
-                    <button onClick={deleteBoard} className="btn btn-danger btn-comment">
+                    <button
+                      onClick={deleteBoard}
+                      className="btn btn-danger btn-comment"
+                    >
                       삭제
                     </button>
                   </div>
@@ -232,28 +250,32 @@ const ViewBoard = () => {
             </div>
           </div>
 
-        {/* 이미지 미리보기 start */}
-        {files && (
-          <div>
-             {files.map((file, i) => (
-      <div key={file.id}>
-        <p> 파일이름: {file.name}</p>
-      
-        {file.type.startsWith('image/') ? (
-          <img
-            className="preview"
-            src={`data:${file.type};base64,${file.data}`}
-            alt={'image-' + i}
-          />
-        ) : (
-          <a href={file.url} target="_blank" rel="noopener noreferrer">
-            파일 보기
-          </a>
-        )}
-                  </div>
-                ))}
-              </div>
-            )}
+          {/* 이미지 미리보기 start */}
+          {files && (
+            <div>
+              {files.map((file, i) => (
+                <div key={file.id}>
+                  <p> 파일이름: {file.name}</p>
+
+                  {file.type.startsWith("image/") ? (
+                    <img
+                      className="preview"
+                      src={`data:${file.type};base64,${file.data}`}
+                      alt={"image-" + i}
+                    />
+                  ) : (
+                    <a
+                      href={file.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      파일 보기
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* 이미지 미리보기 end */}
 
@@ -262,6 +284,7 @@ const ViewBoard = () => {
               <div className="commentcount">
                 <h4>댓글 {commentsCount}개</h4>
               </div>
+              <hr className="comment-divider" />
               <div className="ViewComment">
                 {currentUser ? (
                   <div className="comment-input-container">
@@ -328,33 +351,31 @@ const ViewBoard = () => {
                 </button>
               </ReactModal>
             </div>
-                <div className="ViewCommentList-container">
-                   <div className="ViewCommentList">
-                      {comments.map((comment) => (
-                        <div key={comment.id}>
-                         <div className="user-info">
-                          <AccountCircle style={{ fontSize: "3rem" }} />
-                            {comment.username ? (
-                            <span>{comment.username}</span>
-                                ) : (
-                            <span>비회원</span>
-                                    )}
-                        </div>
+            <div className="ViewCommentList-container">
+              <div className="ViewCommentList">
+                {comments.map((comment) => (
+                  <div key={comment.id}>
+                    <div className="user-info">
+                      <AccountCircle style={{ fontSize: "3rem" }} />
+                      {comment.username ? (
+                        <span>{comment.username}</span>
+                      ) : (
+                        <span>비회원</span>
+                      )}
+                    </div>
                     <div className="comment-content">
                       {comment.content.split("\n").map((line, index) => (
                         <p key={index} style={{ color: "black" }}>
                           {line}
                         </p>
                       ))}
-                   <p>
-                {formatDate(comment.createdAt)}
-              </p>
+                      <p>{formatDate(comment.createdAt)}</p>
                     </div>
                     {currentUser &&
                       currentUser.username === comment.username && (
                         <div className="actions">
                           <button
-                             className="btn btn-primary btn-comment"
+                            className="btn btn-primary btn-comment"
                             onClick={() =>
                               openModal(comment.id, comment.content)
                             }
