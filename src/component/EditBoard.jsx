@@ -34,6 +34,13 @@ const EditBoard = () => {
     const value = e.target.value;
     setBoard({ ...board, [e.target.name]: value });
   };
+  const handleChangeContent = (event, editor) => {
+    const value = editor.getData();
+    setBoard((prevBoard) => ({
+      ...prevBoard,
+      content: value,
+    }));
+  };
 
   const BoardUpdate = (e) => {
     e.preventDefault();
@@ -73,14 +80,13 @@ const EditBoard = () => {
 
                   <div className="mb-3">
                     <label>내용</label>
-                    <input
-                      type="text"
-                      name="content"
-                      className="form-control"
-                      onChange={(e) => handleChange(e)}
-                      value={board.content}
-                    />
-                  </div>
+                    <CKEditor
+                        editor={ClassicEditor}
+                        data={board.content}
+                        onChange={handleChangeContent}
+                      />
+                    </div>
+
                   <div className="mb-3">
                     <label>작성자</label>
                     <input

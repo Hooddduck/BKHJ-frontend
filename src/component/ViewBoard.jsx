@@ -12,7 +12,6 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import FileUploadService from "../services/FileUploadService";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
-import { Margin } from "@mui/icons-material";
 
 const ViewBoard = () => {
   const { id } = useParams();
@@ -278,7 +277,7 @@ const ViewBoard = () => {
             <div>
               {files.map((file, i) => (
                 <div key={file.id}>
-                  <p> 파일이름: {file.name}</p>
+                  <p> 첨부파일: {file.name}</p>
 
                   {file.type.startsWith("image/") ? (
                     <img
