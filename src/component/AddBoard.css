@@ -23,3 +23,8 @@
 .ck-editor__editable {
   height: 500px;
 }
+
+.delete-button {
+  border: none;
+  background-color: rgba(255, 0, 0, 0.721);
+}

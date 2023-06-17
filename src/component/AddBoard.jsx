@@ -6,6 +6,7 @@ import UploadService from "../services/FileUploadService";
 import "./AddBoard.css";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 const AddBoard = () => {
   const navigate = useNavigate();
@@ -18,7 +19,6 @@ const AddBoard = () => {
   const [, setMessage] = useState([]);
   const [, setImageInfos] = useState([]);
   const progressInfosRef = useRef(null);
-  
 
   const [board, setBoard] = useState({
     title: "",
@@ -52,12 +52,11 @@ const AddBoard = () => {
       val: _progressInfos,
     };
 
-    // 게시판 등록 요청
     BoardService.saveBoard(board)
       .then((response) => {
         const boardId = response.data; // 서버에서 받은 게시판 ID
-        const uploadPromises = files.map((file, i) =>
-          upload(i, file, boardId) // 서버에서 받은 게시판 ID를 전달
+        const uploadPromises = files.map(
+          (file, i) => upload(i, file, boardId) // 서버에서 받은 게시판 ID를 전달
         );
         return Promise.all(uploadPromises);
       })
@@ -70,6 +69,8 @@ const AddBoard = () => {
           writer: currentUser.username,
           regdate: "",
         });
+        setSelectedFiles([]); // 등록 후에 선택한 파일 배열 초기화
+        setImagePreviews([]); // 등록 후에 미리 보기 이미지 배열 초기화
         navigate("/listBoard");
       })
       .catch((error) => {
@@ -84,15 +85,38 @@ const AddBoard = () => {
       setImageInfos(response.data);
     });
   }, []);
-
+  const handleDeleteFile = (index) => {
+    const updatedFiles = [...selectedFiles];
+    updatedFiles.splice(index, 1);
+    const updatedPreviews = [...imagePreviews];
+    updatedPreviews.splice(index, 1);
+    setSelectedFiles(updatedFiles);
+    setImagePreviews(updatedPreviews);
+    setProgressInfos({ val: [] });
+    setMessage([]);
+  };
   const selectFiles = (event) => {
-    let images = [];
+    const newFiles = Array.from(event.target.files);
+    resetImageState(newFiles);
+    // 새로 추가된 파일들
+    const updatedFiles = [...selectedFiles]; // 기존에 선택한 파일들 유지
 
-    for (let i = 0; i < event.target.files.length; i++) {
-      images.push(URL.createObjectURL(event.target.files[i]));
+    let images = [...imagePreviews]; // 기존에 미리 보기한 이미지들 유지
+
+    for (let i = 0; i < newFiles.length; i++) {
+      updatedFiles.push(newFiles[i]); // 새로 추가된 파일들을 추가
+      images.push(URL.createObjectURL(newFiles[i])); // 새로 추가된 이미지들을 미리 보기에 추가
     }
 
-    setSelectedFiles(event.target.files);
+    setSelectedFiles(updatedFiles);
+    setImagePreviews(images);
+    setProgressInfos({ val: [] });
+    setMessage([]);
+  };
+  const resetImageState = (newFiles) => {
+    const updatedFiles = [...selectedFiles, ...newFiles];
+    const images = updatedFiles.map((file) => URL.createObjectURL(file));
+    setSelectedFiles(updatedFiles);
     setImagePreviews(images);
     setProgressInfos({ val: [] });
     setMessage([]);
@@ -131,9 +155,7 @@ const AddBoard = () => {
             <div className="col-md-10">
               <div className="card">
                 <div className="card-header fs-3 text-center">게시글 등록</div>
-                {msg && (
-                  <p className="fs-4-text-center text-success">{msg}</p>
-                )}
+                {msg && <p className="fs-4-text-center text-success">{msg}</p>}
                 <div className="card-body"></div>
                 {progressInfos &&
                   progressInfos.val.length > 0 &&
@@ -197,23 +219,29 @@ const AddBoard = () => {
                       </label>
                     </div>
                   </div>
-                  {/* 파일업로드 렌더링 end */}
-                  {/* 이미지 미리보기 start */}
+                  {/* 첨부파일 */}
                   {imagePreviews && (
                     <div>
                       {imagePreviews.map((img, i) => {
                         return (
-                          <img
-                            className="preview"
-                            src={img}
-                            alt={"image-" + i}
-                            key={i}
-                          />
+                          <div key={i} className="preview-container">
+                            <img
+                              className="preview"
+                              src={img}
+                              alt={"image-" + i}
+                            />
+                            <button
+                              className="delete-button"
+                              onClick={() => handleDeleteFile(i)}
+                            >
+                              <RiDeleteBin5Line /> 
+                            </button>
+                          </div>
                         );
                       })}
                     </div>
                   )}
-                  {/* 이미지 미리보기 end */}
+
                   <button className="btn btn-primary col-md-12">등록</button>
                 </form>
                 <div className="card-footer mt-3">
