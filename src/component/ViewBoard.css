@@ -113,6 +113,8 @@
   flex-direction: column;
   align-items: flex-start;
   margin-left: 45px;
+  margin-right: 45px;
+  width: 100%;
 }
 .ViewCommentList > div:not(:last-child) {
   margin-bottom: 20px;
@@ -187,4 +189,8 @@
 
 .ViewContent{
   margin: 10px;
+}
+.edit-comment {
+  height: 100px;
+  width: 80%; 
 }

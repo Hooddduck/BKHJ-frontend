@@ -350,7 +350,7 @@ const ViewBoard = () => {
                           id="comment-edit-field"
                           multiline
                           variant="standard"
-                          rows={2}
+                          rows={4}
                           value={editedCommentContent}
                           className="edit-comment"
                           onChange={(e) =>
