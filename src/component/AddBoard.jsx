@@ -213,35 +213,41 @@ const AddBoard = () => {
                         <input
                           type="file"
                           multiple
-                          accept="image/*"
+                          accept="image/*,.pdf,.txt,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                           onChange={selectFiles}
                         />
                       </label>
                     </div>
                   </div>
                   {/* 첨부파일 */}
-                  {imagePreviews && (
+                  {selectedFiles && (
                     <div>
-                      {imagePreviews.map((img, i) => {
+                      {selectedFiles.map((file, i) => {
                         return (
                           <div key={i} className="preview-container">
-                            <img
-                              className="preview"
-                              src={img}
-                              alt={"image-" + i}
-                            />
+                            {file.type.includes("image") ? (
+                              <img
+                                className="preview"
+                                src={imagePreviews[i]}
+                                alt={"image-" + i}
+                              />
+                            ) : (
+                              <div className="file-preview">
+                                <div className="file-icon">파일 아이콘</div>
+                                <div className="file-name">{file.name}</div>
+                              </div>
+                            )}
                             <button
                               className="delete-button"
                               onClick={() => handleDeleteFile(i)}
                             >
-                              <RiDeleteBin5Line /> 
+                              <RiDeleteBin5Line />
                             </button>
                           </div>
                         );
                       })}
                     </div>
                   )}
-
                   <button className="btn btn-primary col-md-12">등록</button>
                 </form>
                 <div className="card-footer mt-3">
