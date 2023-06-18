@@ -11,7 +11,7 @@ const required = value => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
-        This field is required!
+       필수 정보입니다.
       </div>
     );
   }
@@ -23,7 +23,7 @@ const vusername = vusername => {
   if (vusername.length < 3 || vusername.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The usersId must be between 3 and 20 characters.
+        아이디 : 3~20자 영문 소문자,숫자를 사용하세요.
       </div>
     );
   }
@@ -33,7 +33,7 @@ const email = value => {
   if (!isEmail(value)) {
     return (
       <div className="alert alert-danger" role="alert">
-        This is not a valid email.
+        유효한 이메일이 아닙니다.
       </div>
     );
   }
@@ -43,7 +43,7 @@ const password = password => {
   if (password.length < 6 || password.length > 40) {
     return (
       <div className="alert alert-danger" role="alert">
-        비밀번호를 입력해주세요
+        비밀번호 : 6자이상 영문 대 소문자, 숫자, 특수문자를 사용하세요.
       </div>
     );
   }
@@ -53,7 +53,7 @@ const vusersId = vusersId => {
   if(vusersId.length < 2 || vusersId.length > 9) {
     return (
       <div className="alert alert-danger" role="alert">
-        성명을 입력해주세요
+        성명을 입력해주세요.
       </div>
     );
   }
@@ -107,7 +107,7 @@ const vphonenumber  = vphonenumber => {
   if(vphonenumber.length < 5 || vphonenumber.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        "000-0000-0000" 입력해주세요 
+        "000-0000-0000" 입력해주세요. 
       </div>
     );
   }
@@ -116,7 +116,7 @@ const vresidentnumber = vresidentnumber => {
   if(vresidentnumber.length < 12 || vresidentnumber.length > 14) {
     return (
       <div className="alert alert-danger" role="alert">
-        "-" 없이 13자리 입력해주세요
+        "-" 없이 13자리 입력해주세요.
       </div>
     );
   }
@@ -426,7 +426,7 @@ export default class Register extends Component {
                
                
                 <div className="form-group">
-                  <button className="btn btn-primary btn-block">Sign Up</button>
+                  <button className="btn btn-primary btn-block">가입하기</button>
                 </div>
               </div>
             )}
@@ -441,7 +441,7 @@ export default class Register extends Component {
                   }
                   role="alert"
                 >
-                  {this.state.message}
+                  {this.state.message}😊
                 </div>
               </div>
             )}
