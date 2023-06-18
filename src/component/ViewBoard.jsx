@@ -12,6 +12,7 @@ import FileUploadService from "../services/FileUploadService";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import { saveAs } from "file-saver";
+import { AiOutlineFolder } from "react-icons/ai";
 
 const ViewBoard = () => {
   const { id } = useParams();
@@ -256,33 +257,46 @@ const ViewBoard = () => {
           </div>
 
           {/* 첨부파일 start */}
-          <p>첨부파일</p>
-          {files && (
-            <div>
-              {files.map((file, i) => (
-                <div key={file.id}>
-                  {/* 이미지 미리보기 */}
-             {file.type.startsWith("image/") ? (
-                <img
-                  className="preview"
-                  src={`data:${file.type};base64,${file.data}`}
-                  alt={"image-" + i}
-                />
-                
-              ) : (
-                    <a
-                      href={URL.createObjectURL(
-                        new Blob([file.data], { type: file.type })
-                      )}
-                      download={file.name}
-                    >
-                      {file.name}
-                    </a>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="attachment">
+            <p>
+              <AiOutlineFolder /> 첨부파일
+            </p>
+            {files && (
+              <div>
+                {files.map((file, i) => (
+                  <div key={file.id}>
+                    {/* 이미지 미리보기 */}
+                    {file.type.startsWith("image/") ? (
+                     <>
+                     <img
+                        className="preview"
+                        src={`data:${file.type};base64,${file.data}`}
+                        alt={"image-" + i}
+                      />
+                      <a
+                        href={URL.createObjectURL(
+                          new Blob([file.data], { type: file.type })
+                        )}
+                        download={file.name}
+                      >
+                        {file.name}
+                      </a>
+                      </>
+                    ) : (
+                      <a
+                        href={URL.createObjectURL(
+                          new Blob([file.data], { type: file.type })
+                        )}
+                        download={file.name}
+                      >
+                        {file.name}
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
           {/* 첨부파일 end */}
 
           <div className="ViewComment-wrapper">
