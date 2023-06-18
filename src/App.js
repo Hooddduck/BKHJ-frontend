@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { useLocation } from "react-router-dom"; 
 
 import Header from "./components/Header/Header";
 import Login from "./components/login.component";
@@ -19,12 +20,20 @@ import EditBoard from './component/EditBoard';
 import ViewBoard from './component/ViewBoard';
 import Product from "./component/Product";
 
+const RenderHeader = () => { 
+  const location = useLocation();
+  if (location.pathname === "/login") {
+    return null; // `/login` 경로에서는 Header를 표시하지 않음
+  }
+  return <Header />;
+};
+
 
 class App extends Component {
   render() {
     return (
       <>
-        <Header/>
+          <RenderHeader />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
