@@ -11,6 +11,7 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import FileUploadService from "../services/FileUploadService";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
+import { saveAs } from "file-saver";
 
 const ViewBoard = () => {
   const { id } = useParams();
@@ -94,8 +95,7 @@ const ViewBoard = () => {
         },
         {
           label: "취소",
-          onClick: () => {
-          },
+          onClick: () => {},
         },
       ],
     });
@@ -133,7 +133,7 @@ const ViewBoard = () => {
     CommentService.updateComment(commentId, updatedComment)
       .then((res) => {
         fetchComments();
-        setEditedCommentId(null); 
+        setEditedCommentId(null);
         setEditedCommentContent("");
       })
       .catch((error) => {
@@ -143,11 +143,11 @@ const ViewBoard = () => {
 
   const deleteComment = (commentId) => {
     confirmAlert({
-      title: '댓글 삭제',
-      message: '댓글을 삭제하시겠습니까?',
+      title: "댓글 삭제",
+      message: "댓글을 삭제하시겠습니까?",
       buttons: [
         {
-          label: '확인',
+          label: "확인",
           onClick: () => {
             CommentService.deleteComment(commentId)
               .then((res) => {
@@ -156,16 +156,25 @@ const ViewBoard = () => {
               .catch((error) => {
                 console.log(error);
               });
-          }
+          },
         },
         {
-          label: '취소',
-          onClick: () => {}
-        }
-      ]
+          label: "취소",
+          onClick: () => {},
+        },
+      ],
     });
   };
-
+  const handleFileDownload = (file) => {
+    FileUploadService.downloadFile(file.id)
+      .then((res) => {
+        const blob = new Blob([res.data], { type: file.type });
+        saveAs(blob, file.name);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const formatDate = (date) => {
     const adjustedDate = new Date(date);
     adjustedDate.setHours(adjustedDate.getHours() + 9); // +9시간 조정
@@ -246,32 +255,35 @@ const ViewBoard = () => {
             )}
           </div>
 
-          {/* 이미지 미리보기 start */}
+          {/* 첨부파일 start */}
+          <p>첨부파일</p>
           {files && (
             <div>
               {files.map((file, i) => (
                 <div key={file.id}>
-                  <p> 첨부파일: {file.name}</p>
-
-                  {file.type.startsWith("image/") ? (
-                    <img
-                      className="preview"
-                      src={`data:${file.type};base64,${file.data}`}
-                      alt={"image-" + i}
-                    />
-                  ) : (
+                  {/* 이미지 미리보기 */}
+             {file.type.startsWith("image/") ? (
+                <img
+                  className="preview"
+                  src={`data:${file.type};base64,${file.data}`}
+                  alt={"image-" + i}
+                />
+                
+              ) : (
                     <a
-                      href={file.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={URL.createObjectURL(
+                        new Blob([file.data], { type: file.type })
+                      )}
+                      download={file.name}
                     >
+                      {file.name}
                     </a>
                   )}
                 </div>
               ))}
             </div>
           )}
-          {/* 이미지 미리보기 end */}
+          {/* 첨부파일 end */}
 
           <div className="ViewComment-wrapper">
             <div className="ViewComment-container">
