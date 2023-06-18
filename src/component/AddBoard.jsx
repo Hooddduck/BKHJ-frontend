@@ -233,7 +233,6 @@ const AddBoard = () => {
                               />
                             ) : (
                               <div className="file-preview">
-                                <div className="file-icon">파일 아이콘</div>
                                 <div className="file-name">{file.name}</div>
                               </div>
                             )}
