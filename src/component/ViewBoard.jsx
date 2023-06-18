@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import ReactModal from "react-modal";
 import boardService from "../services/board.service";
 import authService from "../services/auth.service";
 import CommentService from "../services/CommentService";
@@ -96,7 +95,6 @@ const ViewBoard = () => {
         {
           label: "취소",
           onClick: () => {
-            // 취소 버튼을 클릭했을 때 실행되는 로직
           },
         },
       ],
@@ -135,7 +133,7 @@ const ViewBoard = () => {
     CommentService.updateComment(commentId, updatedComment)
       .then((res) => {
         fetchComments();
-        setEditedCommentId(null); // 편집 상태 종료
+        setEditedCommentId(null); 
         setEditedCommentContent("");
       })
       .catch((error) => {
@@ -145,11 +143,11 @@ const ViewBoard = () => {
 
   const deleteComment = (commentId) => {
     confirmAlert({
-      title: "댓글 삭제",
-      message: "댓글을 삭제하시겠습니까?",
+      title: '댓글 삭제',
+      message: '댓글을 삭제하시겠습니까?',
       buttons: [
         {
-          label: "확인",
+          label: '확인',
           onClick: () => {
             CommentService.deleteComment(commentId)
               .then((res) => {
@@ -158,25 +156,16 @@ const ViewBoard = () => {
               .catch((error) => {
                 console.log(error);
               });
-          },
+          }
         },
         {
-          label: "취소",
-          onClick: () => {},
-        },
-      ],
+          label: '취소',
+          onClick: () => {}
+        }
+      ]
     });
   };
 
-  const handleEditedCommentChange = (e) => {
-    setEditedCommentContent(e.target.value);
-  };
-
-  const handleCancelButtonClick = () => {
-    setCommentContent("");
-    setIsButtonDisabled(true);
-    setCancelButtonClicked(true);
-  };
   const formatDate = (date) => {
     const adjustedDate = new Date(date);
     adjustedDate.setHours(adjustedDate.getHours() + 9); // +9시간 조정
@@ -388,7 +377,10 @@ const ViewBoard = () => {
                           >
                             수정
                           </button>
-                          <button className="btn btn-danger btn-comment">
+                          <button
+                            className="btn btn-danger btn-comment"
+                            onClick={() => deleteComment(comment.id)}
+                          >
                             삭제
                           </button>
                         </div>
