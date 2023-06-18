@@ -106,6 +106,7 @@ class Login extends Component {
                 value={this.state.username}
                 onChange={this.onChangeUsername}
                 validations={[required]}
+                placeholder="아이디"
               />
             </div>
 
@@ -118,6 +119,7 @@ class Login extends Component {
                 value={this.state.password}
                 onChange={this.onChangePassword}
                 validations={[required]}
+                placeholder="비밀번호"
               />
             </div>
 
@@ -129,7 +131,7 @@ class Login extends Component {
                 {this.state.loading && (
                   <span className="spinner-border spinner-border-sm"></span>
                 )}
-                <span>Login</span>
+                <span>로그인</span>
               </button>
             </div>
 
