@@ -22,8 +22,8 @@ import Product from "./component/Product";
 
 const RenderHeader = () => { 
   const location = useLocation();
-  if (location.pathname === "/login") {
-    return null; // `/login` 경로에서는 Header를 표시하지 않음
+  if (location.pathname === "/login" || location.pathname === "/register") {
+    return null; // `/login` 및 `/register` 경로에서는 Header를 표시하지 않음
   }
   return <Header />;
 };
