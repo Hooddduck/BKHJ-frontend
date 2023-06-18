@@ -265,7 +265,6 @@ const ViewBoard = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      파일 보기
                     </a>
                   )}
                 </div>
