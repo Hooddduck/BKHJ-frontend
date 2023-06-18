@@ -266,13 +266,17 @@ export default class Register extends Component {
 
   render() {
     return (
+      <>
+      <div className="register-wrapper">
       <div className="col-md-12">
         <div className="card card-container">
-          <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile-img"
-            className="profile-img-card"
-          />
+        <div className="logo-container">
+            <img
+              src="./logo2.png"
+              alt=""
+              width={150}
+            />
+          </div>
 
           <Form
             onSubmit={this.handleRegister}
@@ -447,6 +451,8 @@ export default class Register extends Component {
           </Form>
         </div>
       </div>
+      </div>
+      </>
     );
   }
 }
