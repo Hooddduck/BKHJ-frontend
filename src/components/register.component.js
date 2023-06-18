@@ -3,6 +3,7 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
+import { Link } from "react-router-dom";
 
 import AuthService from "../services/auth.service";
 
@@ -271,12 +272,14 @@ export default class Register extends Component {
       <div className="col-md-12">
         <div className="card card-container">
         <div className="logo-container">
-            <img
-              src="./logo2.png"
-              alt=""
-              width={150}
-            />
-          </div>
+              <Link to="/">
+                <img
+                  src="./logo2.png"
+                  alt=""
+                  width={150}
+                />
+              </Link>
+            </div>
 
           <Form
             onSubmit={this.handleRegister}

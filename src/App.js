@@ -22,11 +22,12 @@ import Product from "./component/Product";
 
 const RenderHeader = () => { 
   const location = useLocation();
-  if (location.pathname === "/login") {
+  if (location.pathname === "/login" || location.pathname === "/register") {
     return null; // `/login` 및 `/register` 경로에서는 Header를 표시하지 않음
   }
   return <Header />;
 };
+
 
 
 class App extends Component {
