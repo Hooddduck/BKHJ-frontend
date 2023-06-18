@@ -4,8 +4,12 @@ import boardService from "../services/board.service";
 import "./EditBoard.css";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
+import { AiOutlineFolder } from "react-icons/ai";
+import { saveAs } from "file-saver";
+import FileUploadService from "../services/FileUploadService";
 
 const EditBoard = () => {
+  const { id } = useParams();
   const [board, setBoard] = useState({
     id: "",
     title: "",
@@ -13,11 +17,10 @@ const EditBoard = () => {
     writer: "",
     regdate: "",
   });
+  const [msg, setMsg] = useState("");
+  const [files, setFiles] = useState([]);
 
   const navigate = useNavigate();
-  const { id } = useParams();
-
-  const [msg, setMsg] = useState("");
 
   useEffect(() => {
     boardService
@@ -28,8 +31,22 @@ const EditBoard = () => {
       .catch((error) => {
         console.log(error);
       });
+      fetchFiles();
   }, []);
-
+  const fetchFiles = () => {
+    boardService
+      .getBoardById(id)
+      .then((res) => {
+        const boardId = res.data.id;
+        return FileUploadService.getFilesByBoardId(boardId);
+      })
+      .then((res) => {
+        setFiles(res.data); // 파일 목록 업데이트
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const handleChange = (e) => {
     const value = e.target.value;
     setBoard({ ...board, [e.target.name]: value });
@@ -97,6 +114,47 @@ const EditBoard = () => {
                       value={board.writer}
                     />
                   </div>
+                  <div className="attachment">
+            <p>
+              <AiOutlineFolder /> 첨부파일
+            </p>
+            {files && (
+              <div>
+                {files.map((file, i) => (
+                  <div key={file.id}>
+                    {/* 이미지 미리보기 */}
+                    {file.type.startsWith("image/") ? (
+                     <>
+                     <img
+                        className="preview"
+                        src={`data:${file.type};base64,${file.data}`}
+                        alt={"image-" + i}
+                      />
+                      <a
+                        href={URL.createObjectURL(
+                          new Blob([file.data], { type: file.type })
+                        )}
+                        download={file.name}
+                      >
+                        {file.name}
+                      </a>
+                      </>
+                    ) : (
+                      <a
+                        href={URL.createObjectURL(
+                          new Blob([file.data], { type: file.type })
+                        )}
+                        download={file.name}
+                      >
+                        {file.name}
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+          {/* 첨부파일 end */}
                   <button className="btn btn-primary col-md-12">수정</button>
                 </form>
               </div>

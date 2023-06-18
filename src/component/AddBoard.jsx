@@ -219,7 +219,7 @@ const AddBoard = () => {
                       </label>
                     </div>
                   </div>
-                  {/* 첨부파일 */}
+                  {/* 첨부파일추가 start*/}
                   {selectedFiles && (
                     <div>
                       {selectedFiles.map((file, i) => {
@@ -247,6 +247,7 @@ const AddBoard = () => {
                       })}
                     </div>
                   )}
+                   {/* 첨부파일추가 end*/}
                   <button className="btn btn-primary col-md-12">등록</button>
                 </form>
                 <div className="card-footer mt-3">
