@@ -31,3 +31,15 @@
     background-color: #F9FBFC;
     z-index: 1;
   }
+
+  .profile-header {
+    text-align: center;
+  }
+  
+  .basic-info {
+    margin-left: 10px;
+  }
+  
+  .left-menu{
+    margin-left: 10px;
+  }
