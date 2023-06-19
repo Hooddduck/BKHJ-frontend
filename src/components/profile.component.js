@@ -51,7 +51,7 @@ export default class Profile extends Component {
 
     return (
       <section className="profile-wraper">
-        <div className="profile">
+        <div className="profile-container">
         {/* left side */}
         <div className="profile-left">
           {this.state.userReady ? (
@@ -96,40 +96,7 @@ export default class Profile extends Component {
         </div>
         {/* right side */}
         <div className="profile-right">
-          {this.state.userReady ? (
-            <div>
-              <header className="jumbotron">
-                <h3>
-                  <strong>{currentUser.username}</strong> Profile
-                </h3>
-              </header>
 
-              <p>
-                <strong>Token:</strong>{" "}
-                {currentUser.accessToken.substring(0, 20)} ...{" "}
-                {currentUser.accessToken.substr(
-                  currentUser.accessToken.length - 20
-                )}
-              </p>
-              <p>
-                <strong>Id:</strong> {currentUser.username}
-              </p>
-              <p>
-                <strong>Email:</strong> {currentUser.email}
-              </p>
-              <strong>Authorities:</strong>
-              <ul>
-                {currentUser.roles &&
-                  currentUser.roles.map((role, index) => (
-                    <li key={index}>{role}</li>
-                  ))}
-              </ul>
-              <button onClick={handleDeleteMember}>회원탈퇴</button>
-              <button onClick={this.updateProfile.bind(this)}>
-                회원정보 수정
-              </button>
-            </div>
-          ) : null}
         </div>
         </div>
       </section>
