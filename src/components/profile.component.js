@@ -74,31 +74,18 @@ export default class Profile extends Component {
                 </div>
                 <div className="basic-info">
                 <p>
-                  <strong>Token:</strong>{" "}
-                  {currentUser.accessToken.substring(0, 20)} ...{" "}
-                  {currentUser.accessToken.substr(
-                    currentUser.accessToken.length - 20
-                  )}
-                </p>
-                <p>
-                  <strong>Id:</strong> {currentUser.username}
+                  <strong>ID :</strong> {currentUser.username}
                 </p>
                 <p>
                   <strong>Email:</strong> {currentUser.email}
                 </p>
-                <strong>Authorities:</strong>
-                <ul>
-                  {currentUser.roles &&
-                    currentUser.roles.map((role, index) => (
-                      <li key={index}>{role}</li>
-                    ))}
-                </ul>
                 </div>
                 <div className="left-menu">
                   <p>내프로필</p>
                   <p>신용대출</p>
                   <p>금리진단</p>
                 </div>
+                
                 <button onClick={handleDeleteMember}>회원탈퇴</button>
                 <button onClick={this.updateProfile.bind(this)}>
                   회원정보 수정
