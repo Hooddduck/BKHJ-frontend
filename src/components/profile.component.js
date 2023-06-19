@@ -72,7 +72,7 @@ export default class Profile extends Component {
                     <strong>{currentUser.username}</strong> Profile
                   </h3>
                 </div>
-
+                <div className="basic-info">
                 <p>
                   <strong>Token:</strong>{" "}
                   {currentUser.accessToken.substring(0, 20)} ...{" "}
@@ -93,6 +93,12 @@ export default class Profile extends Component {
                       <li key={index}>{role}</li>
                     ))}
                 </ul>
+                </div>
+                <div className="left-menu">
+                  <p>내프로필</p>
+                  <p>신용대출</p>
+                  <p>금리진단</p>
+                </div>
                 <button onClick={handleDeleteMember}>회원탈퇴</button>
                 <button onClick={this.updateProfile.bind(this)}>
                   회원정보 수정
