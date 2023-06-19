@@ -52,52 +52,56 @@ export default class Profile extends Component {
     return (
       <section className="profile-wraper">
         <div className="profile-container">
-        {/* left side */}
-        <div className="profile-left">
-          {this.state.userReady ? (
-            <div>
-              <div className="logo-container">
-                <Link to="/">
-                  <img src="./logo2.png" alt="" width={150} />
-                </Link>
-              </div>
-              <div className="profile-header">
-                <h3>
-                  <strong>{currentUser.username}</strong> Profile
-                </h3>
-              </div>
+          {/* left side */}
+          <div className="profile-left">
+            {this.state.userReady ? (
+              <div>
+                <div className="logo-container">
+                  <Link to="/">
+                    <img src="./logo2.png" alt="" width={150} />
+                  </Link>
+                </div>
+                <div className="profile-header">
+                  <img
+                    src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+                    alt="profile-img"
+                    className="profile-img-card"
+                  />
 
-              <p>
-                <strong>Token:</strong>{" "}
-                {currentUser.accessToken.substring(0, 20)} ...{" "}
-                {currentUser.accessToken.substr(
-                  currentUser.accessToken.length - 20
-                )}
-              </p>
-              <p>
-                <strong>Id:</strong> {currentUser.username}
-              </p>
-              <p>
-                <strong>Email:</strong> {currentUser.email}
-              </p>
-              <strong>Authorities:</strong>
-              <ul>
-                {currentUser.roles &&
-                  currentUser.roles.map((role, index) => (
-                    <li key={index}>{role}</li>
-                  ))}
-              </ul>
-              <button onClick={handleDeleteMember}>회원탈퇴</button>
-              <button onClick={this.updateProfile.bind(this)}>
-                회원정보 수정
-              </button>
-            </div>
-          ) : null}
-        </div>
-        {/* right side */}
-        <div className="profile-right">
+                  <h3>
+                    <strong>{currentUser.username}</strong> Profile
+                  </h3>
+                </div>
 
-        </div>
+                <p>
+                  <strong>Token:</strong>{" "}
+                  {currentUser.accessToken.substring(0, 20)} ...{" "}
+                  {currentUser.accessToken.substr(
+                    currentUser.accessToken.length - 20
+                  )}
+                </p>
+                <p>
+                  <strong>Id:</strong> {currentUser.username}
+                </p>
+                <p>
+                  <strong>Email:</strong> {currentUser.email}
+                </p>
+                <strong>Authorities:</strong>
+                <ul>
+                  {currentUser.roles &&
+                    currentUser.roles.map((role, index) => (
+                      <li key={index}>{role}</li>
+                    ))}
+                </ul>
+                <button onClick={handleDeleteMember}>회원탈퇴</button>
+                <button onClick={this.updateProfile.bind(this)}>
+                  회원정보 수정
+                </button>
+              </div>
+            ) : null}
+          </div>
+          {/* right side */}
+          <div className="profile-right"></div>
         </div>
       </section>
     );
