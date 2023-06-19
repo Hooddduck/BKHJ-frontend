@@ -43,18 +43,21 @@ export default class Profile extends Component {
 
     const { currentUser } = this.state;
     const handleDeleteMember = () => {
-      AuthService.deleteMember()
-        .then((response) => {
-          // Member deletion successful
-          console.log(response.data); // '회원 탈퇴 성공'
-          AuthService.logout(); // Logout the user after deleting the membership information
-          // Additional actions or redirect to a different page if needed
-          this.setState({ redirect: "/" });
-        })
-        .catch((error) => {
-          // Handle errors, e.g., display an error message
-          console.log(error);
-        });
+      const confirmDelete = window.confirm("정말로 회원탈퇴 하시겠습니까?");
+
+      if (confirmDelete) {
+        AuthService.deleteMember()
+          .then((response) => {
+            console.log(response.data); // '회원 탈퇴 성공'
+            AuthService.logout();
+            alert("회원탈퇴가 완료되었습니다.");
+            this.setState({ redirect: "/" });
+          })
+          .catch((error) => {
+            console.log(error);
+            // 에러 처리, 예를 들어 에러 메시지 표시 등
+          });
+      }
     };
 
     return (
@@ -101,7 +104,6 @@ export default class Profile extends Component {
                   <span className="vertical-line"></span>
                   <a>고객센터</a>
                 </div>
-                
               </div>
             ) : null}
           </div>
@@ -109,20 +111,25 @@ export default class Profile extends Component {
           <div className="profile-right">
             {/* <MyProfile /> */}
             <section className="MyProfile-wrapper">
-        <div className="MyProfile-container">
-            <div className="myprofile-edit">내프로필</div>
-            <div className="profile-info">이름</div>
-            <div className="profile-info">아이디</div>
-            <div className="profile-info">이메일</div>
-            <div className="profile-info">휴대폰번호</div>
-        </div>
-        <div className="member-button">
-        <button onClick={handleDeleteMember} style={{ marginRight: '10px' }}>회원탈퇴</button>
-                <button onClick={this.updateProfile.bind(this)}>
+              <div className="MyProfile-container">
+                <div className="myprofile-edit">내프로필</div>
+                <div className="profile-info">이름</div>
+                <div className="profile-info">아이디</div>
+                <div className="profile-info">이메일</div>
+                <div className="profile-info">휴대폰번호</div>
+              </div>
+              <div className="member-button">
+                <button onClick={handleDeleteMember} className="custom-button">
+                  회원탈퇴
+                </button>
+                <button
+                  onClick={this.updateProfile.bind(this)}
+                  className="custom-button"
+                >
                   회원정보 수정
                 </button>
-                </div>
-      </section>
+              </div>
+            </section>
           </div>
         </div>
       </section>
