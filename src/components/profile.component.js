@@ -26,6 +26,15 @@ export default class Profile extends Component {
   updateProfile() {
     this.setState({ redirect: "/update-profile" });
   }
+  handleLogout = () => {
+    const confirmLogout = window.confirm("로그아웃 하시겠습니까?");
+
+    if (confirmLogout) {
+      AuthService.logout();
+      alert("로그아웃 되었습니다.");
+      this.setState({ redirect: "/" });
+    }
+  };
 
   render() {
     if (this.state.redirect) {
@@ -33,7 +42,6 @@ export default class Profile extends Component {
     }
 
     const { currentUser } = this.state;
-
     const handleDeleteMember = () => {
       AuthService.deleteMember()
         .then((response) => {
@@ -62,39 +70,60 @@ export default class Profile extends Component {
                   </Link>
                 </div>
                 <div className="profile-header">
-                  <img
-                    src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                    alt="profile-img"
-                    className="profile-img-card"
-                  />
-
+                  <div className="profile-img-container">
+                    <img
+                      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+                      alt="profile-img"
+                      className="profile-img-card"
+                      style={{ margin: "0 auto", width: "30%", height: "30%" }}
+                    />
+                  </div>
                   <h3>
                     <strong>{currentUser.username}</strong> Profile
                   </h3>
                 </div>
                 <div className="basic-info">
-                <p>
-                  <strong>ID :</strong> {currentUser.username}
-                </p>
-                <p>
-                  <strong>Email:</strong> {currentUser.email}
-                </p>
+                  <p>
+                    <strong>ID :</strong> {currentUser.username}
+                  </p>
+                  <p>
+                    <strong>Email:</strong> {currentUser.email}
+                  </p>
                 </div>
                 <div className="left-menu">
                   <p>내프로필</p>
                   <p>신용대출</p>
                   <p>금리진단</p>
                 </div>
+
+                <div className="left-menu2">
+                  <a onClick={this.handleLogout}>로그아웃</a>
+                  <span className="vertical-line"></span>
+                  <a>고객센터</a>
+                </div>
                 
-                <button onClick={handleDeleteMember}>회원탈퇴</button>
-                <button onClick={this.updateProfile.bind(this)}>
-                  회원정보 수정
-                </button>
               </div>
             ) : null}
           </div>
           {/* right side */}
-          <div className="profile-right"></div>
+          <div className="profile-right">
+            {/* <MyProfile /> */}
+            <section className="MyProfile-wrapper">
+        <div className="MyProfile-container">
+            <div className="myprofile-edit">내프로필</div>
+            <div className="profile-info">이름</div>
+            <div className="profile-info">아이디</div>
+            <div className="profile-info">이메일</div>
+            <div className="profile-info">휴대폰번호</div>
+        </div>
+        <div className="member-button">
+        <button onClick={handleDeleteMember} style={{ marginRight: '10px' }}>회원탈퇴</button>
+                <button onClick={this.updateProfile.bind(this)}>
+                  회원정보 수정
+                </button>
+                </div>
+      </section>
+          </div>
         </div>
       </section>
     );

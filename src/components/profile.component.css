@@ -40,7 +40,68 @@
     margin-left: 10px;
   }
   
-  .left-menu{
+  .left-menu {
     margin-left: 10px;
     margin-top: 50px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  .left-menu2 {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  .vertical-line {
+    width: 1px;
+    height: 12px;
+    background-color: #cccccc;
+    margin: 0 10px;
+  }
+  .left-menu p:first-child {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .left-menu p:hover {
+    cursor: pointer;
+  }
+  .MyProfile-wrapper {
+    box-sizing: border-box;
+    margin-left: 10%;
+    margin-right: 20%;
+    margin-top: 10%;
+  }
+  
+  .MyProfile-container {
+    border: 2px solid #5F7ED9;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .myprofile-edit {
+    background: linear-gradient(to right, #5F7ED9, #7186C7, #3c5391);
+    color: white;
+    margin-top: 0;
+    padding: 0.75em 1.5em;
+  }
+  
+  .profile-info {
+    border-bottom: 1px solid #EAEAEA;
+    padding-bottom: 5px;
+    color: #777777;
+    padding: 0.75em 1.5em;
+  }
+
+  .member-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15%;
   }
