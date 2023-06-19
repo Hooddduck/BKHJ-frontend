@@ -22,7 +22,7 @@ import Product from "./component/Product";
 
 const RenderHeader = () => { 
   const location = useLocation();
-  if (location.pathname === "/login" || location.pathname === "/register") {
+  if (location.pathname === "/login" || location.pathname === "/register"|| location.pathname === "/profile") {
     return null; // `/login` 및 `/register` 경로에서는 Header를 표시하지 않음
   }
   return <Header />;
