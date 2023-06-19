@@ -4,14 +4,13 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import { Link } from "react-router-dom";
-
 import AuthService from "../services/auth.service";
 
 const required = value => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
-       필수 정보입니다.
+        필수 정보입니다.
       </div>
     );
   }
@@ -62,7 +61,7 @@ const vnickname = vnickname => {
   if(vnickname.length < 2 || vnickname.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The usernickname must be between 10 and 20 characters.
+        닉네임을 입력해주세요.
       </div>
     );
   }
@@ -71,7 +70,7 @@ const vzoneCode = vzoneCode => {
   if(vzoneCode.length < 2 || vzoneCode.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The zonecode must be between 10 and 20 characters.
+        지번을 입력해주세요.
       </div>
     );
   }
@@ -80,7 +79,7 @@ const vaddress = vaddress => {
   if(vaddress.length < 2 || vaddress.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The address must be between 10 and 20 characters.
+        주소를 입력해주세요.
       </div>
     );
   }
@@ -89,7 +88,7 @@ const vdetailaddress = vdetailaddress => {
   if(vdetailaddress.length < 2 || vdetailaddress.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The detailAddress must be between 10 and 20 characters.
+        상세주소를 입력해주세요.
       </div>
     );
   }
@@ -98,7 +97,7 @@ const vlegalDong = vlegalDong => {
   if(vlegalDong.length < 2 || vlegalDong.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The legalDong must be between 10 and 20 characters.
+        법정동을 입력해주세요.
       </div>
     );
   }
@@ -107,7 +106,7 @@ const vphonenumber  = vphonenumber => {
   if(vphonenumber.length < 5 || vphonenumber.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        "000-0000-0000" 입력해주세요. 
+        휴대폰번호 : "000-0000-0000" 입력해주세요.  
       </div>
     );
   }
@@ -116,7 +115,25 @@ const vresidentnumber = vresidentnumber => {
   if(vresidentnumber.length < 12 || vresidentnumber.length > 14) {
     return (
       <div className="alert alert-danger" role="alert">
-        "-" 없이 13자리 입력해주세요.
+       주민번호 : "-" 없이 13자리 입력해주세요.
+      </div>
+    );
+  }
+}
+const vage = vage => {
+  if(vnickname.length < 1 || vnickname.length > 20) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        금융정보에 필요한 출생년도를 기입해주세요.
+      </div>
+    );
+  }
+}
+const vgender = vgender => {
+  if(vnickname.length < 1 || vnickname.length > 10) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        금융정보에 필요한 성별을 기입해주세요.
       </div>
     );
   }
@@ -138,6 +155,8 @@ export default class Register extends Component {
     this.onChangeLegalDong = this.onChangeLegalDong.bind(this);
     this.onChangePhonenumber = this.onChangePhonenumber.bind(this);
     this.onChangeResidentnumber = this.onChangeResidentnumber.bind(this);
+    this.onChangeAge = this.onChangeAge.bind(this);
+    this.onChangeGender = this.onChangeGender.bind(this);
 
     
     
@@ -154,6 +173,8 @@ export default class Register extends Component {
       legalDong: "",
       phonenumber: "",
       residentnumber: "",
+      age: "",
+      gender: "",
       successful: false,
       message: ""
     };
@@ -216,6 +237,16 @@ export default class Register extends Component {
       residentnumber: e.target.value
     });
   }
+  onChangeAge(e) {
+    this.setState({
+      age: e.target.value
+    });
+  }
+  onChangeGender(e) {
+    this.setState({
+      gender: e.target.value
+    });
+  }
        
 
   handleRegister(e) {
@@ -240,7 +271,9 @@ export default class Register extends Component {
         this.state.detailaddress,
         this.state.legalDong,
         this.state.phonenumber,
-        this.state.residentnumber                
+        this.state.residentnumber,
+        this.state.age, 
+        this.state.gender                 
       ).then(
         response => {
           this.setState({
@@ -280,7 +313,6 @@ export default class Register extends Component {
                 />
               </Link>
             </div>
-
           <Form
             onSubmit={this.handleRegister}
             ref={c => {
@@ -422,11 +454,48 @@ export default class Register extends Component {
                   validations={[required, vresidentnumber]}
                   />
                 </div>
+                <div className="form-group">
+                 <label htmlFor="age">출생년도</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="age"
+                  value={this.state.age}
+                  onChange={this.onChangeAge}
+                  validations={[required, vage]}
+                  />
+                  <small className="form-text text-muted">ex) 2000년생이면 숫자 2000만 기입해주세요.</small>
+                </div>
+                <div className="form-group">
+                <label htmlFor="gender">성별</label>
+                <div>
+                  <label>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="1"
+                      checked={this.state.gender === "1"}
+                      onChange={this.onChangeGender}
+                    />
+                    남성
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="2"
+                      checked={this.state.gender === "2"}
+                      onChange={this.onChangeGender}
+                    />
+                    여성
+                  </label>
+                </div>
+              </div>
 
                
                
                 <div className="form-group">
-                  <button className="btn btn-primary btn-block">가입하기</button>
+                  <button className="btn btn-primary btn-block">Sign Up</button>
                 </div>
               </div>
             )}
@@ -441,7 +510,7 @@ export default class Register extends Component {
                   }
                   role="alert"
                 >
-                  {this.state.message}😊
+                  {this.state.message}
                 </div>
               </div>
             )}
