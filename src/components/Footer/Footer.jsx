@@ -9,20 +9,17 @@ const Footer = () => {
         <div className="flexColStart f-left">
           <img src="./logo2.png" alt="" width={120} />
           <span className="secondaryText">
-            Our vision is to make all people <br />
-            the best place to live for them.
+            Our vision: Optimal living environment for everyone, <br />
+            with loan product comparisons.
           </span>
         </div>
 
         {/* right side */}
         <div className="flexColStart f-right">
           <span className="primaryText">Information</span>
-          <span className="secondaryText">145 New York, FL 5467, USA</span>
+          <span className="secondaryText">서울 강남구 테헤란로10길 9</span>
 
           <div className="flexCenter f-menu">
-            <span>Property</span>
-            <span>Services</span>
-            <span>Product</span>
             <span>About Us</span>
           </div>
         </div>
