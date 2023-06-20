@@ -29,7 +29,7 @@ const Credit = () => {
           </div>
           {/* 버튼창 start*/}
           <div className="bkhj-top-menu">
-          <div className="custom-btn">신용대출</div>
+            <div className="custom-btn">신용대출</div>
             <div>금리진단</div>
             <div>부동산관리</div>
             <div>담보대출</div>
@@ -38,7 +38,11 @@ const Credit = () => {
           {/* 시작하기창 start*/}
           <div className="credit-start">
             <div className="credit-top">
-              <div><strong><h3>나에게 맞는 대출 상품을 찾아보세요👍</h3></strong></div>
+              <div>
+                <h3 className="bold-text">
+                  나에게 맞는 대출 상품을 찾아보세요👍
+                </h3>
+              </div>
             </div>
             <div className="credit-bottom">
               <div className="credit-button">신용대출 비교하기</div>

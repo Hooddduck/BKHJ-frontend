@@ -1,5 +1,5 @@
 .credit-section {
-  background-color: #F8F8FA;
+  background-color: #f8f8fa;
   padding: 2% 15%;
   height: calc(100vh - 20px);
   overflow-y: auto;
@@ -7,7 +7,7 @@
 
 .credit-wrapper {
   border: none;
-  background-color: #F8F8FA;
+  background-color: #f8f8fa;
   height: 90%;
   overflow: auto;
 }
@@ -35,7 +35,7 @@
   border-radius: 30px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: #6D7582;
+  background-color: #6d7582;
   color: white;
   font-weight: bold;
 }
@@ -52,11 +52,11 @@
   cursor: pointer;
   box-sizing: border-box;
   background-color: #ffffff;
-  color: #6D7582;
+  color: #6d7582;
   font-weight: bold;
 }
 
-.credit-start{
+.credit-start {
   background-color: white;
   height: 60%;
   border-radius: 15px;
@@ -72,7 +72,7 @@
   border-radius: 15px;
 }
 
-.credit-button{
+.credit-button {
   font-size: 1.5rem;
   margin-right: 1rem;
   border: none;
@@ -84,7 +84,10 @@
   border-radius: 30px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: #5F7ED9;
+  background-color: #5f7ed9;
   color: #ffffff;
+  font-weight: bold;
+}
+.bold-text {
   font-weight: bold;
 }
