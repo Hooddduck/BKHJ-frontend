@@ -13,8 +13,10 @@ const Header = () => {
   };
 
   const currentUser = AuthService.getCurrentUser();
-  const showModeratorBoard = currentUser && currentUser.roles.includes("ROLE_MODERATOR");
-  const showAdminBoard = currentUser && currentUser.roles.includes("ROLE_ADMIN");
+  const showModeratorBoard =
+    currentUser && currentUser.roles.includes("ROLE_MODERATOR");
+  const showAdminBoard =
+    currentUser && currentUser.roles.includes("ROLE_ADMIN");
 
   const handleLinkClick = (path) => {
     navigate(path);
@@ -28,14 +30,14 @@ const Header = () => {
         </a>
 
         <div className="flexCenter h-menu">
-        <a
+          <a
             href="/customization"
             onClick={() => handleLinkClick("/customization")}
             className="menu-link"
           >
             맞춤상품
           </a>
-        <a
+          <a
             href="/product"
             onClick={() => handleLinkClick("/product")}
             className="menu-link"
@@ -94,14 +96,15 @@ const Header = () => {
                 onClick={() => handleLinkClick("/login")}
                 className="menu-link"
               >
-                Login
+                로그인
               </a>
               <a
                 href="/register"
                 className="button"
                 onClick={() => handleLinkClick("/register")}
+                style={{ color: "white" }}
               >
-                Sign Up
+                회원가입
               </a>
             </>
           )}
