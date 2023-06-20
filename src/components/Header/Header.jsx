@@ -49,6 +49,13 @@ const Header = () => {
           >
             게시판
           </a>
+          <a
+            href="/listboard"
+            onClick={() => handleLinkClick("/listboard")}
+            className="menu-link"
+          >
+            고객후기
+          </a>
           {currentUser ? (
             <>
               <a

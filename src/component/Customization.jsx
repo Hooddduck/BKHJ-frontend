@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AuthService from '../services/auth.service';
 import axios from "axios";
-import RecommendationException from "./RecommendationException"
 
 const Customization = () => {
   const [derivedValues, setDerivedValues] = useState(null);
@@ -33,9 +32,7 @@ const Customization = () => {
           <p>Predictions Result: {derivedValues.result}</p>
         </div>
       ) : (
-        <>
-        <RecommendationException/>
-        </>
+        <h1>잠시만 기다려주세요...</h1>
       )}
     </div>
   );
