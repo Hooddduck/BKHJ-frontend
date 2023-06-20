@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 import { GrPowerReset } from "react-icons/gr";
 import { IoFilterSharp } from "react-icons/io5";
 import Input from "@mui/material/Input";
 import Button from "@mui/material/Button";
 import { Modal, Spinner } from "react-bootstrap";
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import "./Product.css"; 
 import ProductDataService from "../services/ProductService";
 import DetailViewProduct from "../component/DetailviewProduct";
@@ -95,29 +101,6 @@ const LoanProduct = () => {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
-  };
-
-  const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
-  const handleNextPage = () => {
-    const maxPage = getTotalPages();
-    if (currentPage < maxPage) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const getTotalPages = () => {
-    return Math.ceil(filteredLoanProducts.length / itemsPerPage);
-  };  
-
-  const getCurrentItems = () => {
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    return filterLoanProducts.slice(startIndex, endIndex);
   };
 
   const renderLoanProducts = () => {
@@ -297,6 +280,11 @@ const LoanProduct = () => {
                 10000 이상
               </label>
               </div>
+              {/* <div className="use">
+              <h3>용도</h3>
+              {/* Add radio box filters for usge */}
+              {/* Add more radio box filters for other fields */}
+              {/* </div> */} 
               <div className="Loan period">
               <h3>총대출기간</h3>
               <label>
@@ -458,56 +446,18 @@ const LoanProduct = () => {
           <div className="renderLoanProduct-container">
             {renderLoanProducts()}
           </div>
-          {/* 페이지 */}
-          <div className="d-flex justify-content-center mt-3">
-  <nav>
-    <ul className="pagination">
-      <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
-        <button
-          className="page-link"
-          onClick={handlePrevPage}
-          disabled={currentPage === 1}
-        >
-          이전
-        </button>
-      </li>
-      {Array.from({ length: totalPages }, (_, i) => {
-        const page = i + 1;
-        const startPage = (Math.ceil(currentPage / itemsPerPage) - 1) * itemsPerPage + 1;
-        const endPage = startPage + itemsPerPage - 1;
-        if (page >= startPage && page <= endPage) {
-          return (
-            <li
-              className={`page-item ${page === currentPage ? "active" : ""}`}
-              key={i}
-            >
-              <button
-                className="page-link"
-                onClick={() => handlePageChange(page)}
-              >
-                {page}
-              </button>
-            </li>
-          );
-        }
-        return null;
-      })}
-      <li
-        className={`page-item ${
-          currentPage === getTotalPages() ? "disabled" : ""
-        }`}
-      >
-        <button
-          className="page-link"
-          onClick={handleNextPage}
-          disabled={currentPage === getTotalPages()}
-        >
-          다음
-        </button>
-      </li>
-    </ul>
-  </nav>
-</div>
+          <div className="pagination-wrapper">
+        {/* Render pagination */}
+        {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+          <button
+            key={page}
+            onClick={() => handlePageChange(page)}
+            style={{ fontWeight: currentPage === page ? "bold" : "normal" }}
+          >
+            {page}
+          </button>
+        ))}
+        </div>
           </div>
         </div>
         {/* 자세히보기  */}

@@ -297,36 +297,7 @@ export default class Register extends Component {
       );
     }
   }
-//카카오주소openapi
-componentDidMount() {
-  this.initializeDaumPostcode();
-}
-initializeDaumPostcode = () => {
-  const script = document.createElement("script");
-  script.src =
-    "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
-  script.async = true;
-  script.onload = this.handleScriptLoad;
-  document.body.appendChild(script);
-};
-handleScriptLoad = () => {
-  // Create a new instance of the Daum Postcode API
-  const { daum } = window;
-  const postcode = new daum.Postcode({
-    oncomplete: (data) => {
-      this.setState({
-        zoneCode: data.zonecode,
-        address: data.address,
-        detailaddress: data.buildingName || "",
-        legalDong: data.jibunAddress,
-      });
-    },
-  });
-  // Bind the postcode search function to the button click event
-  document.getElementById("searchPostcode").onclick = () => {
-    postcode.open();
-  };
-};
+
   render() {
     return (
       <>
@@ -411,59 +382,54 @@ handleScriptLoad = () => {
                   validations={[required, vnickname]}
                   />
                 </div>
+
                 <div className="form-group">
-            <label htmlFor="zoneCode">우편번호</label>
-            <div className="d-flex align-items-center">
-              <Input
-                type="text"
-                className="form-control"
-                name="zoneCode"
-                value={this.state.zoneCode}
-                readOnly
-              />
-              <button
-                className="btn btn-secondary ml-2"
-                id="searchPostcode"
-                type="button"
-              >
-                우편번호 찾기
-              </button>
-            </div>
-          </div>
+                 <label htmlFor="zoneCode">지번</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="zoneCode"
+                  value={this.state.zoneCode}
+                  onChange={this.onChangeZoneCode}
+                  validations={[required, vzoneCode]}
+                  />
+                </div>
 
-          <div className="form-group">
-            <label htmlFor="address">주소</label>
-            <Input
-              type="text"
-              className="form-control"
-              name="address"
-              value={this.state.address}
-              readOnly
-            />
-          </div>
+                <div className="form-group">
+                 <label htmlFor="address">주소</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="address"
+                  value={this.state.address}
+                  onChange={this.onChangeAddress}
+                  validations={[required, vaddress]}
+                  />
+                </div>
 
-          <div className="form-group">
-            <label htmlFor="detailaddress">상세주소</label>
-            <Input
-              type="text"
-              className="form-control"
-              name="detailaddress"
-              value={this.state.detailaddress}
-              onChange={this.onChangeDetailaddress}
-              validations={[required, vdetailaddress]}
-            />
-          </div>
+                <div className="form-group">
+                 <label htmlFor="detailaddress">상세주소</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="detailaddress"
+                  value={this.state.detailaddress}
+                  onChange={this.onChangeDetailaddress}
+                  validations={[required, vdetailaddress]}
+                  />
+                </div>
 
-          <div className="form-group">
-            <label htmlFor="legalDong">참고항목</label>
-            <Input
-              type="text"
-              className="form-control"
-              name="legalDong"
-              value={this.state.legalDong}
-              readOnly
-            />
-          </div>
+                <div className="form-group">
+                 <label htmlFor="legalDong">법정동</label>
+                 <Input
+                  type="text"
+                  className="form-control"
+                  name="legalDong"
+                  value={this.state.legalDong}
+                  onChange={this.onChangeLegalDong}
+                  validations={[required, vlegalDong]}
+                  />
+                </div>
 
                 <div className="form-group">
                  <label htmlFor="phonenumber">핸드폰번호</label>

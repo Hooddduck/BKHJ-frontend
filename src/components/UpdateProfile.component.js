@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthService from "../services/auth.service";
 
@@ -83,42 +83,11 @@ export default function UpdateProfile() {
     alert("회원정보 수정 되었습니다.");
     navigate("/");
   };
-//카카오주소openapi
-useEffect(() => {
-  initializeDaumPostcode();
-}, []);
 
-const initializeDaumPostcode = () => {
-  const script = document.createElement("script");
-  script.src =
-    "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
-  script.async = true;
-  script.onload = handleScriptLoad;
-  document.body.appendChild(script);
-};
-
-const handleScriptLoad = () => {
-  const { daum } = window;
-  const postcode = new daum.Postcode({
-    oncomplete: (data) => {
-      setState((prevState) => ({
-        ...prevState,
-        zoneCode: data.zonecode,
-        address: data.address,
-        detailaddress: data.buildingName || "",
-        legalDong: data.jibunAddress
-      }));
-    }
-  });
-
-  document.getElementById("searchPostcode").onclick = () => {
-    postcode.open();
-  };
-};
   return (
     <div className="container">
       <header className="jumbotron">
-        <h3>회원정보수정</h3>
+        <h3>Update Member Information</h3>
       </header>
       <form onSubmit={handleUpdateProfile}>
         <div className="form-group">
@@ -177,32 +146,25 @@ const handleScriptLoad = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="zoneCode">우편번호</label>
-          <div className="d-flex align-items-center">
-            <input
-              type="text"
-              className="form-control"
-              name="zoneCode"
-              value={state.zoneCode}
-              readOnly
-            />
-            <button
-              className="btn btn-secondary ml-2"
-              id="searchPostcode"
-              type="button"
-            >
-              우편번호 찾기
-            </button>
-          </div>
+          <label htmlFor="zoneCode">지번</label>
+          <input
+            type="text"
+            className="form-control"
+            id="zoneCode"
+            name="zoneCode"
+            value={state.zoneCode}
+            onChange={handleInputChange}
+          />
         </div>
         <div className="form-group">
           <label htmlFor="address">주소</label>
           <input
             type="text"
             className="form-control"
+            id="address"
             name="address"
             value={state.address}
-            readOnly
+            onChange={handleInputChange}
           />
         </div>
         <div className="form-group">
@@ -210,21 +172,23 @@ const handleScriptLoad = () => {
           <input
             type="text"
             className="form-control"
+            id="detailaddress"
             name="detailaddress"
             value={state.detailaddress}
             onChange={handleInputChange}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="legalDong">참고항목</label>
+          <label htmlFor="legalDong">법정동</label>
           <input
             type="text"
             className="form-control"
+            id="legalDong"
             name="legalDong"
             value={state.legalDong}
-            readOnly
+            onChange={handleInputChange}
           />
-        </div>
+        </div> 
         <div className="form-group">
           <label htmlFor="phonenumber">핸드폰번호</label>
           <input
