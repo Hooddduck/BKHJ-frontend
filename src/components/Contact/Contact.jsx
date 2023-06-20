@@ -9,11 +9,7 @@ const Contact = () => {
         <div className="flexColStart c-left">
           <span className="orangeText">한눈에 서비스</span>
           <span className="primaryText">쉬운 대출비교</span>
-          <span className="secondaryText">
-            We are always ready to help by providing the best loan services for
-            you. We believe that the right financing option can make your life
-            better by helping you achieve your goals.
-          </span>
+          <span className="secondaryText">맞춤형 대출비교 시작하기</span>
 
           <div className="flexColStart contactModes">
             {/* first row */}
@@ -37,9 +33,9 @@ const Contact = () => {
                   <div className="flexColStart detail">
                     <span className="primaryText">금리진단</span>
                     <span className="secondaryText">
-                      내 담보대출 금리를
+                      적합한 금리를
                       <br />
-                      진단해 보세요
+                      진단해보세요
                     </span>
                   </div>
                 </div>
@@ -54,9 +50,9 @@ const Contact = () => {
                   <div className="flexColStart detail">
                     <span className="primaryText">신용대출</span>
                     <span className="secondaryText">
-                      다양한 신용대출
+                      적합한 신용대출
                       <br />
-                      조건을 확인하세요
+                      상품을 확인하세요
                     </span>
                   </div>
                 </div>

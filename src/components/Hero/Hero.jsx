@@ -21,8 +21,8 @@ const Hero = () => {
             {/* original 
             <span className="secondaryText">Find a variety of properties that suit you very easilty</span>
             <span className="secondaryText">Forget all difficulties in finding a residence for you</span> */}
-            <span>Find a variety of loan products that suit you very easily</span>
-            <span>Forget all the difficulties in choosing the right loan for you</span>
+            <span>모든 어려움을 잊고, 편안하고 신속하게</span>
+            <span>보다 쉽게 대출상품을 비교해 드리겠습니다</span>
           </div>
           <div className="flexCenter search-bar">
             <HiLocationMarker color="var(--blue)" size={25} />
@@ -46,7 +46,7 @@ const Hero = () => {
             </div>
             <div className="flexColCenter stat">
               <span>
-                <CountUp end={3400}/>
+                <CountUp end={3400} />
                 <span>억</span>
                 <span>+</span>
               </span>
