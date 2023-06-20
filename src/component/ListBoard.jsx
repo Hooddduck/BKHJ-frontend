@@ -126,6 +126,7 @@ const ListBoard = () => {
 
   return (
     <>
+    <div className="ListBoard-wrapper">
       <div className="container mt-3">
         <div className="row">
           <div className="col-md-12">
@@ -215,6 +216,7 @@ const ListBoard = () => {
           </div>
         </div>
       </div>
+      
 
       <div className="d-flex justify-content-center mt-3">
         <nav>
@@ -257,7 +259,9 @@ const ListBoard = () => {
           </ul>
         </nav>
       </div>
+      </div>
     </>
+
   );
 };
 

@@ -157,6 +157,7 @@ const LoanProduct = () => {
 
   return (
     <>
+    <div className="Product">
       <div className="LoanProduct-wrapper">
         <div className="LoanProduct-container">
           <h1>대출상품 비교해줘.</h1>
@@ -528,6 +529,7 @@ const LoanProduct = () => {
           <button onClick={handleCloseModal}>Close</button>
         </Modal.Footer>
       </Modal>
+      </div>
       </div>
     </>
   );

@@ -61,7 +61,7 @@ const Header = () => {
                 {currentUser.username}
               </a>
               <button className="button" onClick={handleLogout}>
-                LogOut
+                로그아웃
               </button>
               {showModeratorBoard && (
                 <a
