@@ -19,6 +19,7 @@ import AddBoard from './component/AddBoard';
 import EditBoard from './component/EditBoard';
 import ViewBoard from './component/ViewBoard';
 import Product from "./component/Product";
+import Customization from "./component/Customization";
 
 const RenderHeader = () => { 
   const location = useLocation();
@@ -50,7 +51,7 @@ class App extends Component {
             <Route path="/mod" element={<BoardModerator />} />
             <Route path="/admin" element={<BoardAdmin />} />
             <Route path="/product" element={<Product />} />
-            
+            <Route path="/customization" element={<Customization />} />
           </Routes>
         {/* <AuthVerify logOut={this.logOut}/> */}
       </>

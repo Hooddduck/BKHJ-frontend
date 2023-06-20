@@ -29,6 +29,13 @@ const Header = () => {
 
         <div className="flexCenter h-menu">
         <a
+            href="/customization"
+            onClick={() => handleLinkClick("/customization")}
+            className="menu-link"
+          >
+            맞춤상품
+          </a>
+        <a
             href="/product"
             onClick={() => handleLinkClick("/product")}
             className="menu-link"
