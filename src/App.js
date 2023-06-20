@@ -19,6 +19,12 @@ import AddBoard from './component/AddBoard';
 import EditBoard from './component/EditBoard';
 import ViewBoard from './component/ViewBoard';
 import Product from "./component/Product";
+
+
+
+// bkhj
+import Credit from "./component/bkhj/Credit";
+
 import Cutomization from "./component/Customization";
 import Irate from "./component/Irate";
 const RenderHeader = () => { 
@@ -53,7 +59,7 @@ class App extends Component {
             <Route path="/product" element={<Product />} />
             <Route path="/customization" element={<Cutomization />} />
             <Route path="/Irate" element={<Irate/>} />
-
+            <Route path="/credit" element={<Credit/>} />
           </Routes>
         {/* <AuthVerify logOut={this.logOut}/> */}
       </>

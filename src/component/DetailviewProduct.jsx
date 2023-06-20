@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
+import "./DetailviewProduct.css";
 
 const DetailViewProduct = () => {
   const { seq } = useParams();
   const [loanProduct, setLoanProduct] = useState([]);
   const apiUrl = seq ? `/api/${seq}` : "/api";
-
 
   useEffect(() => {
     fetchLoanProduct();
@@ -31,8 +30,8 @@ const DetailViewProduct = () => {
   };
 
   return (
-    <div>
-      <h1>Loan Product Details</h1>
+    <div className="detail-view">
+      <h1>자세히 보기</h1>
       {loanProduct ? (
         <div>
           <p>상품명: {loanProduct.finPrdNm}</p>
@@ -49,7 +48,9 @@ const DetailViewProduct = () => {
           <p>문의처: {loanProduct.cnpl}</p>
           <p>신청방법: {loanProduct.jnMthd}</p>
           <p>연체 이자율: {loanProduct.ovItrYr}</p>
-          <p>관련사이트: {loanProduct.rltSite}</p>
+          <div className="related-site">
+  <p>관련사이트: <a href={loanProduct.rltSite}>{loanProduct.rltSite}</a></p>
+</div>
           <p>운영기한: {loanProduct.prdOprPrid}</p>
         </div>
       ) : (
