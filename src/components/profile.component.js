@@ -95,9 +95,9 @@ export default class Profile extends Component {
                 </div>
                 <div className="left-menu">
                   <p>내프로필</p>
-                  <Link to = "/customization">신용 대출</Link>
+                  <Link to = "/credit">신용 대출</Link>
                   <p></p>
-                  <Link to = "/Irate">금리 진단</Link>
+                  <Link to = "/diagnosis">금리 진단</Link>
                 </div>
 
                 <div className="left-menu2">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AuthService from "../../services/auth.service";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./Credit.css";
 
 const Credit = () => {
@@ -29,8 +30,8 @@ const Credit = () => {
           </div>
           {/* 버튼창 start*/}
           <div className="bkhj-top-menu">
-            <div className="custom-btn">신용대출</div>
-            <div>금리진단</div>
+            <div> <Link to="/credit" className="button-credit">신용대출</Link></div>
+            <div className="custom-btn"><Link to="/diagnosis" className="button-link-diagnosis">금리진단</Link></div>
             <div>부동산관리</div>
             <div>담보대출</div>
           </div>

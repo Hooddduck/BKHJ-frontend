@@ -20,10 +20,8 @@ import EditBoard from './component/EditBoard';
 import ViewBoard from './component/ViewBoard';
 import Product from "./component/Product";
 
-
-
-// bkhj
 import Credit from "./component/bkhj/Credit";
+import Diagnosis from "./component/bkhj/Diagnosis";
 
 import Cutomization from "./component/Customization";
 import Irate from "./component/Irate";
@@ -58,8 +56,9 @@ class App extends Component {
             <Route path="/admin" element={<BoardAdmin />} />
             <Route path="/product" element={<Product />} />
             <Route path="/customization" element={<Cutomization />} />
-            <Route path="/Irate" element={<Irate/>} />
+            <Route path="/diagnosis/Irate" element={<Irate/>} />
             <Route path="/credit" element={<Credit/>} />
+            <Route path="/diagnosis" element={<Diagnosis/>} />
           </Routes>
         {/* <AuthVerify logOut={this.logOut}/> */}
       </>

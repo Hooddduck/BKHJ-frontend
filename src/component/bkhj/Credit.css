@@ -24,7 +24,7 @@
   margin-bottom: 40px;
 }
 
-.bkhj-top-menu > .custom-btn {
+.bkhj-top-menu > .button-credit {
   font-size: 1.5rem;
   margin-right: 1rem;
   border: none;
@@ -90,4 +90,22 @@
 }
 .bold-text {
   font-weight: bold;
+}
+.button-link-diagnosis {
+  color: white;
+  text-decoration: none;
+}
+
+.button-link-diagnosis:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.button-credit{
+  color: #6d7582;
+}
+
+.button-link-credit:hover {
+  color: #6d7582;
+  text-decoration: none;
 }
