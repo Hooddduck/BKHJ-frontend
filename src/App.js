@@ -19,8 +19,8 @@ import AddBoard from './component/AddBoard';
 import EditBoard from './component/EditBoard';
 import ViewBoard from './component/ViewBoard';
 import Product from "./component/Product";
-import Customization from "./component/Customization";
-
+import Cutomization from "./component/Customization";
+import Irate from "./component/Irate";
 const RenderHeader = () => { 
   const location = useLocation();
   if (location.pathname === "/login" || location.pathname === "/register"|| location.pathname === "/profile") {
@@ -51,7 +51,9 @@ class App extends Component {
             <Route path="/mod" element={<BoardModerator />} />
             <Route path="/admin" element={<BoardAdmin />} />
             <Route path="/product" element={<Product />} />
-            <Route path="/customization" element={<Customization />} />
+            <Route path="/customization" element={<Cutomization />} />
+            <Route path="/Irate" element={<Irate/>} />
+
           </Routes>
         {/* <AuthVerify logOut={this.logOut}/> */}
       </>

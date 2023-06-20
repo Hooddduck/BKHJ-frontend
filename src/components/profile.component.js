@@ -95,8 +95,9 @@ export default class Profile extends Component {
                 </div>
                 <div className="left-menu">
                   <p>내프로필</p>
-                  <p>신용대출</p>
-                  <p>금리진단</p>
+                  <Link to = "/customization">신용 대출</Link>
+                  <p></p>
+                  <Link to = "/Irate">금리 진단</Link>
                 </div>
 
                 <div className="left-menu2">
@@ -113,10 +114,10 @@ export default class Profile extends Component {
             <section className="MyProfile-wrapper">
               <div className="MyProfile-container">
                 <div className="myprofile-edit">내프로필</div>
-                <div className="profile-info">이름</div>
-                <div className="profile-info">아이디</div>
-                <div className="profile-info">이메일</div>
-                <div className="profile-info">휴대폰번호</div>
+           
+                <div className="profile-info">ID: {currentUser.username}</div>
+                <div className="profile-info">Email: {currentUser.email}</div>
+           
               </div>
               <div className="member-button">
                 <button onClick={handleDeleteMember} className="custom-button">
