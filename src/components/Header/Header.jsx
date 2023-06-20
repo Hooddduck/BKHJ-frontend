@@ -28,13 +28,7 @@ const Header = () => {
         </a>
 
         <div className="flexCenter h-menu">
-        <a
-            href="/customization"
-            onClick={() => handleLinkClick("/customization")}
-            className="menu-link"
-          >
-            맞춤상품
-          </a>
+        
         <a
             href="/product"
             onClick={() => handleLinkClick("/product")}
@@ -48,6 +42,13 @@ const Header = () => {
             className="menu-link"
           >
             게시판
+          </a>
+          <a
+            href="/listboard"
+            onClick={() => handleLinkClick("/listboard")}
+            className="menu-link"
+          >
+            고객후기
           </a>
           {currentUser ? (
             <>

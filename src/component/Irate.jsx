@@ -30,9 +30,9 @@ const Irate = () => {
 
   return (
     <div>
-      <h2>Interest Rate Prediction</h2>
+      <h2>금리 예측하기</h2>
       <div>
-        <label>Loan Limit:</label>
+        <label>대출 한도</label>
         <input
           type="text"
           value={loanLimit}
@@ -40,18 +40,18 @@ const Irate = () => {
         />
       </div>
       <div>
-        <label>Loan Period:</label>
+        <label>대출 기한</label>
         <input
           type="text"
           value={loanPeriod}
           onChange={handleLoanPeriodChange}
         />
       </div>
-      <button onClick={handlePredict}>Predict</button>
+      <button onClick={handlePredict}>예상 금리</button>
       {predictedRate && (
         <div>
-          <h3>Predicted Interest Rate:</h3>
-          <p>{predictedRate}</p>
+          <h3> ★☆★☆★☆★☆★ </h3>
+          <p>{predictedRate} %</p>
         </div>
       )}
     </div>
