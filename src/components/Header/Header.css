@@ -1,6 +1,6 @@
 .h-wrapper {
-  color: white;
-  background: black;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
 }
 
 .h-container {
@@ -18,8 +18,9 @@
 }
 
 .h-menu a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .h-menu a.menu-link.bold {
@@ -28,7 +29,9 @@
 }
 
 .h-menu a.menu-link:hover {
-  text-decoration: none; /* 밑줄 제거 */
+  text-decoration: none;
+  color: #5F7ED9;
+  font-weight: bold;
 }
 
 .h-menu button.button {
