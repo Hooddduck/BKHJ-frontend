@@ -24,7 +24,7 @@
   margin-bottom: 40px;
 }
 
-.bkhj-top-menu > .button-credit {
+.button-credit {
   font-size: 1.5rem;
   margin-right: 1rem;
   border: none;
@@ -37,22 +37,6 @@
   box-sizing: border-box;
   background-color: #6d7582;
   color: white;
-  font-weight: bold;
-}
-
-.bkhj-top-menu > div {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  border: none;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 30px;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  color: #6d7582;
   font-weight: bold;
 }
 
@@ -90,22 +74,4 @@
 }
 .bold-text {
   font-weight: bold;
-}
-.button-link-diagnosis {
-  color: white;
-  text-decoration: none;
-}
-
-.button-link-diagnosis:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.button-credit{
-  color: #6d7582;
-}
-
-.button-link-credit:hover {
-  color: #6d7582;
-  text-decoration: none;
 }
