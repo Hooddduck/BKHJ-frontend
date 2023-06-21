@@ -31,10 +31,14 @@ const Credit = () => {
           {/* 버튼창 start*/}
           <div className="bkhj-top-menu">
             <div className="button-credit">
-              <Link to="/credit" className="button-credit-link">신용대출</Link>
+              <Link to="/credit" className="button-credit-link">
+                신용대출
+              </Link>
             </div>
             <div className="button-diagnosis">
-              <Link to="/diagnosis" className="button-diagnosis-link">금리진단</Link>
+              <Link to="/diagnosis" className="button-diagnosis-link">
+                금리진단
+              </Link>
             </div>
             <div className="estate-button">부동산관리</div>
             <div className="loans-button">담보대출</div>
@@ -50,7 +54,11 @@ const Credit = () => {
               </div>
             </div>
             <div className="credit-bottom">
-              <div className="credit-comparison">신용대출 비교하기</div>
+              <div className="credit-comparison">
+                <Link to="/customization" className="linktocustomization">
+                  신용대출 비교하기
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -58,6 +58,16 @@
   color: #ffffff;
   font-weight: bold;
 }
+
+.linktocustomization{
+  color: #ffffff;
+  text-decoration: none;
+}
+.linktocustomization:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .button-credit {
   font-size: 1.5rem;
   margin-right: 1rem;
