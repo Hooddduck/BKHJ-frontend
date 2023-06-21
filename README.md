@@ -8,7 +8,7 @@
 ###### 과제2 : Python 기반의 데이터분석: 수집(web scraping) + 정제(pandas) + 분석 + 시각화
 ###### 과제3 : Python 기반의 데이터 예측: AI 알고리즘 (선형회귀, 다항 션형회귀)을 활용하여 데이터 예측 시스템 구축
 
-## 📚목차
+## ➕목차
 * ##### 프로젝트 구조
 * ##### 사용기술
 * ##### 구현기능
@@ -20,7 +20,23 @@
 ## ✓프로젝트 구조
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/dbb51e2d-edaf-4dca-8763-da949b996a07)
 ## ✓사용기술
-
+### Backend
+* java,  Python </br>
+* Spring Boot, Spring MVC </br>
+* JPA, Mybatis,  REST API controller </br>
+* Junit5, Snapshot </br>
+* Maven </br>
+### DevOps
+* MySQL, Elasticsearch, Logstash, Kibana </br>
+* Testng, lombok </br>
+* cookie, security, JWT </br>
+* Web scraping, Numpy, Pandas, Flask, CORS </br>
+### Frontend
+* HTML5, CSS3(SCSS), JS, JSX, Node.js </br>
+* React </br>
+### Tools & Collaboration
+* IntelliJ, STS4, Eclipse, VScode, Pycharm </br>
+* Git, Sourcetree, Kakaotalk </br>
 
 ## ✓구현기능
 *  ##### 게시판 기능
@@ -161,7 +177,7 @@
 ## ✓ERD설계
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/675ce487-7d23-4a98-8d90-85ee2f067944)
 
-## ✓트러블슈팅
+## ❕❕트러블슈팅
 
 
 
