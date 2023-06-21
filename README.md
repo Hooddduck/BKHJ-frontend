@@ -152,7 +152,7 @@
 * ###### Flask 서버측 코드는 대출 한도 및 대출 기간 입력을 기반으로 예측을 처리하는 경로를 정의하고 React 구성 요소는 이러한 값을 입력하고 서버에서 반환되는 예측 금리를 표시하는 사용자 인터페이스를 제공합니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/283ea2c9-7792-44fc-a545-7530b5338e52)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea89da14-2e52-4f3a-bbb3-9b9c9a82bece)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea7fa71f-66d6-4317-a17b-673a9dc1dbc0)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/04ed1a44-7ebc-40cb-9a8f-f9f5e4ab5a6b)
 ## ✓ELK
 
 
