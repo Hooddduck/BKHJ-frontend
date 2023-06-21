@@ -34,7 +34,7 @@ c-container{
 
 .mode .button{
     width: 100%;
-    background: var(--lightBlue);
+    background: #5F7ED9;
     color: var(--blue);
     font-size: 0.9rem;
     font-weight: 600;
@@ -60,5 +60,4 @@ c-container{
     color: white;
     scale: 0.8;
 }
-
 

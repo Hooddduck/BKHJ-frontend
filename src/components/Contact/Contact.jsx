@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Contact.css";
 
 const Contact = () => {
@@ -17,15 +18,19 @@ const Contact = () => {
               <div className="flexColCenter mode">
                 <div className="felxStart">
                   <div className="flexColStart detail">
-                    <span className="primaryText">담보대출</span>
+                    <span className="primaryText">신용대출</span>
                     <span className="secondaryText">
-                      주택담보대출을
+                      적합한 신용대출
                       <br />
-                      비교해 보세요
+                      상품을 확인하세요
                     </span>
                   </div>
                 </div>
-                <div className="flexCenter button">시작하기</div>
+                <div className="flexCenter button">
+                  <Link to="/credit" className="custom-link">
+                    시작하기
+                  </Link>
+                </div>
               </div>
               {/* second mode */}
               <div className="flexColCenter mode">
@@ -39,7 +44,11 @@ const Contact = () => {
                     </span>
                   </div>
                 </div>
-                <div className="flexCenter button">시작하기</div>
+                <div className="flexCenter button">
+                <Link to="/diagnosis" className="custom-link">
+                    시작하기
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -48,11 +57,11 @@ const Contact = () => {
               <div className="flexColCenter mode">
                 <div className="felxStart">
                   <div className="flexColStart detail">
-                    <span className="primaryText">신용대출</span>
+                    <span className="primaryText">시세관리</span>
                     <span className="secondaryText">
-                      적합한 신용대출
+                      우리집 시세변동을
                       <br />
-                      상품을 확인하세요
+                      확인해 보세요
                     </span>
                   </div>
                 </div>
@@ -62,9 +71,9 @@ const Contact = () => {
               <div className="flexColCenter mode">
                 <div className="felxStart">
                   <div className="flexColStart detail">
-                    <span className="primaryText">시세조회</span>
+                    <span className="primaryText">담보대출</span>
                     <span className="secondaryText">
-                      우리집 시세변동을
+                      적합한 담보대출을
                       <br />
                       확인해 보세요
                     </span>

@@ -84,7 +84,7 @@ const Credit = () => {
       {/* 모달 창 */}
       <Modal show={showModal} onHide={handleModalClose}>
         <Modal.Header closeButton>
-          <Modal.Title>로그인이 필요합니다✔️</Modal.Title>
+          <Modal.Title>로그인이 필요합니다</Modal.Title>
         </Modal.Header>
         <Modal.Body>로그인 후에 신용대출 비교하기를 이용할 수 있습니다✅</Modal.Body>
         <Modal.Footer>

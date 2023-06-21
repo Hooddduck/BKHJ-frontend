@@ -3,7 +3,7 @@ import { GrPowerReset } from "react-icons/gr";
 import { IoFilterSharp } from "react-icons/io5";
 import Input from "@mui/material/Input";
 import Button from "@mui/material/Button";
-import { Modal, Spinner } from "react-bootstrap";
+import { Modal, Spinner} from "react-bootstrap";
 import "./Product.css"; 
 import ProductDataService from "../services/ProductService";
 import DetailViewProduct from "../component/DetailviewProduct";
@@ -526,7 +526,8 @@ const LoanProduct = () => {
           )}
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={handleCloseModal}>Close</button>
+          <button className="footerbutton"
+          onClick={handleCloseModal}>Close</button>
         </Modal.Footer>
       </Modal>
       </div>
