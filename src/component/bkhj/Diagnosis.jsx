@@ -64,7 +64,7 @@ const Diagnosis = () => {
             <div className="credit-bottom">
             {currentUser ? (
               <div className="mydiagnosis">
-                <Link to="/Irarte" className="button-link-diagnosis">
+                <Link to="/Irate" className="button-link-diagnosis">
                   내 금리 진단하기
                 </Link>
               </div>

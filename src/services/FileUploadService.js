@@ -22,10 +22,15 @@ const getFiles = () => {
   return http.get("/files");
 };
 
+const deleteFile = (fileId) => {
+  return http.delete(`/files/${fileId}`);
+};
+
 const FileUploadService = {
   upload,
   getFiles,
   getFilesByBoardId,
+  deleteFile,
 };
 
-export default FileUploadService; 
+export default FileUploadService;
