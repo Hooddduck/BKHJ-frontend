@@ -76,7 +76,7 @@ const vzoneCode = vzoneCode => {
   }
 }
 const vaddress = vaddress => {
-  if(vaddress.length < 2 || vaddress.length > 20) {
+  if(vaddress.length < 2 || vaddress.length > 50) {
     return (
       <div className="alert alert-danger" role="alert">
         주소를 입력해주세요.
@@ -85,7 +85,7 @@ const vaddress = vaddress => {
   }
 }
 const vdetailaddress = vdetailaddress => {
-  if(vdetailaddress.length < 2 || vdetailaddress.length > 20) {
+  if(vdetailaddress.length < 2 || vdetailaddress.length > 50) {
     return (
       <div className="alert alert-danger" role="alert">
         상세주소를 입력해주세요.
@@ -94,7 +94,7 @@ const vdetailaddress = vdetailaddress => {
   }
 }
 const vlegalDong = vlegalDong => {
-  if(vlegalDong.length < 2 || vlegalDong.length > 20) {
+  if(vlegalDong.length < 0 || vlegalDong.length > 50) {
     return (
       <div className="alert alert-danger" role="alert">
         법정동을 입력해주세요.

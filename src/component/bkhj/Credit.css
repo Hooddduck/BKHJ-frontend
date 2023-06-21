@@ -24,22 +24,6 @@
   margin-bottom: 40px;
 }
 
-.button-credit {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  border: none;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 30px;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: #6d7582;
-  color: white;
-  font-weight: bold;
-}
-
 .credit-start {
   background-color: white;
   height: 60%;
@@ -55,8 +39,10 @@
   height: 60%;
   border-radius: 15px;
 }
-
-.credit-button {
+.bold-text {
+  font-weight: bold;
+}
+.credit-comparison {
   font-size: 1.5rem;
   margin-right: 1rem;
   border: none;
@@ -72,6 +58,89 @@
   color: #ffffff;
   font-weight: bold;
 }
-.bold-text {
+.button-credit {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #6d7582;
+  color: white;
+  font-weight: bold;
+
+}
+
+.button-credit-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button-credit-link:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button-diagnosis {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #6d7582;
   font-weight: bold;
 }
+
+.button-diagnosis-link{
+  color: #6d7582;
+  text-decoration: none;
+}
+.button-diagnosis-link:hover {
+  color: #6d7582;
+  text-decoration: none;
+}
+
+.estate-button{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #6d7582;
+  font-weight: bold;
+
+}
+
+.loans-button{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #6d7582;
+  font-weight: bold;
+
+}
+

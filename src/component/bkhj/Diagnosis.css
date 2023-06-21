@@ -24,38 +24,6 @@
     margin-bottom: 40px;
   }
   
-  .bkhj-top-menu > .custom-btn {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    border: none;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 30px;
-    cursor: pointer;
-    box-sizing: border-box;
-    background-color: #6d7582;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .bkhj-top-menu > div {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    border: none;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 30px;
-    cursor: pointer;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    color: #6d7582;
-    font-weight: bold;
-  }
-  
   .credit-start {
     background-color: white;
     height: 60%;
@@ -71,8 +39,10 @@
     height: 60%;
     border-radius: 15px;
   }
-  
-  .credit-button {
+  .bold-text {
+    font-weight: bold;
+  }
+  .mydiagnosis {
     font-size: 1.5rem;
     margin-right: 1rem;
     border: none;
@@ -88,9 +58,7 @@
     color: #ffffff;
     font-weight: bold;
   }
-  .bold-text {
-    font-weight: bold;
-  }
+ 
   .button-link-diagnosis {
     color: white;
     text-decoration: none;
@@ -101,11 +69,99 @@
     text-decoration: none;
   }
 
-  .button-link-credit{
-    color: #6d7582;
-  }
+.credit-button{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #6d7582;
+  font-weight: bold;
 
-  .button-link-credit:hover {
-    color: #6d7582;
-    text-decoration: none;
-  }
+}
+
+.button-link-credit {
+  color: #6d7582;
+  text-decoration: none;
+}
+
+.button-link-credit:hover {
+  color: #6d7582;
+  text-decoration: none;
+}
+
+.diagnosis-button{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #6d7582;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.estate-button{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #6d7582;
+  font-weight: bold;
+
+}
+
+.button-link-credit {
+  color: #6d7582;
+  text-decoration: none;
+}
+
+.button-link-credit:hover {
+  color: #6d7582;
+  text-decoration: none;
+}
+
+.loans-button{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #6d7582;
+  font-weight: bold;
+
+}
+
+.button-link-credit {
+  color: #6d7582;
+  text-decoration: none;
+}
+
+.button-link-credit:hover {
+  color: #6d7582;
+  text-decoration: none;
+}
