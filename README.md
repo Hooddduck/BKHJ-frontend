@@ -69,7 +69,8 @@
 * ###### 로그인한 사용자는 게시글을 작성할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/e7aba42c-816b-459d-92d6-beca733d813e)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/8df4660d-39a4-4265-ae54-bbde74b4ef89)
-
+* ###### 로그인하지 않았을 경우 글 작성이 제한됩니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/2dc4bc96-abee-4310-a13b-190b097427d8)
 
 
 ### CSV 데이터를 Elastic 검색으로 가져오고 React를 사용하여 시각화
