@@ -153,7 +153,15 @@
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/283ea2c9-7792-44fc-a545-7530b5338e52)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea89da14-2e52-4f3a-bbb3-9b9c9a82bece)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea7fa71f-66d6-4317-a17b-673a9dc1dbc0)
+## ✓ELK
 
+
+
+
+## ✓ERD설계
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/675ce487-7d23-4a98-8d90-85ee2f067944)
+
+## ✓트러블슈팅
 
 
 
