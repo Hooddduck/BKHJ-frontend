@@ -74,6 +74,17 @@
 * ###### 게시글 작성자는 게시글을 수정할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/fa85f4cf-7e8a-45d2-a906-14bee77ace31)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/25dc46b3-3dfb-4a61-8274-9a10d6c7232a)
+## 댓글 기능
+### 댓글 작성
+* ###### 특정 게시글에 대한 댓글을 작성할 수 있습니다. 게시글 작성 과 마찬가지로 로그인한 사용자만 댓글을 작성할 수 있습니다. 그리고 작성한 댓글을 조회할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/8885c7b2-1571-46b8-afb3-0d9269ee5db1)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/332ee021-eab8-4d50-9ca7-73767add7852)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/a45230bd-7ed6-44e4-9fb0-cab2a252fe34)
+* ###### 자신이 작성한 댓글을 수정할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/cc914d90-ed12-473a-afe7-f4ec92a30a09)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/f180f0d4-148a-43c9-b436-545f5c86fa8c)
+* ###### 자신이 작성한 댓글을 삭제할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/5ad86354-da05-460f-bef5-aab4d5aec6b6)
 
 
 
