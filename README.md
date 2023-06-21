@@ -1,5 +1,3 @@
-## TEAM3 Bikyohaejwo Project
-
 ###### 웹 애플리케이션 프로젝트 입니다.
 
 ##### 2023.05.01 ~ 2023.06.26 동안 Spring Boot, React, Python을 사용해 구현했습니다.
@@ -36,7 +34,7 @@
     * ###### 댓글 수정 [회원]
     * ###### 댓글 삭제 [회원]
 * ##### 파일업로드 기능
-    * ###### 파일 업로드 [회원]
+    * ###### 파일 업로드 및 조회 [회원]
     * ###### 파일 다운로드
     * ###### 파일 수정 [회원, 게시글 작성자]
     * ###### 파일 삭제 [회원, 게시글 작성자]
@@ -74,9 +72,13 @@
 * ###### 게시글 작성자는 게시글을 수정할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/fa85f4cf-7e8a-45d2-a906-14bee77ace31)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/25dc46b3-3dfb-4a61-8274-9a10d6c7232a)
+### 게시글 삭제
+* ###### 게시글 작성자는 게시글을 삭제할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c2bd23b6-fc4f-408b-8587-559ad2074817)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/63e829f5-dc9e-481e-be00-912e8ab75399)
 ## 댓글 기능
 ### 댓글 작성
-* ###### 특정 게시글에 대한 댓글을 작성할 수 있습니다. 게시글 작성 과 마찬가지로 로그인한 사용자만 댓글을 작성할 수 있습니다. 그리고 작성한 댓글을 조회할 수 있습니다.
+* ###### 특정 게시글에 대한 댓글을 작성할 수 있습니다. 게시글 작성 과 마찬가지로 로그인한 사용자만 댓글을 작성할 수 있습니다. 그리고 작성한 댓글을 ```게시글 상세``` 에서 조회할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/8885c7b2-1571-46b8-afb3-0d9269ee5db1)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/332ee021-eab8-4d50-9ca7-73767add7852)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/a45230bd-7ed6-44e4-9fb0-cab2a252fe34)
@@ -86,45 +88,74 @@
 * ###### 자신이 작성한 댓글을 삭제할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/5ad86354-da05-460f-bef5-aab4d5aec6b6)
 ## 파일 업로드 기능
-### 파일 업로드
-* ###### 게시글을 작성할 때 파일도 같이 업로드하여 게시판 조회시 업로드된 파일을 확인할 수 있다.
-
-
-
+### 파일 업로드 및 조회
+* ###### 게시글을 작성할 때 파일도 같이 업로드하여 게시판 조회시 업로드된 파일을 확인할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/04892d9e-7845-4679-9899-1a227406d9a9)
+### 파일 다운로드
+* ###### 게시글 조회할 때 파일 이름을 클릭 시 파일을 다운로드할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/9f8bc8d9-1f0f-4679-a06f-0f22b7253ce0)
+### 파일 수정
+* ###### 게시글 수정 버튼을 누르면 파일도 같이 수정할 수 있다. 여러 개의 파일을 한 번에 업로드할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0c83616c-8fa3-47fc-8ed7-4777cac2e602)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/732a8297-8149-43aa-947f-b9bc779a7dda)
+### 파일 삭제
+* ###### 파일을 각각 따로 삭제가 가능합니다. 게시글을 삭제하면 전체 다 삭제됩니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ac89ecaf-eaa4-4086-ab98-c9550205f31f)
+## 회원 기능
+### 회원가입
+* ###### 메인페이지와 로그인 페이지에서 회원가입을 진행할 수 있다. 
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/8362db1a-91c5-4852-9d3e-7b54df72e582)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea7478d9-bd75-4dad-b4de-d059a2a0f17d)
+* ###### 주소를 입력할 때 카카오주소를 사용하여 입력합니다. 회원가입을 통해 서비스에 사용자 정보를 저장합니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/409610bb-9fee-4e98-9ddd-9fc4a2b41024)
+### 로그인/로그아웃
+* ###### 회원가입할 때 입력했던 아이디와 비밀번호를 입력합니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/034261b2-454f-40a9-b0be-e3e835aa4c66)
+* ###### 로그인에 성공하면 메인페이지로 자동으로 이동하고 헤더에 사용자의 아이디가 표시됩니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/258cbc9c-f387-4fc0-bdb4-d520200d7841)
+* ###### 로그인을 완료하면 브라우저의 ```Local Storage``` 에 사용자 ```ID```와 ```JWT``` 토큰 정보를 저장합니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/9c9e8846-04f9-451b-8ca1-a559dbc0d5c4)
+* ###### 로그아웃
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/f30971cd-4cbd-4451-9459-d0bbe9838bb9)
+* ###### 로그아웃을 완료하면 브라우저의 ```Local Storage``` 의 내용도 삭제합니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/f003cdaf-186a-479e-9f88-ffc3cfabd10f)
+### 회원탈퇴
+* ###### 마이페이지(아이디 클릭)에서 회원탈퇴가 가능합니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/396e7510-a9b1-4de5-a446-cb97df610637)
+* ###### DB 에서도 회원 데이터 정보가 삭제된 모습을 볼 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/2596d38b-dbb5-4a44-9c9e-a8ccfd0133c7)
+### 회원정보수정
+* ###### 회원정보수정
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/d0d4f231-0e36-4700-901a-4cc8d823edee)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/058a9cf0-d2f5-45f4-9122-8d95e86ecf8a)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c252e46c-b9e7-4eb3-82c0-19d3ab4c942f)
+## ELK Stack을 이용한 데이터 분석 및 시각화 기능
 ### CSV 데이터를 Elastic 검색으로 가져오고 React를 사용하여 시각화
-이 프로젝트는 ELK(Elastic search, Logstash, Kibana) Stack을 활용하여 데이터 분석 및 시각화 기능을 보여줍니다. ELK Stack은 데이터 수집, 인덱싱, 분석 및 시각화를 지원하는 강력한 오픈 소스 도구 조합입니다.
+* ###### ELK(Elastic search, Logstash, Kibana) Stack을 활용하여 데이터 분석 및 시각화 기능을 보여줍니다. 효율적인 저장 및 인덱싱을 위해 Excel 파일의 데이터를 CSV 형식으로 변환한 다음 ELK로 import.
 
-이 프로젝트는 CSV 데이터를 확장성이 높은 검색 및 분석 엔진인 Elasticsearch로 가져오는 프로세스를 보여줍니다. 효율적인 저장 및 인덱싱을 위해 Excel 파일의 데이터를 CSV 형식으로 변환한 다음 Elastic 검색으로 가져왔습니다.
+```[csv로 변환하는 python 캡처 사진 등록희망(메모장x python에 들어가있는 컬러풀한 사진o)]```
 
-프로젝트의 프런트 엔드 부분은 사용자 인터페이스를 구축하기 위한 인기 있는 JavaScript 라이브러리인 React를 사용하여 구축됩니다. Elastic search에서 가져온 데이터는 React 응용 프로그램을 통해 시각화되고 사용자에게 표시됩니다. 이를 통해 대화형의 사용자 친화적인 데이터 탐색 및 분석이 가능합니다.
+* ###### Elastic search에서 가져온 데이터는 React 응용 프로그램을 통해 시각화되고 사용자에게 표시됩니다. 이를 통해 대화형의 사용자 친화적인 데이터 탐색 및 분석이 가능합니다.
 
-이 프로젝트는 Elasticsearch의 강력한 데이터 저장 및 검색 기능을 React로 구축된 동적이고 대응력이 뛰어난 사용자 인터페이스와 결합하여 데이터 분석 및 시각화를 위한 포괄적인 솔루션을 제공합니다.
+```[ELK discover에서 왼쪽 16개의 컬럼 + 후 깔끔한 캡처 사진 등록희망]```
+
+* ###### 대출 제품 데이터를 가져오고, 사용자가 데이터를 검색, 필터링 및 탐색할 수 있습니다. 또한 프록시 구성을 사용하여 React 응용 프로그램과 Elastic 검색 간의 통신이 가능하므로 응용 프로그램이 시각화 및 상호 작용을 위해 Elastic 검색에서 데이터를 검색할 수 있습니다.
+
+```[대출상품 캡처 사진 등록희망]```
+```[대출상품 자세히보기 캡처 사진 등록희망]```
+
+## 데이터 예측 기능
 ### 선형 회귀 분석을 사용하여 응답에서 로그인된 쿼리 값에 대한 데이터 검색 자동화 및 DB 업데이트
-이 프로젝트에서 데이터 예측 기능은 선형 회귀 및 다항식 선형 회귀와 같은 기계 학습 알고리즘을 활용합니다. 로그인한 쿼리 값은 React의 데이터베이스에서 자동으로 가져와 업데이트됩니다. 이를 통해 학습된 AI 모델을 기반으로 예측 금리를 실시간으로 검색하고 활용할 수 있습니다. 선형 회귀 알고리즘은 쿼리 값을 검색하고 업데이트하는 프로세스를 자동화하는 데 사용됩니다. 반면, 다항식 선형회귀는 대출한도와 대출기간 값을 입력하여 금리를 예측하는 데 활용됩니다. 결과 예측은 정확하며 대출 상품의 맥락에서 정보에 입각한 의사 결정을 가능하게 합니다.
+* ###### 데이터 예측 기능은 선형 회귀 및 다항식 선형 회귀와 같은 기계 학습 알고리즘을 활용합니다. 로그인한 쿼리 값은 React의 데이터베이스에서 자동으로 가져와 업데이트됩니다. 이를 통해 학습된 AI 모델을 기반으로 예측 금리를 실시간으로 검색하고 활용할 수 있습니다. 선형 회귀 알고리즘은 쿼리 값을 검색하고 업데이트하는 프로세스를 자동화하는 데 사용됩니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/99a7e13a-a77f-4fc6-9055-0fc07223c918)
+* ###### ```Local Storage``` 에서 사용자에 대한 ID값을 가져와 쿼리가 제공된 사용자 ID를 기반으로 데이터베이스에서 연령 및 성별 정보를 검색한다. 그리고 React 코드가 HTTP GET 요청을 Flask API endpoint /api/customization에 수행하여 사용자 ID를 쿼리 매개 변수로 전달함을 명확히 할 수 있습니다. 그런 다음 API 끝점은 파생된 값을 JSON으로 반환합니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0266de5d-7e53-4ca3-b815-aa315c35f931)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/1ce5e517-3fde-4420-912a-3e8bc50ada83)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/d05ba660-a371-417f-83cc-f2d8a4f32b25)
 ### 대출한도 및 대출 기간 입력에 따른 다항식 선형 회귀를 이용한 금리 예측
-
-
-
-
-
-
-홈페이지 화면 구성 [React]
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/23ceeddd-f6ac-4a0c-92c4-9896549a3457)
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/4a4f0dee-a8c4-4197-872c-b7a07262eabe)
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/da52b200-8aea-49f8-8709-42a6f9ddcd9d)
-
-
-
-
-
-파일 DB 및 권한 부여는 따로 적용
-
-[file DB.txt](https://github.com/Hooddduck/BKHJ-frontend/files/11624647/file.DB.txt)
+* ###### 다항식 선형회귀는 대출한도와 대출기간 값을 입력하여 금리를 예측하는 데 활용됩니다. 결과 예측은 정확하며 대출 상품의 맥락에서 정보에 입각한 의사 결정을 가능하게 합니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/7ed7db4d-880f-4e6c-a1e8-c178f24e0f95)
+* ###### 
 
 
 
