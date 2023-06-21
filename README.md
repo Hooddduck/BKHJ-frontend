@@ -26,7 +26,7 @@
 
 ## ✓구현기능
 *  ##### 게시판 기능
-    * ###### 모든 게시글 조회
+    * ###### 모든 게시글 및 특정 게시글 조회
     * ###### 특정 게시글 검색 (제목, 작성자, 작성일)
     * ###### 게시글 작성 [회원]
     * ###### 게시글 수정 [회원, 게시글 작성자]
@@ -56,7 +56,17 @@
 ## ✓기능 실행화면
 ### 메인화면페이지
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/b6f6119c-6f5d-439a-9a5a-999c011f3f11)
-### 모든 게시글 조회
+### 모든 게시글 및 특정 게시글 조회
+* ###### 모든 게시글을 조회할 수 있습니다. 페이징 기능을 통해 한 페이지에서 최대 10개의 게시글이 조회됩니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0d75db69-c0dd-4576-b289-2dc858323ae1)
+* ###### 게시글의 제목을 클릭하면, 게시글의 상세내용을 조회할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/879a9e6e-35f6-4f0c-b801-5b1ee7afd95e)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/7f42b980-ad6b-4533-957e-cb2392cfb979)
+### 특정 게시글 검색 (제목, 작성자, 작성일)
+* ###### 게시글의 제목과 작성자 또는 작성일로 게시글을 검색할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c343c4da-2053-44fd-8e40-bfea3be8b0b3)
+### 게시글 작성
+* ###### 로그인한 사용자는 게시글을 작성할 수 있습니다.
 
 
 
