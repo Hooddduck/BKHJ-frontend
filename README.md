@@ -20,7 +20,7 @@
 * ##### 트러블슈팅
 
 ## ✓프로젝트 구조
-![프로젝트 구조2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/76c70d5e-e355-4ab2-a63f-aa0c5910397f)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/dbb51e2d-edaf-4dca-8763-da949b996a07)
 ## ✓사용기술
 
 
@@ -68,6 +68,7 @@
 ### 게시글 작성
 * ###### 로그인한 사용자는 게시글을 작성할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/e7aba42c-816b-459d-92d6-beca733d813e)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/8df4660d-39a4-4265-ae54-bbde74b4ef89)
 
 
 
