@@ -149,8 +149,10 @@
 ### 대출한도 및 대출 기간 입력에 따른 다항식 선형 회귀를 이용한 금리 예측
 * ###### 다항식 선형회귀는 대출한도와 대출기간 값을 입력하여 금리를 예측하는 데 활용됩니다. 결과 예측은 정확하며 대출 상품의 맥락에서 정보에 입각한 의사 결정을 가능하게 합니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/7ed7db4d-880f-4e6c-a1e8-c178f24e0f95)
-* ###### 
-
+* ###### Flask 서버측 코드는 대출 한도 및 대출 기간 입력을 기반으로 예측을 처리하는 경로를 정의하고 React 구성 요소는 이러한 값을 입력하고 서버에서 반환되는 예측 금리를 표시하는 사용자 인터페이스를 제공합니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/283ea2c9-7792-44fc-a545-7530b5338e52)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea89da14-2e52-4f3a-bbb3-9b9c9a82bece)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea7fa71f-66d6-4317-a17b-673a9dc1dbc0)
 
 
 
