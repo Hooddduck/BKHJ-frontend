@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import AuthService from "../../services/auth.service";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Button, Modal } from "react-bootstrap";
 import "./Diagnosis.css";
 
 const Diagnosis = () => {
   const [derivedValues, setDerivedValues] = useState(null);
   const currentUser = AuthService.getCurrentUser();
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (currentUser) {
@@ -20,7 +22,13 @@ const Diagnosis = () => {
         });
     }
   }, [currentUser]);
+  const handleModalOpen = () => {
+    setShowModal(true);
+  };
 
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
   return (
     <>
       <section className="credit-section">
@@ -31,10 +39,14 @@ const Diagnosis = () => {
           {/* 버튼창 start*/}
           <div className="bkhj-top-menu">
             <div className="credit-button">
-              <Link to="/credit" className="button-link-credit">신용대출</Link>
+              <Link to="/credit" className="button-link-credit">
+                신용대출
+              </Link>
             </div>
             <div className="diagnosis-button">
-              <Link to="/diagnosis" className="button-link-diagnosis">금리진단</Link>
+              <Link to="/diagnosis" className="button-link-diagnosis">
+                금리진단
+              </Link>
             </div>
             <div className="estate-button">부동산관리</div>
             <div className="loans-button">담보대출</div>
@@ -50,16 +62,34 @@ const Diagnosis = () => {
               </div>
             </div>
             <div className="credit-bottom">
+            {currentUser ? (
               <div className="mydiagnosis">
-                <Link to="/diagnosis/Irarte" className="button-link-diagnosis">
+                <Link to="/Irarte" className="button-link-diagnosis">
                   내 금리 진단하기
                 </Link>
               </div>
+              ) : (
+                <Button onClick={handleModalOpen} className="credit-comparison">
+                신용대출 비교하기
+              </Button>
+          )}
             </div>
           </div>
         </div>
         {/* 시작하기창 end*/}
       </section>
+      {/* 모달 창 */}
+      <Modal show={showModal} onHide={handleModalClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>로그인이 필요합니다</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>로그인 후에 신용대출 비교하기를 이용할 수 있습니다✅</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleModalClose}>
+            닫기
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
