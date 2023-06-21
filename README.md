@@ -20,13 +20,13 @@
 * ##### 트러블슈팅
 
 ## ✓프로젝트 구조
-![프로젝트 구조2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/76c70d5e-e355-4ab2-a63f-aa0c5910397f)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/dbb51e2d-edaf-4dca-8763-da949b996a07)
 ## ✓사용기술
 
 
 ## ✓구현기능
 *  ##### 게시판 기능
-    * ###### 모든 게시글 조회
+    * ###### 모든 게시글 및 특정 게시글 조회
     * ###### 특정 게시글 검색 (제목, 작성자, 작성일)
     * ###### 게시글 작성 [회원]
     * ###### 게시글 수정 [회원, 게시글 작성자]
@@ -56,7 +56,27 @@
 ## ✓기능 실행화면
 ### 메인화면페이지
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/b6f6119c-6f5d-439a-9a5a-999c011f3f11)
-### 모든 게시글 조회
+### 모든 게시글 및 특정 게시글 조회
+* ###### 모든 게시글을 조회할 수 있습니다. 페이징 기능을 통해 한 페이지에서 최대 10개의 게시글이 조회됩니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0d75db69-c0dd-4576-b289-2dc858323ae1)
+* ###### 게시글의 제목을 클릭하면, 게시글의 상세내용을 조회할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/879a9e6e-35f6-4f0c-b801-5b1ee7afd95e)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/7f42b980-ad6b-4533-957e-cb2392cfb979)
+### 특정 게시글 검색 (제목, 작성자, 작성일)
+* ###### 게시글의 제목과 작성자 또는 작성일로 게시글을 검색할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c343c4da-2053-44fd-8e40-bfea3be8b0b3)
+### 게시글 작성
+* ###### 로그인한 사용자는 게시글을 작성할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/e7aba42c-816b-459d-92d6-beca733d813e)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/8df4660d-39a4-4265-ae54-bbde74b4ef89)
+* ###### 로그인하지 않았을 경우 글 작성이 제한됩니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/2dc4bc96-abee-4310-a13b-190b097427d8)
+### 게시글 수정
+* ###### 게시글 작성자는 게시글을 수정할 수 있습니다.
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/fa85f4cf-7e8a-45d2-a906-14bee77ace31)
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/25dc46b3-3dfb-4a61-8274-9a10d6c7232a)
+
+
 
 
 
