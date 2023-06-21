@@ -10,20 +10,18 @@
 ##### 과제2 : Python 기반의 데이터분석: 수집(web scraping) + 정제(pandas) + 분석 + 시각화
 ##### 과제3 : Python 기반의 데이터 예측: AI 알고리즘 (선형회귀, 다항 션형회귀)을 활용하여 데이터 예측 시스템 구축
 
+## 📚목차
+##### ● 프로젝트 구조
+##### ● 사용기술
+##### ● 구현기능
+##### ● 기능 실행화면
+##### ● ELK
+##### ● ERD설계
+##### ● 트러블슈팅
+
+## ✓프로젝트 구조
 
 
-
-git:  https://github.com/Hooddduck/BKHJ-backend [backend] 
-
-
-
-
-ERD 초기 구성 화면
-
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/f3d5b4e1-66e2-48aa-8223-532acb35c4af)
 
 
 
