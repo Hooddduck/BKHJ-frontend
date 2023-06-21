@@ -1,7 +1,15 @@
-**팀3 
-대출 상품 추천 프로그램 **
+## TEAM3 Bikyohaejwo Project
 
-React + java + SpringBoot + JPA + DB [my sql ]기반의 웹어플리케이션 개발
+##### 웹 애플리케이션 프로젝트 입니다.
+
+##### 2023.05.01 ~ 2023.06.26 동안 Spring Boot, React, Python을 사용해 구현했습니다.
+
+##### 저희는 금융정보 데이터 분석 기반, 대출상품 추천 솔루션 구축 이라는 주제로 진행하였습니다.
+
+##### 과제1 :  React + java + SpringBoot + JPA + DB [MYSQL]기반의 웹어플리케이션 개발
+##### 과제2 : Python 기반의 데이터분석: 수집(web scraping) + 정제(pandas) + 분석 + 시각화
+##### 과제3 : Python 기반의 데이터 예측: AI 알고리즘 (선형회귀, 다항 션형회귀)을 활용하여 데이터 예측 시스템 구축
+
 
 
 
