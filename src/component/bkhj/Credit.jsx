@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import AuthService from "../../services/auth.service";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Button, Modal } from "react-bootstrap";
 import "./Credit.css";
 
 const Credit = () => {
   const [derivedValues, setDerivedValues] = useState(null);
+  const [showModal, setShowModal] = useState(false);
   const currentUser = AuthService.getCurrentUser();
 
   useEffect(() => {
@@ -20,6 +22,14 @@ const Credit = () => {
         });
     }
   }, [currentUser]);
+
+  const handleModalOpen = () => {
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
 
   return (
     <>
@@ -54,16 +64,35 @@ const Credit = () => {
               </div>
             </div>
             <div className="credit-bottom">
-              <div className="credit-comparison">
-                <Link to="/customization" className="linktocustomization">
-                  신용대출 비교하기
-                </Link>
-              </div>
+              {currentUser ? (
+                <div className="credit-comparison">
+                  <Link to="/customization" className="linktocustomization">
+                    신용대출 비교하기
+                  </Link>
+                </div>
+              ) : (
+                  <Button onClick={handleModalOpen} className="linktocustomization">
+                    신용대출 비교하기
+                  </Button>
+              )}
             </div>
           </div>
         </div>
         {/* 시작하기창 end*/}
       </section>
+
+      {/* 모달 창 */}
+      <Modal show={showModal} onHide={handleModalClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>로그인이 필요합니다</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>로그인 후에 신용대출 비교하기를 이용할 수 있습니다.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleModalClose}>
+            닫기
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
