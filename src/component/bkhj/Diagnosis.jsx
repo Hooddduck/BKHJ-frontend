@@ -38,16 +38,18 @@ const Diagnosis = () => {
           </div>
           {/* 버튼창 start*/}
           <div className="bkhj-top-menu">
-            <div className="credit-button">
-              <Link to="/credit" className="button-link-credit">
-                신용대출
-              </Link>
-            </div>
-            <div className="diagnosis-button">
-              <Link to="/diagnosis" className="button-link-diagnosis">
-                금리진단
-              </Link>
-            </div>
+            <button
+              onClick={() => (window.location.href = "/credit")}
+              className="credit-button"
+            >
+              신용대출
+            </button>
+            <button
+              onClick={() => (window.location.href = "/credit")}
+              className="diagnosis-button"
+            >
+              금리진단
+            </button>
             <div className="estate-button">부동산관리</div>
             <div className="loans-button">담보대출</div>
           </div>
@@ -62,17 +64,18 @@ const Diagnosis = () => {
               </div>
             </div>
             <div className="credit-bottom">
-            {currentUser ? (
-              <div className="mydiagnosis">
-                <Link to="/Irate" className="button-link-diagnosis">
-                  내 금리 진단하기
-                </Link>
-              </div>
+              {currentUser ? (
+                <Button
+                  onClick={() => (window.location.href = "/Irate")}
+                  className="credit-comparison"
+                >
+                  신용대출 비교하기
+                </Button>
               ) : (
                 <Button onClick={handleModalOpen} className="credit-comparison">
-                내 금리 진단하기
-              </Button>
-          )}
+                  내 금리 진단하기
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -83,7 +86,9 @@ const Diagnosis = () => {
         <Modal.Header closeButton>
           <Modal.Title>로그인이 필요합니다</Modal.Title>
         </Modal.Header>
-        <Modal.Body>로그인 후에 신용대출 비교하기를 이용할 수 있습니다✅</Modal.Body>
+        <Modal.Body>
+          로그인 후에 신용대출 비교하기를 이용할 수 있습니다✅
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleModalClose}>
             닫기
