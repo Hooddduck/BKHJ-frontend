@@ -22,7 +22,6 @@ const Customization = () => {
     <div>
       {currentUser && (
         <p>
-          <strong>Id:</strong> {currentUser.id}
         </p>
       )}
       {derivedValues ? (

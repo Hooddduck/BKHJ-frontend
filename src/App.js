@@ -23,8 +23,9 @@ import Product from "./component/Product";
 import Credit from "./component/bkhj/Credit";
 import Diagnosis from "./component/bkhj/Diagnosis";
 
-import Cutomization from "./component/Customization";
-import Irate from "./component/Irate";
+import Bkhjcustomization from "./component/bkhj/Bkhjcustomization";
+import Bkhjirate from "./component/bkhj/Bkhjirate";
+
 const RenderHeader = () => { 
   const location = useLocation();
   if (location.pathname === "/login" || location.pathname === "/register"|| location.pathname === "/profile") {
@@ -55,8 +56,8 @@ class App extends Component {
             <Route path="/mod" element={<BoardModerator />} />
             <Route path="/admin" element={<BoardAdmin />} />
             <Route path="/product" element={<Product />} />
-            <Route path="/customization" element={<Cutomization />} />
-            <Route path="/Irate" element={<Irate/>} />
+            <Route path="/customization" element={<Bkhjcustomization/>} />
+            <Route path="/Irate" element={<Bkhjirate/>} />
             <Route path="/credit" element={<Credit/>} />
             <Route path="/diagnosis" element={<Diagnosis/>} />
           </Routes>
