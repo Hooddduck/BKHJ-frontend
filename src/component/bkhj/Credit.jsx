@@ -61,7 +61,7 @@ const Credit = () => {
             <div className="credit-top">
               <div>
                 <h3 className="bold-text">
-                  나에게 맞는 대출 상품을 찾아보세요👍
+                나에게 딱 맞는 대출상품을 찾아드립니다👍
                 </h3>
               </div>
             </div>
@@ -71,11 +71,11 @@ const Credit = () => {
                   onClick={() => (window.location.href = "/customization")}
                   className="credit-comparison"
                 >
-                  신용대출 비교하기
+                  비교해줘 시작하기
                 </Button>
               ) : (
                 <Button onClick={handleModalOpen} className="credit-comparison">
-                  신용대출 비교하기
+                  비교해줘 비교하기
                 </Button>
               )}
             </div>
