@@ -86,7 +86,6 @@ const Header = () => {
                 onClick={() => handleLinkClick("/user")}
                 className="menu-link"
               >
-                User
               </a>
             </>
           ) : (

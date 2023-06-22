@@ -53,35 +53,7 @@ const Contact = () => {
             </div>
 
             {/* second row */}
-            <div className="flexStart row">
-              <div className="flexColCenter mode">
-                <div className="felxStart">
-                  <div className="flexColStart detail">
-                    <span className="primaryText">시세관리</span>
-                    <span className="secondaryText">
-                      우리집 시세변동을
-                      <br />
-                      확인해 보세요
-                    </span>
-                  </div>
-                </div>
-                <div className="flexCenter button">시작하기</div>
-              </div>
-              {/* forth mode */}
-              <div className="flexColCenter mode">
-                <div className="felxStart">
-                  <div className="flexColStart detail">
-                    <span className="primaryText">담보대출</span>
-                    <span className="secondaryText">
-                      적합한 담보대출을
-                      <br />
-                      확인해 보세요
-                    </span>
-                  </div>
-                </div>
-                <div className="flexCenter button">시작하기</div>
-              </div>
-            </div>
+            
           </div>
         </div>
 
