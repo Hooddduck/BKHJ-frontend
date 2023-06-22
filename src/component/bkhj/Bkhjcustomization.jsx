@@ -53,8 +53,8 @@ const Bkhjcustomization = () => {
           >
             금리진단
           </button>
-          <div className="estate-button">알아보기</div>
-          <div className="loans-button">QnA</div>
+          <div className="estate-button">더알아보기</div>
+          <div className="loans-button">이용안내</div>
         </div>
         {/* 버튼창 end */}
         {/* 시작하기창 start*/}
