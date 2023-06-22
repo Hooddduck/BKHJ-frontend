@@ -139,8 +139,6 @@ class Login extends Component {
                 </div>
                 <div className="form-pa-reg">
                   <div className="link-container">
-                    <a href="/password-reset">비밀번호 변경</a>
-                    <span className="vertical-line"></span>
                     <a href="/register">회원가입</a>
                   </div>
                 </div>
