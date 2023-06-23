@@ -420,7 +420,8 @@ def get_customization():
 ```
 &nbsp;
 
-    * 필요한 모듈(풀링된 DB 및 커서)을 가져오고 데이터베이스 연결 풀을 수정하면 Backend가 MySQL 데이터베이스와의 연결을 자동화 설정할 수 있었습니다.
+* 필요한 모듈(풀링된 DB 및 커서)을 가져오고 데이터베이스 연결 풀을 수정하면 Backend가 MySQL 데이터베이스와의 연결을 자동화 설정할 수 있었습니다. </br>
+
 ```
 import pymysql
 from pymysql import cursors
@@ -438,9 +439,7 @@ pool = PooledDB(
     maxconnections=10  # Adjust the pool size as per your requirements
 )
 ```
-&nbsp;
-
-    * ID 값이 데이터 검색 및 대출 상품 권장 사항을 위해 올바르게 수신되어 데이터베이스 쿼리에서 사용됨으로써 데이터 검색, 예측 및 JSON 응답을 성공적으로 수행할 수 있습니다.
+* ID 값이 데이터 검색 및 대출 상품 권장 사항을 위해 올바르게 수신되어 데이터베이스 쿼리에서 사용됨으로써 데이터 검색, 예측 및 JSON 응답을 성공적으로 수행할 수 있습니다.
 &nbsp;
 
 ## ✓참고사항
