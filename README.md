@@ -188,9 +188,8 @@
 &nbsp;
 
 ## ✓ELK
-
-[사진추가]
-
+### Elasticsearch
+![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/4502c874-4ee1-4bc5-97dd-7a58d19bb642)
 &nbsp;
 
 ## ✓ERD설계
