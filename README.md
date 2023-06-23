@@ -1,4 +1,4 @@
-##### 웹 애플리케이션 프로젝트 입니다.
+###### 웹 애플리케이션 프로젝트 입니다.
 
 ##### 2023.05.01 ~ 2023.06.26 동안 Spring Boot, React, Python을 사용해 구현했습니다.
 
@@ -7,6 +7,9 @@
 ###### 과제1 :  React + java + SpringBoot + JPA + DB [MYSQL]기반의 웹어플리케이션 개발
 ###### 과제2 : Python 기반의 데이터분석: 수집(web scraping) + 정제(pandas) + 분석 + 시각화
 ###### 과제3 : Python 기반의 데이터 예측: AI 알고리즘 (선형회귀, 다항 션형회귀)을 활용하여 데이터 예측 시스템 구축
+&nbsp;
+
+# 프로젝트 시연 영상
 
 ## ➕목차
 * ##### 프로젝트 구조
@@ -16,6 +19,8 @@
 * ##### ELK
 * ##### ERD설계
 * ##### 트러블슈팅
+* ##### 참고사항
+&nbsp;
 
 ## ✓프로젝트 구조
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/dbb51e2d-edaf-4dca-8763-da949b996a07)
@@ -37,6 +42,7 @@
 ### Tools & Collaboration
 * IntelliJ, STS4, Eclipse, VScode, Pycharm </br>
 * Git, Sourcetree, Kakaotalk </br>
+&nbsp;
 
 ## ✓구현기능
 *  ##### 게시판 기능
@@ -64,6 +70,7 @@
 * ##### 데이터 예측 기능
     * ###### 선형 회귀 분석을 사용하여 응답에서 로그인된 쿼리 값에 대한 데이터 검색 자동화 및 DB 업데이트
     * ###### 대출한도 및 대출 기간 입력에 따른 다항식 선형 회귀를 이용한 금리 예측
+&nbsp;
 
 ## ✓기능 실행화면
 ### 메인화면페이지
@@ -92,6 +99,7 @@
 * ###### 게시글 작성자는 게시글을 삭제할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c2bd23b6-fc4f-408b-8587-559ad2074817)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/63e829f5-dc9e-481e-be00-912e8ab75399)
+&nbsp;
 ## 댓글 기능
 ### 댓글 작성
 * ###### 특정 게시글에 대한 댓글을 작성할 수 있습니다. 게시글 작성 과 마찬가지로 로그인한 사용자만 댓글을 작성할 수 있습니다. 그리고 작성한 댓글을 ```게시글 상세``` 에서 조회할 수 있습니다.
@@ -103,6 +111,8 @@
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/f180f0d4-148a-43c9-b436-545f5c86fa8c)
 * ###### 자신이 작성한 댓글을 삭제할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/5ad86354-da05-460f-bef5-aab4d5aec6b6)
+&nbsp;
+
 ## 파일 업로드 기능
 ### 파일 업로드 및 조회
 * ###### 게시글을 작성할 때 파일도 같이 업로드하여 게시판 조회시 업로드된 파일을 확인할 수 있습니다.
@@ -117,6 +127,8 @@
 ### 파일 삭제
 * ###### 파일을 각각 따로 삭제가 가능합니다. 게시글을 삭제하면 전체 다 삭제됩니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ac89ecaf-eaa4-4086-ab98-c9550205f31f)
+&nbsp;
+
 ## 회원 기능
 ### 회원가입
 * ###### 메인페이지와 로그인 페이지에서 회원가입을 진행할 수 있다. 
@@ -145,6 +157,8 @@
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/d0d4f231-0e36-4700-901a-4cc8d823edee)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/058a9cf0-d2f5-45f4-9122-8d95e86ecf8a)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c252e46c-b9e7-4eb3-82c0-19d3ab4c942f)
+&nbsp;
+
 ## ELK Stack을 이용한 데이터 분석 및 시각화 기능
 ### CSV 데이터를 Elastic 검색으로 가져오고 React를 사용하여 시각화
 * ###### ELK(Elastic search, Logstash, Kibana) Stack을 활용하여 데이터 분석 및 시각화 기능을 보여줍니다. 효율적인 저장 및 인덱싱을 위해 Excel 파일의 데이터를 CSV 형식으로 변환한 다음 ELK로 import.
@@ -154,6 +168,8 @@
 * ###### 대출 제품 데이터를 가져오고, 사용자가 데이터를 검색, 필터링 및 탐색할 수 있습니다. 또한 프록시 구성을 사용하여 React 응용 프로그램과 Elastic 검색 간의 통신이 가능하므로 응용 프로그램이 시각화 및 상호 작용을 위해 Elastic 검색에서 데이터를 검색할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0ed4d5b7-49e1-4b63-8dc5-fba88971cab0)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/db3fa1c4-6f6e-4da8-b7b1-c9e6a55a54e1)
+&nbsp;
+
 ## 데이터 예측 기능
 ### 선형 회귀 분석을 사용하여 응답에서 로그인된 쿼리 값에 대한 데이터 검색 자동화 및 DB 업데이트
 * ###### 데이터 예측 기능은 선형 회귀 및 다항식 선형 회귀와 같은 기계 학습 알고리즘을 활용합니다. 로그인한 쿼리 값은 React의 데이터베이스에서 자동으로 가져와 업데이트됩니다. 이를 통해 학습된 AI 모델을 기반으로 예측 금리를 실시간으로 검색하고 활용할 수 있습니다. 선형 회귀 알고리즘은 쿼리 값을 검색하고 업데이트하는 프로세스를 자동화하는 데 사용됩니다.
@@ -169,37 +185,271 @@
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/283ea2c9-7792-44fc-a545-7530b5338e52)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea89da14-2e52-4f3a-bbb3-9b9c9a82bece)
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/04ed1a44-7ebc-40cb-9a8f-f9f5e4ab5a6b)
+&nbsp;
+
 ## ✓ELK
 
+[사진추가]
 
-
+&nbsp;
 
 ## ✓ERD설계
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/675ce487-7d23-4a98-8d90-85ee2f067944)
+&nbsp;
 
 ## ❕❕트러블슈팅
+### 1. 회원탈퇴
+회원정보를 jwt, accessToken을 사용하여 개발하였는데 회원정보 삭제 기능에 있어서 토큰을 찾지 못하여 회원정보가 삭제가 되지 않는 문제가 발생하였습니다. </br>
+예상으로는 axios를 걸어주는 service부분에서 문제가 발생하여 계속해서 토큰을 찾지못하는 문제점이었습니다.
+&nbsp;
+```
+deleteMember() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const config = {
+      headers: {
+        Authorization: `Bearer ${user.accessToken}`
+      }
+    };
 
+    return axios.delete(API_URL + `delete/${user.id}`, config);
+  }
+```
+* 발생조건 파악하기
+    * 토큰 저장소 확인: 액세스 토큰이 브라우저의 localStorage에 올바르게 저장되어 있는지 확인합니다. 브라우저 개발자 도구를 사용하여 localStorage를 검사하고 토큰이 올바른 키(이 경우에는 'user')로 저장되었는지 확인할 수 있습니다. 사용자가 로그인하거나 등록할 때 토큰이 올바르게 저장되고 있는지 확인합니다.
+    * 토큰 만료 확인: 토큰을 제대로 검색하고 있지만 구성원 삭제 프로세스 중에 여전히 찾을 수 없는 경우, 토큰이 만료되었을 수 있습니다. 토큰 만료 메커니즘을 확인하고 만료된 토큰이 제대로 처리되는지 확인합니다.
+    * 토큰 가용성 보장: deleteMember() 함수가 호출될 때 액세스 토큰을 사용할 수 있는지 확인합니다. 제공된 코드에서는 토큰이 localStorage에 저장되고 localStorage.getItem('user')을 사용하여 검색되는 것으로 가정합니다. localStorage에서 가져온 사용자 개체에 액세스 권한이 포함되어 있는지 확인합니다.
+* **해결법**
+    * ```localStorage:``` 웹 응용 프로그램이 브라우저에 데이터를 저장할 수 있도록 해주는 웹 API입니다. 쿠키와 유사하지만 용량이 더 크고 보안이 향상된 키 값 스토리지 메커니즘을 제공합니다. </br>
+    * ```getItem()``` 메서드는 지정된 키와 연결된 값을 검색하는 데 사용됩니다. 이 경우 키는 'user'입니다. </br>
+    * ```JSON.parse()``` 함수를 호출하여 검색된 문자열을 JSON으로 구문 분석하고 JavaScript 개체로 변환합니다. </br>
+    * 이 코드를 실행한 후 사용자 변수에는 localStorage에서 검색된 사용자 데이터가 포함됩니다. </br>
+* localStorage를 활용하여 문제점을 해결할 수 있었습니다.
+&nbsp;
 
+### 2. ELK Stack을 이용한 데이터 분석 및 시각화 기능을 위해 python에서 kibana검색을 불러와서 react로 화면 출력
+* 상황 파악: </br>
+React 응용 프로그램의 **프록시**를 사용하여 Elastic 검색에서 데이터를 불러왔습니다. 그런데 특정 컬럼에대한 관련 모든 데이터를 검색 후 불러오는 과정에서 오류가 발생하였습니다.
+```
+const { createProxyMiddleware } = require("http-proxy-middleware");
 
-**개발 순서**
+module.exports = function (app) {
+  app.use(
+    "/api",
+    createProxyMiddleware({
+      target: "http://localhost:9200", // Replace with your Elasticsearch endpoint
+      changeOrigin: true,
+      pathRewrite: {
+        "^/api": "/product/_doc/_search?size=186", // Replace with your Elasticsearch path
+      },
+    })
+  );
+};
+```
+이 코드에는 seq 값의 존재에 따라 API 끝점을 결정하는 조건문 const apiUrl = seq ? /api/${seq} : "/api"가 포함됩니다.
+이 문제는 useEffect 종속성 배열에 [apiURL]을 추가하고 response.data.hits.hits의 길이를 확인하여 데이터 가용성을 보장함으로써 해결됩니다.
+&nbsp;
 
-회원 로그인 [token, security] -> 게시판[ back -> front ] ->   댓글 [ back -> front] -> 파일 [ back -> front] 
+* 오류발생 출처: </br>
+    * 이 문제의 원인은 useEffect 종속성 배열에 apiUrl 값이 잘못 사용되었거나 없기 때문인 것 같습니다.
+    * apiUrl 값이 종속성 배열에 포함되지 않으면 apiUrl 값이 변경될 때 영향이 트리거되지 않아 일관성 없는 데이터 검색이 발생할 수 있습니다.
+```
+  const apiUrl = seq ? `/api/${seq}` : "/api";
 
+  useEffect(() => {
+    fetchLoanProduct();
+  }, [apiUrl]);
+```
+&nbsp;
 
+* 발생 조건: </br>
+이 문제는 ELK에서 특정 열의 데이터를 검색할 때 발생합니다.
+특히 seq 값이 존재하는 경우 apiUrl을 /api/${seq}(으)로 설정하여 특정 문서에 대한 데이터를 가져와야 합니다. 그렇지 않으면 apiUrl을 "/api"로 설정하여 모든 데이터를 검색해야 합니다. 또한 useEffect 종속성 배열에 apiUrl 값이 포함되지 않은 경우 이 문제가 발생할 수 있습니다.
+&nbsp;
 
-**로그인 구현 순서** 
+* **해결법:** 다음 단계를 통해 문제를 해결합니다. </br>
+    * seq 값을 기준으로 apiUrl 변수가 올바르게 설정되었는지 확인합니다. seq가 있으면 apiUrl을 /api/${seq}로 설정하고, 그렇지 않으면 "/api"로 설정합니다.
+    * apiUrl 값이 변경될 때 효과를 트리거하려면 useEffecthook의 종속성 배열에 [apiUrl]을 포함합니다.
+    * response.data.hits.hits의 길이를 확인하여 데이터에 액세스하기 전에 데이터를 사용할 수 있는지 확인합니다. 이렇게 하면 빈 배열의 속성에 액세스할 때 발생할 수 있는 오류를 방지할 수 있습니다.
+```
+const LoanProduct = () => {
+  const [showModal, setShowModal] = useState(false);
+{/* 자세히보기  */}
+<>
+        <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Loan Product Details</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {loading ? (
+            <Spinner animation="border" variant="primary" />
+          ) : selectedLoanProduct ? (
+            <DetailViewProduct seq={selectedLoanProduct.seq} />
+          ) : (
+            <p>No loan product details available.</p>
+          )}
+        </Modal.Body>
+        <Modal.Footer>
+          <button className="footerbutton"
+          onClick={handleCloseModal}>Close</button>
+        </Modal.Footer>
+      </Modal>
+</>
+}
+```
+&nbsp;
+```
+const DetailViewProduct = () => {
+const { seq } = useParams();
+  const [loanProduct, setLoanProduct] = useState([]);
+  const apiUrl = seq ? `/api/${seq}` : "/api";
 
-Spring Boot + Spring Security 애플리케이션을 빌드
+  useEffect(() => {
+    fetchLoanProduct();
+  }, [apiUrl]);
 
-설명: Token을 이용한, 로그인/ 로그아웃
-사용자는 새 계정에 가입(등록)하거나 사용자 이름과 비밀번호로 로그인할 수 있습니다.
-사용자의 역할(관리자, 중재자, 사용자)에 따라 사용자가 리소스에 액세스할 수 있는 권한을 부여한다.
+  const fetchLoanProduct = async () => {
+    try {
+      const response = await axios.get(apiUrl);
+      if (
+        response.data &&
+        response.data.hits &&
+        response.data.hits.hits.length > 0
+      ) {
+        setLoanProduct(response.data.hits.hits[0]._source);
+      } else {
+        throw new Error("Invalid API response");
+      }
+    } catch (error) {
+      console.error("Error retrieving loan product:", error);
+    }
+  };
+}
+```
+&nbsp;
 
+* 요약: </br>
+    * 이 문제는 useEffect 종속성 배열에 apiUrl 값이 잘못 사용되거나 없기 때문에 발생했으며 response.data.hits.hits.hits의 데이터 가용성에 대한 유효성을 검사하지 않았기 때문에 발생했습니다.
+    * 종속성 배열에 [apiUrl]을(를) 추가하고 response.data.hits.hits의 길이를 확인하여 문제를 해결했습니다.
+    * seq 값을 기준으로 apiUrl을 올바르게 설정하고 데이터 가용성을 적절하게 처리하여 일관성 있고 신뢰할 수 있는 데이터 검색을 보장해야 합니다.
+&nbsp;
 
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/3a259be2-a9f3-4c1c-8775-e4a4ea30eeff)
+### 3. spring boot로 백엔드를 개발하였는데 데이터 예측 기능을 만들기 위해 선형회귀 적용 가능한 python으로 백엔드 추가 개발하여 react로 화면 출력
+* 상황 파악: </br>
+    * 제공된 코드는 선형 회귀를 사용하여 대출 제품 추천을 위해 Python Backend와 통신하는 React Frontend를 포함합니다.
+    * **Python 서버는 localhost:5000에서 호스팅**되며 프런트 엔드는 Axios를 사용하여 Backend로 요청을 보냅니다.
+    * 이 문제는 Python Backend에서 로그인한 사용자의 ID 값을 검색하는 것과 관련이 있습니다.
+    * Frontend는 JWT와 액세스를 사용합니다.토큰을 사용하여 사용자를 인증하고 사용자의 ID를 얻습니다.
+```
+[메모장 코드 작성]
+```
+&nbsp;
 
+* 문제 발생 출처: </br>
+    * 로그인 상태에서 해당 ID 값을 검색할 수 없었습니다. 이 문제는 토큰 추출 프로세스 또는 ID가 Backend로 전송되는 방식에 오류가 있었던 것 같습니다.
+    * 로그인상태의 해당 ID값을 가져와 결과값을 도출을 해결했는데 Python서버가 DB검색을 자동화하지않아 회원가입을 할때마다 Python서버를 껏다켜야하는 문제가 발생했습니다.
+&nbsp;
+
+* 발생 조건: </br>
+    * 사용자가 Python Backend에 ID를 명시적으로 입력하지 않고 React Frontend에서 로그인할 때 발생합니다. Frontend는 JWT와 액세스를 활용합니다.토큰을 사용하여 사용자를 인증하고 ID를 얻습니다. 그러나 ID 값이 Backend 측에서 성공적으로 검색되지 않습니다.
+&nbsp;
+
+* **해결법:** </br>
+    * Frontend:
+        * 토큰이 프런트 엔드에 올바르게 저장되어 있고 API 요청 시 액세스할 수 있는지 확인합니다.
+        * 토큰 추출 프로세스에서 ID 값이 토큰에서 올바르게 추출되었는지 확인합니다.
+        * API를 호출하기 전에 AuthService.getCurrentUser()에서 가져온 currentUser.id 값이 null이거나 정의되지 않았는지 확인합니다.
+        * Axios 요청에 사용된 URL 형식(http://localhost:hostname/api/customization?id=${currentUser.id })을 다시 확인하여 백엔드 끝점과 일치하는지 확인합니다.
+```
+const Customization = () => {
+const currentUser = AuthService.getCurrentUser();
+
+  useEffect(() => {
+    if (currentUser) {
+      axios.get(`http://localhost:5000/api/customization?id=${currentUser.id}`)
+        .then(response => {
+          setDerivedValues(response.data);
+        })
+        .catch(error => {
+          console.error('Error:', error.response.data);
+        });
+    }
+  }, [currentUser]);
+}
+```
+    * Python Backend:
+        * Flask endpoint /api/customization을 디버그하여 수신된 ID 값이 없음이 아니라 올바른지 확인합니다.
+        * 데이터베이스 쿼리가 MySQL 데이터베이스의 스키마 및 테이블 구조와 일치하는지 확인합니다.
+        * PooledDB 클래스를 사용하여 특정 데이터베이스에 대한 연결 풀을 만들고 관리합니다. 연결 풀을 사용하면 필요할 때마다 새 연결을 만들지 않고 재사용할 수 있는 사전 초기화된 데이터베이스 연결 풀을 설정할 수 있습니다. pymysql.cursors의 DictCursor 클래스가 사용됩니다. 이 커서 클래스는 쿼리 결과를 사전으로 반환합니다.
+        * ID 값이 쿼리에서 올바르게 사용되고 사용자 테이블에서 원하는 정보를 검색하는지 확인합니다.
+        * 데이터 검색, 예측 및 JSON 응답과 관련된 문제를 디버그하여 예상대로 작동하는지 확인합니다.
+&nbsp;
+
+* 요약: </br>
+    * 이 문제는 Python 백엔드에서 로그인한 사용자의 ID 값을 검색하지 못해 발생합니다.
+    * 문제 해결 단계에는 토큰 추출 프로세스 확인, Frontend에서 currentUser.id 의 유효성 확인, Backend 엔드포인트 및 데이터베이스 쿼리의 정확성 확인이 포함됩니다.
+```
+# Cache to store previously computed customization results
+customization_cache = {}
+
+@app.route('/api/customization')
+def get_customization():
+    user_id = request.args.get('id')
+    cached_result = customization_cache.get(user_id)
+
+    if cached_result:
+        # If the customization result is cached, return it directly
+        return jsonify(cached_result)
+
+    # Acquire a connection from the connection pool
+    connection = pool.connection()
+    with connection.cursor() as cursor:
+        # 데이터베이스에서 연령 및 성별 검색
+        query = f"SELECT AGE, GENDER FROM users WHERE id={user_id}"  # 쿼리와 일치하도록 <조건> 수정
+        cursor.execute(query)
+        result = cursor.fetchone()
+
+    # Return the derived values as JSON
+        derived_values = {
+            'predictions': predictions.tolist(),
+            'result': result
+        }
+
+        # Cache the customization result
+        customization_cache[user_id] = derived_values
+
+```
+&nbsp;
+
+    * 필요한 모듈(풀링된 DB 및 커서)을 가져오고 데이터베이스 연결 풀을 수정하면 Backend가 MySQL 데이터베이스와의 연결을 자동화 설정할 수 있었습니다.
+```
+import pymysql
+from pymysql import cursors
+
+# MySQL 데이터베이스에 대한 연결 풀 만들기
+pool = PooledDB(
+    creator=pymysql,  # Specify the database adapter (e.g., pymysql, psycopg2)
+    host='localhost',
+    user='root',
+    password='root',
+    database='bikyohaejwo',
+    charset='utf8mb4',
+    cursorclass=cursors.DictCursor,
+    autocommit=True,
+    maxconnections=10  # Adjust the pool size as per your requirements
+)
+```
+&nbsp;
+
+    * ID 값이 데이터 검색 및 대출 상품 권장 사항을 위해 올바르게 수신되어 데이터베이스 쿼리에서 사용됨으로써 데이터 검색, 예측 및 JSON 응답을 성공적으로 수행할 수 있습니다.
+&nbsp;
+
+## ✓참고사항
+* **개발 순서**
+
+회원 로그인 [token, security] -> 게시판[ back -> front ] ->   댓글 [ back -> front] -> 파일 [ back -> front] -> 회원탈퇴, 회원정보수정 [token, security] -> 댓글 조회수 [ back -> front ] ->  id 마다 각각 Role 부여 [ back -> front] -> 공공데이터 수집 [webscapping] -> Python 통해서 데이터 정제 및 csv파일로 변환(numpy,pandas) [ python -> ELK ] + ELK에 해당 파일 import(분석) + ElK에 있는 URL 통해서 Rest Api 설정 => React로 전달(시각화) -> 회원가입, 회원정보수정 폼 업데이트 [ back -> front] -> dummy 데이터 생성 및 정제 [ 회귀분석(Python) ] + 금리, 대출한도를 통한 [ 다항선형회귀분석(Python) ] -> 전반적인 UI변경 [ front ]
 
 ============================================================================
+&nbsp;
 스프링 시큐리티
 
 – WebSecurityConfig보안 구현의 핵심[단, 현재 filterchain으로 대체중(deprecated)] =>입니다.
@@ -267,37 +517,6 @@ user.service의 메서드는 보호된 리소스에 액세스하기 위해 인�
 
 [회원정보 수정, 회원 탈퇴 기능은 CRUD기능으로, 게시판 수정 삭제를 확인하시고 응용이 필요합니다]
 
-코드는 git에서 확인 필요
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/e9002347-eab3-4ae1-a4b3-2424b95a847b)
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/e6ecbb7c-f26b-44eb-9607-d8278b37b2b7)
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/1c4f7d6b-3474-44b0-8050-106895839a26)
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/00dfd6f5-bc86-40ec-a178-6e24bffbdb48)
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/68069adf-2976-4352-9a5b-6a5c4b4ffc54)
-
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/6850480c-5b68-4622-b4af-02840ed9c8db)
-
-
-
-
-
-
 
 다음으로는,
 
@@ -307,325 +526,4 @@ user.service의 메서드는 보호된 리소스에 액세스하기 위해 인�
 
 application.properties [mysql 및 추가 되는 기능에 따른 연결 설정 => pom.xml [가장 중요]=> BoardController [ @CrossOrigin(origins = "*")
  @RestController @RequestMapping("/api/auth")] 해당 부분이 중요함 token, security 부분 확인=> Board.java=> BoardRepository.java => BoardService.java => BoardSerivceImpl.java
-
-
-게시판 front 부분입니다.
-
-AddBoard.jsx => EditBoard.jsx => => viewBoard.jsx => App.js=>   Navbar.js=> Board.service.js
-[게시판 추가]     [게시판 수정]        [게시판 보기]    [화면구성] [header]     [Restapi연결=> Springboot에 있는 url을 react를 가져오고, BaseUrl형태로 정리]
-
-
-게시판 리스트 형태입니다. [ 검색 기능 및 페이징 기능은 리액트 자체적인 코드로 처리 하였습니다 ]
-
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/b3e7cba6-3abc-43df-8fea-90b77f5c736f)
-
-
-
-게시글 등록 입니다.
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/2d1e1b2f-7dfb-4d85-9a8b-c7f0f9c0a45a)
-
-
-
-
-
-
-글 제목을 클릭하면 ViewBoard로 들어가집니다. 해당 부분에 작성자이면, 수정 및 삭제가 가능합니다.
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/af0a16e8-ad5e-4341-9ed0-3fb8abb164bb)
-
-
-
-
-
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117277093/7dfccc6a-e73f-4a23-a8f7-576f4e8e68de)
-
-
-
-
-====================================================================================================
-
-수요일까지 이거 보고 무조건 설정하셈.
-
-1. 파이참 설치, [**아나콘다** 설치 무조건 경로 잘 확인] => 파이참에 file -> settings -> Add Interprter -> Exisiting [ 아나콘다 무조건 체크 하고 설치]
-
-파이참 메인 화면 가서
-
-
-from flask import Flask, make_response
-import requests
-import pandas as pd
-from urllib.parse import urlencode
-import xml.etree.ElementTree as ET
-import io
-
-app = Flask(__name__)
-
-@app.route('/api/data', methods=['GET'])
-def get_data():
-    base_url = 'https://apis.data.go.kr/B553701/LoanProductSearchingInfo/LoanProductSearchingInfo/getLoanProductSearchingInfo'
-    service_key = '6N8AyrU0fUoSYr2GUOsvAxlP0HKCse3E4tmVVACTY9CVzngxvmvZuWd%2FcNQGcCmxjQCynXGNhj13jEuR1snJQQ%3D%3D'
-
-    params = {
-        'pageNo': '1',
-        'numOfRows': '329',
-        'type': 'xml',
-        'finPrdNm': '파서'
-    }
-
-    url = f"{base_url}?{urlencode(params)}&serviceKey={service_key}"
-
-    response = requests.get(url, verify=True)
-    response.encoding = 'UTF-8'
-    contents = response.text
-
-    # XML 파싱
-    root = ET.fromstring(contents)
-
-    # 원하는 항목들
-    desired_tags = ['seq', 'finPrdNm', 'usge', 'lnLmt', 'irt', 'maxRdptTrm', 'rdptMthd', 'trgt', 'age', 'incm', 'rsdAreaPamtEqltIstm', 'ofrInstNm', 'cnpl', 'jnMthd', 'ovItrYr', 'rltSite', 'prdOprPrid']
-
-    # XML을 JSON으로 변환
-    json_data = []
-    for item in root.iter('item'):
-        item_data = {}
-        for child in item:
-            if child.tag in desired_tags:
-                if child.text:
-                    item_data[child.tag] = child.text.encode('UTF-8').decode('UTF-8')
-                else:
-                    item_data[child.tag] = ''
-        json_data.append(item_data)
-
-    # JSON을 데이터프레임으로 변환
-    df = pd.DataFrame(json_data)
-
-    # CSV 파일로 저장
-    csv_data = df.to_csv(index=False, encoding='utf-8-sig')
-
-    # 파일 다운로드 응답 생성
-    response = make_response(csv_data)
-    response.headers.set('Content-Type', 'text/csv')
-    response.headers.set('Content-Disposition', 'attachment', filename='data.csv')
-
-    return response
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-해당 코드 작성 [ 작성하면 설치하라는 부분이 많이 나옴 다 설치 필요]
-
-실행하면, http://127.0.0.1:5000/api/data 검색 
-
-csv 파일 자동으로 다운로드 됨
-
-그 다음 step은 ELK 들어가서 주소: http://localhost:5601/  왼쪽 카테고리 클릭 -> Kibana -> machinelearning -> Data Visualizer -> Import data [csv 파일 등록] -> 그리고 import 시키는대로 파일 이름은 product로 통일 부탁드립니다.
-
-이게 완료되면, react 코드 들어가서, cors를 무시해야되서
-visual에 터미널 켜서 yarn add install http-proxy-middleware 
-
-
-
-product.js[생성] 
-
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-
-const LoanProduct = () => {
-  const [loanProducts, setLoanProducts] = useState([]);
-  const [searchTerms, setSearchTerms] = useState({
-    finPrdNm: "",
-    irt: "",
-    lnLmt: "",
-    usge: "",
-    maxRdptTrm: "",
-    ofrInstNm: ""
-  });
-  const [filteredLoanProducts, setFilteredLoanProducts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
-
-  useEffect(() => {
-    fetchLoanProducts();
-  }, []);
-
-  useEffect(() => {
-    filterLoanProducts();
-  }, [loanProducts, searchTerms]);
-
-  const fetchLoanProducts = async () => {
-    try {
-      const response = await axios.get('/api');
-      const data = response.data.hits.hits.map(hit => hit._source);
-      setLoanProducts(data);
-    } catch (error) {
-      console.error("Error retrieving loan products:", error);
-    }
-  };
-
-  const filterLoanProducts = () => {
-    const filteredProducts = loanProducts.filter(loanProduct => {
-      return Object.entries(searchTerms).every(([key, value]) => {
-        const fieldValue = loanProduct[key] || "";
-        return fieldValue.toLowerCase().includes(value.toLowerCase());
-      });
-    });
-    setFilteredLoanProducts(filteredProducts);
-  };
-
-  const handleSearch = (e, field) => {
-    setSearchTerms(prevState => ({
-      ...prevState,
-      [field]: e.target.value
-    }));
-  };
-
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
-  const renderLoanProducts = () => {
-    if (filteredLoanProducts.length === 0) {
-      return <p>No loan products found.</p>;
-    }
-
-    return currentItems.map((loanProduct) => (
-      <div key={loanProduct.seq}>
-        <h3>상품명: {loanProduct.finPrdNm}</h3>
-        <p>금리: {loanProduct.irt}</p>
-        <p>대출한도: {loanProduct.lnLmt}</p>
-        <p>용도: {loanProduct.usge}</p>
-        <p>총대출기간: {loanProduct.maxRdptTrm}</p>
-        <p>제공기관: {loanProduct.ofrInstNm}</p>
-        {/* Add more fields as needed */}
-        <Link to={`/loan/${loanProduct.seq}`}>
-          <button>자세히보기</button>
-        </Link>
-      </div>
-    ));
-  };
-
-  // Paginate the loan products based on the current page and items per page
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filteredLoanProducts.slice(indexOfFirstItem, indexOfLastItem);
-
-  // Calculate total pages for pagination
-  const totalPages = Math.ceil(filteredLoanProducts.length / itemsPerPage);
-
-  return (
-    <div>
-      <h1>Loan Products</h1>
-      <div>
-        <input
-          type="text"
-          placeholder="Search by product name"
-          value={searchTerms.finPrdNm}
-          onChange={e => handleSearch(e, "finPrdNm")}
-        />
-        <input
-          type="text"
-          placeholder="Search by interest rate"
-          value={searchTerms.irt}
-          onChange={e => handleSearch(e, "irt")}
-        />
-        <input
-          type="text"
-          placeholder="Search by loan limit"
-          value={searchTerms.lnLmt}
-          onChange={e => handleSearch(e, "lnLmt")}
-        />
-        <input
-          type="text"
-          placeholder="Search by usage"
-          value={searchTerms.usge}
-          onChange={e => handleSearch(e, "usge")}
-        />
-        <input
-          type="text"
-          placeholder="Search by maximum repayment term"
-          value={searchTerms.maxRdptTrm}
-          onChange={e => handleSearch(e, "maxRdptTrm")}
-        />
-        <input
-          type="text"
-          placeholder="Search by offering institution"
-          value={searchTerms.ofrInstNm}
-          onChange={e => handleSearch(e, "ofrInstNm")}
-        />
-      </div>
-      {renderLoanProducts()}
-      <div>
-        {/* Render pagination */}
-        {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
-          <button key={page} onClick={() => handlePageChange(page)}>
-            {page}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default LoanProduct;
-
-
-SetupProxy.js [생성]
-
-const { createProxyMiddleware } = require('http-proxy-middleware');
-
-module.exports = function(app) {
-  app.use(
-    '/api',
-    createProxyMiddleware({
-      target: 'http://localhost:9200', // Replace with your Elasticsearch endpoint
-      changeOrigin: true,
-      pathRewrite: {
-        '^/api': '/product/_doc/_search?size=186' // Replace with your Elasticsearch path
-      },
-    })
-  );
-};
-
-
-ProductService.js [생성]
-
-import axios from "axios";
-
-const API_URL = "https://cors-anywhere.herokuapp.com/http://localhost:9200/product/_doc/_search?size=186";
-
-const getProductData = async () => {
-  try {
-    const response = await axios.get(API_URL);
-    return response.data.hits.hits.map(hit => hit._source);
-  } catch (error) {
-    console.error("Error retrieving data:", error);
-    return null;
-  }
-};
-
-export { getProductData };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+&nbsp;
