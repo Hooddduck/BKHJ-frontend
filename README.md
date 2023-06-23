@@ -9,7 +9,7 @@
 ###### 과제3 : Python 기반의 데이터 예측: AI 알고리즘 (선형회귀, 다항 션형회귀)을 활용하여 데이터 예측 시스템 구축
 &nbsp;
 
-# 프로젝트 시연 영상
+# 프로젝트 시연 영상 <과제3>
 
 
 https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/1b08158f-861d-4e23-b65a-cd8e96d3d2a3
