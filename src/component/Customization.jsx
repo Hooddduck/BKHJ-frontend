@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AuthService from '../services/auth.service';
 import axios from "axios";
+import "./EditBoard.css";
 
 const Customization = () => {
   const [derivedValues, setDerivedValues] = useState(null);
@@ -27,8 +28,8 @@ const Customization = () => {
       {derivedValues ? (
         <div>
           <h1>맞춤상품추천</h1>
-          <p>Predictions seq: {derivedValues.predictions.join(', ')}</p>
-          <p>Predictions Result: {derivedValues.result}</p>
+          <p>상품 번호 : {derivedValues.predictions.join(', ')}</p>
+          <p>예측 결과: {derivedValues.result}</p>
         </div>
       ) : (
         <>

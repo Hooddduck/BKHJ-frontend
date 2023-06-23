@@ -69,7 +69,7 @@ const Diagnosis = () => {
                   onClick={() => (window.location.href = "/Irate")}
                   className="credit-comparison"
                 >
-                  신용대출 비교하기
+                  내 금리 진단하기
                 </Button>
               ) : (
                 <Button onClick={handleModalOpen} className="credit-comparison">

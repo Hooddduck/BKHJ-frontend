@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Irate.css";
 
 const Irate = () => {
   const [loanLimit, setLoanLimit] = useState("");
@@ -30,27 +31,27 @@ const Irate = () => {
 
   return (
     <div>
-      <h2>Interest Rate Prediction</h2>
+      <h2>최적 금리 계산 하기 </h2>
       <div>
-        <label>Loan Limit:</label>
+        <label>대출 한도</label>
         <input
           type="text"
           value={loanLimit}
           onChange={handleLoanLimitChange}
-        />
+        />(만)
       </div>
       <div>
-        <label>Loan Period:</label>
+        <label>대출 기간</label>
         <input
           type="text"
           value={loanPeriod}
           onChange={handleLoanPeriodChange}
-        />
+        />(년)
       </div>
       <button onClick={handlePredict}>Predict</button>
       {predictedRate && (
         <div>
-          <h3>Predicted Interest Rate:</h3>
+          <h3>한도와 기간에 따른 최적 금리</h3>
           <p>{predictedRate}</p>
         </div>
       )}
