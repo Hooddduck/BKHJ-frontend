@@ -443,13 +443,12 @@ pool = PooledDB(
 
 ## ✓참고사항
 * **개발 순서**
-
-회원 로그인 [token, security] -> 게시판[ back -> front ]  ->   댓글 [ back -> front] -> 파일 [ back -> front] -> </br>
-회원탈퇴, 회원정보수정 [token, security] -> 댓글 조회수 [ back -> front ] -> </br>
-id 마다 각각 Role 부여 [ back -> front] -> 공공데이터 수집 [webscapping] -> </br>
-Python 통해서 데이터 정제 및 csv파일로 변환(numpy,pandas) [ python -> ELK ] + ELK에 해당 파일 import(분석) => </br>
-ElK에 있는 URL 통해서 Rest Api 설정 => React로 전달(시각화) -> </br> 
-회원가입, 회원정보수정 폼 업데이트 [ back -> front] -> dummy 데이터 생성 및 정제 [ 회귀분석(Python) ] + 금리, 대출한도를 통한 [ 다항선형회귀분석(Python) ] -> 전반적인 UI변경 [ front ]
+    * 회원 로그인 [token, security] -> 게시판[ back -> front ]  ->   댓글 [ back -> front] -> 파일 [ back -> front] -> </br>
+    * 회원탈퇴, 회원정보수정 [token, security] -> 댓글 조회수 [ back -> front ] -> </br>
+    * id 마다 각각 Role 부여 [ back -> front] -> 공공데이터 수집 [webscapping] -> </br>
+    * Python 통해서 데이터 정제 및 csv파일로 변환(numpy,pandas) [ python -> ELK ] + ELK에 해당 파일 import(분석) => </br>
+    * ElK에 있는 URL 통해서 Rest Api 설정 => React로 전달(시각화) -> </br> 
+    * 회원가입, 회원정보수정 폼 업데이트 [ back -> front] -> dummy 데이터 생성 및 정제 [ 회귀분석(Python) ] + 금리, 대출한도를 통한 [ 다항선형회귀분석(Python) ] -> 전반적인 UI변경 [ front ]
 
 ============================================================================
 &nbsp;
