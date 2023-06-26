@@ -176,12 +176,13 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 ## ELK Stack을 이용한 데이터 분석 및 시각화 기능
 ### CSV 데이터를 Elastic 검색으로 가져오고 React를 사용하여 시각화
 * ###### ELK(Elastic search, Logstash, Kibana) Stack을 활용하여 데이터 분석 및 시각화 기능을 보여줍니다. 효율적인 저장 및 인덱싱을 위해 Excel 파일의 데이터를 CSV 형식으로 변환한 다음 ELK로 import.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/b68c89e6-7967-492c-bc43-f6d3ff739b58)
+![8](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/4885aa89-cff6-41a9-addc-e7fbefb158df)
+![9](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c2b0a6ef-ac8d-415f-ba4e-49028610d733)
 * ###### Elastic search에서 가져온 데이터는 React 응용 프로그램을 통해 시각화되고 사용자에게 표시됩니다. 이를 통해 대화형의 사용자 친화적인 데이터 탐색 및 분석이 가능합니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/19bd14cf-8798-46ed-a447-a0705521b0b1)
+![7](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/1965d7e0-7759-4a41-b33c-c18ea62e6645)
 * ###### 대출 제품 데이터를 가져오고, 사용자가 데이터를 검색, 필터링 및 탐색할 수 있습니다. 또한 프록시 구성을 사용하여 React 응용 프로그램과 Elastic 검색 간의 통신이 가능하므로 응용 프로그램이 시각화 및 상호 작용을 위해 Elastic 검색에서 데이터를 검색할 수 있습니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0ed4d5b7-49e1-4b63-8dc5-fba88971cab0)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/db3fa1c4-6f6e-4da8-b7b1-c9e6a55a54e1)
+![10](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/36ea5996-02b5-4c67-8215-6bbb889365d6)
+![11](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/68f002c4-1413-4015-b7bf-8dc34f8e894a)
 &nbsp;
 
 ## 데이터 예측 기능
