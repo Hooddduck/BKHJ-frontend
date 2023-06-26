@@ -10,11 +10,6 @@
 &nbsp;
 
 # 프로젝트 시연 영상 <과제3>
-
-
-https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/1b08158f-861d-4e23-b65a-cd8e96d3d2a3
-
-
 &nbsp;
 
 ## ➕목차
