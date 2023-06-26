@@ -86,7 +86,9 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 
 ## ✓기능 실행화면
 ### 메인화면페이지
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/b6f6119c-6f5d-439a-9a5a-999c011f3f11)
+![5](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/240ddae9-1eab-4536-ac94-909d5de39ba7)
+&nbsp;
+
 ## 게시판 기능
 ### 모든 게시글 및 특정 게시글 조회
 * ###### 모든 게시글을 조회할 수 있습니다. 페이징 기능을 통해 한 페이지에서 최대 10개의 게시글이 조회됩니다.
