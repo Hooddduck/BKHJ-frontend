@@ -30,10 +30,7 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 &nbsp;
 
 ## ✓프로젝트 구조
-![1](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/38b00666-63ce-48b9-82d4-21c2ab7fed30)
-![2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/79330817-740e-4e0b-946f-3cc0ea54f82d)
-![3](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/cbc7f80b-256a-4ab2-b0b0-e24190c989a1)
-![4](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/5ba778ee-24d6-4242-a492-ce3235c5ff94)
+![프로젝트 구조2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/f78882e7-d212-4104-b958-7b2ae8d72580)
 &nbsp;
 
 ## ✓사용기술
