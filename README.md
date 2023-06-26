@@ -12,7 +12,8 @@
 # 프로젝트 시연 영상 <과제3>
 
 
-Uploading bandicam 2023-06-23 비교해줘. 신용대출,금리진단.mp4…
+https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9c69-47503a2e998a
+
 
 
 &nbsp;
