@@ -100,8 +100,8 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 ![22](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/dbfa9f0a-7fb5-4243-9549-5409d7c5fd73)
 ### 게시글 작성
 * ###### 로그인한 사용자는 게시글을 작성할 수 있습니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/e7aba42c-816b-459d-92d6-beca733d813e)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/8df4660d-39a4-4265-ae54-bbde74b4ef89)
+![24](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/aefda6cc-95c5-4da5-a3ba-a5e1edd57445)
+![24_2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c2667cf0-660f-41ef-98e2-e976fe3cf168)
 * ###### 로그인하지 않았을 경우 글 작성이 제한됩니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/2dc4bc96-abee-4310-a13b-190b097427d8)
 ### 게시글 수정
