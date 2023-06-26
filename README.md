@@ -191,17 +191,17 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 ![12](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/39b39ef5-89ac-47e7-9c12-5a33721a885f)
 ![13](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/54aae90f-aa2b-4517-8d22-d22dcf1106fa)
 * ###### ```Local Storage``` 에서 사용자에 대한 ID값을 가져와 쿼리가 제공된 사용자 ID를 기반으로 데이터베이스에서 연령 및 성별 정보를 검색한다. 그리고 React 코드가 HTTP GET 요청을 Flask API에 수행하여 사용자 ID를 쿼리 매개 변수로 전달할 수 있습니다. 그런 다음 파생된 값을 JSON으로 반환합니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0266de5d-7e53-4ca3-b815-aa315c35f931)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/1ce5e517-3fde-4420-912a-3e8bc50ada83)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/d05ba660-a371-417f-83cc-f2d8a4f32b25)
+![16](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/d25c77e0-23ba-4c02-a84c-8baf98118bf7)
+![17](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c6fb29ce-dc5e-45be-987f-e90a1fe913c6)
+![19](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c828663c-b244-43cc-8de2-e2d90dc7dc93)
 ### 대출한도 및 대출 기간 입력에 따른 다항식 선형 회귀를 이용한 금리 예측
 * ###### 다항식 선형회귀는 대출한도와 대출기간 값을 입력하여 금리를 예측하는 데 활용됩니다. 결과 예측은 정확하며 대출 상품의 맥락에서 정보에 입각한 의사 결정을 가능하게 합니다.
 ![14](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ede9eaa4-c505-4a3d-b69b-f2f0f682fe7f)
 ![15](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/47314855-74b3-4132-9cef-741f56986f68)
+
 * ###### Flask 서버측 코드는 대출 한도 및 대출 기간 입력을 기반으로 예측을 처리하는 경로를 정의하고 React 구성 요소는 이러한 값을 입력하고 서버에서 반환되는 예측 금리를 표시하는 사용자 인터페이스를 제공합니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/283ea2c9-7792-44fc-a545-7530b5338e52)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea89da14-2e52-4f3a-bbb3-9b9c9a82bece)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/04ed1a44-7ebc-40cb-9a8f-f9f5e4ab5a6b)
+![18](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/24b3fb47-093b-4696-9e1d-1d30f3f8043d)
+![20](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/4f7eca71-7513-4252-bcaa-22a03275ddac)
 &nbsp;
 
 ## ✓ELK
