@@ -146,21 +146,26 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 ## 회원 기능
 ### 회원가입
 * ###### 메인페이지와 로그인 페이지에서 회원가입을 진행할 수 있다. 
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/8362db1a-91c5-4852-9d3e-7b54df72e582)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ea7478d9-bd75-4dad-b4de-d059a2a0f17d)
+![35(회원가입)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c9086e59-9734-43f0-b25f-581c13ab6166)
+![35_2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/638b36a4-71dd-4614-a086-93580e556d78)
+![35_3](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/7c7784ef-0a03-4e43-9f49-ee0d8151a6a4)
 * ###### 주소를 입력할 때 카카오주소를 사용하여 입력합니다. 회원가입을 통해 서비스에 사용자 정보를 저장합니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/409610bb-9fee-4e98-9ddd-9fc4a2b41024)
+![36(카카오주소)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/db0e0f35-b8fe-434e-a665-fd787fb93abc)
+&nbsp;
+
 ### 로그인/로그아웃
 * ###### 회원가입할 때 입력했던 아이디와 비밀번호를 입력합니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/034261b2-454f-40a9-b0be-e3e835aa4c66)
+![37(로그인)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0b832d80-4b4d-4f2d-9f2d-a9fec110817e)
 * ###### 로그인에 성공하면 메인페이지로 자동으로 이동하고 헤더에 사용자의 아이디가 표시됩니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/258cbc9c-f387-4fc0-bdb4-d520200d7841)
+![38(로그인시 메인페이지 이동)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c5abe843-377e-48f2-939c-3e53664d4f3f)
 * ###### 로그인을 완료하면 브라우저의 ```Local Storage``` 에 사용자 ```ID```와 ```JWT``` 토큰 정보를 저장합니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/9c9e8846-04f9-451b-8ca1-a559dbc0d5c4)
+![39(토큰)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/39a63d30-edd6-4f75-912a-90af97b37c09)
 * ###### 로그아웃
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/f30971cd-4cbd-4451-9459-d0bbe9838bb9)
+![40(로그아웃)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/79d4e9fc-f062-43e3-a034-12b6a9423a59)
 * ###### 로그아웃을 완료하면 브라우저의 ```Local Storage``` 의 내용도 삭제합니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/f003cdaf-186a-479e-9f88-ffc3cfabd10f)
+![41(로그아웃 토큰)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/1449ceff-e81a-4da8-bd92-fd2328fe5f41)
+&nbsp;
+
 ### 회원탈퇴
 * ###### 마이페이지(아이디 클릭)에서 회원탈퇴가 가능합니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/396e7510-a9b1-4de5-a446-cb97df610637)
