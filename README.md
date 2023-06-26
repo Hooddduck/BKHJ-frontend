@@ -130,17 +130,17 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 ## 파일 업로드 기능
 ### 파일 업로드 및 조회
 * ###### 게시글을 작성할 때 파일도 같이 업로드하여 게시판 조회시 업로드된 파일을 확인할 수 있습니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/04892d9e-7845-4679-9899-1a227406d9a9)
+![31(파일업로드)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/b98752a5-14cc-4ddd-83f5-17dfe96d4dcd)
 ### 파일 다운로드
 * ###### 게시글 조회할 때 파일 이름을 클릭 시 파일을 다운로드할 수 있습니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/9f8bc8d9-1f0f-4679-a06f-0f22b7253ce0)
+![32(파일 다운로드)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/8a186647-c0ac-430a-9845-f505056f13e9)
 ### 파일 수정
 * ###### 게시글 수정 버튼을 누르면 파일도 같이 수정할 수 있다. 여러 개의 파일을 한 번에 업로드할 수 있습니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0c83616c-8fa3-47fc-8ed7-4777cac2e602)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/732a8297-8149-43aa-947f-b9bc779a7dda)
+![33(파일 수정)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/5fd9b377-e834-4806-a7bb-ce1860ebdd99)
+![33_2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/4e5dbcae-18ce-4222-b4ed-4ba9bae9caf1)
 ### 파일 삭제
 * ###### 파일을 각각 따로 삭제가 가능합니다. 게시글을 삭제하면 전체 다 삭제됩니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/ac89ecaf-eaa4-4086-ab98-c9550205f31f)
+![34(파일삭제)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/35dd95e7-2b2c-4e01-b22d-cc3e3bafe3f0)
 &nbsp;
 
 ## 회원 기능
