@@ -92,10 +92,9 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 ## 게시판 기능
 ### 모든 게시글 및 특정 게시글 조회
 * ###### 모든 게시글을 조회할 수 있습니다. 페이징 기능을 통해 한 페이지에서 최대 10개의 게시글이 조회됩니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0d75db69-c0dd-4576-b289-2dc858323ae1)
+![21(게시판 페이징)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/fd55d0ca-4375-4592-9a32-c55534f52a16)
 * ###### 게시글의 제목을 클릭하면, 게시글의 상세내용을 조회할 수 있습니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/879a9e6e-35f6-4f0c-b801-5b1ee7afd95e)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/7f42b980-ad6b-4533-957e-cb2392cfb979)
+![22](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/dbfa9f0a-7fb5-4243-9549-5409d7c5fd73)
 ### 특정 게시글 검색 (제목, 작성자, 작성일)
 * ###### 게시글의 제목과 작성자 또는 작성일로 게시글을 검색할 수 있습니다.
 ![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c343c4da-2053-44fd-8e40-bfea3be8b0b3)
