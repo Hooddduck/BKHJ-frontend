@@ -31,8 +31,6 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 
 ## ✓프로젝트 구조
 ![프로젝트 구조2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/f78882e7-d212-4104-b958-7b2ae8d72580)
-&nbsp;
-
 ## ✓사용기술
 ### Backend
 * java,  Python </br>
