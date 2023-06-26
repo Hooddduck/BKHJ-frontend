@@ -207,7 +207,7 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 &nbsp;
 
 ## ✓ERD설계
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/675ce487-7d23-4a98-8d90-85ee2f067944)
+![6](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/132866bf-91f7-4f7f-8ac1-a3ddc93f74ac)
 &nbsp;
 
 ## ❕❕트러블슈팅
