@@ -97,22 +97,23 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 ![23(게시글)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/da2d543e-2173-486a-8f0d-b96c508df433)
 ### 특정 게시글 검색 (제목, 작성자, 작성일)
 * ###### 게시글의 제목과 작성자 또는 작성일로 게시글을 검색할 수 있습니다.
-![22](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/dbfa9f0a-7fb5-4243-9549-5409d7c5fd73)
+![22](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/929feb93-d7a7-4f8a-899f-911c1b503aa2)
 ### 게시글 작성
 * ###### 로그인한 사용자는 게시글을 작성할 수 있습니다.
 ![24](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/aefda6cc-95c5-4da5-a3ba-a5e1edd57445)
 ![24_2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c2667cf0-660f-41ef-98e2-e976fe3cf168)
 * ###### 로그인하지 않았을 경우 글 작성이 제한됩니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/2dc4bc96-abee-4310-a13b-190b097427d8)
+![25](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/817f7e20-b52d-4997-9a99-a1e3e727a153)
 ### 게시글 수정
 * ###### 게시글 작성자는 게시글을 수정할 수 있습니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/fa85f4cf-7e8a-45d2-a906-14bee77ace31)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/25dc46b3-3dfb-4a61-8274-9a10d6c7232a)
+![26(게시글 수정)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/f4771c07-b36e-487a-9e06-5469793a4d1e)
+![26_2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/2905df00-5f4c-40e7-a119-a55a66c7b978)
 ### 게시글 삭제
 * ###### 게시글 작성자는 게시글을 삭제할 수 있습니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c2bd23b6-fc4f-408b-8587-559ad2074817)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/63e829f5-dc9e-481e-be00-912e8ab75399)
+![27(게시글 삭제)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/5d161ddc-de99-4b5c-80e0-a7b9e2ff8ea8)
+![27_2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/be5cb152-0f24-43c3-95f3-aeae2a62e7a0)
 &nbsp;
+
 ## 댓글 기능
 ### 댓글 작성
 * ###### 특정 게시글에 대한 댓글을 작성할 수 있습니다. 게시글 작성 과 마찬가지로 로그인한 사용자만 댓글을 작성할 수 있습니다. 그리고 작성한 댓글을 ```게시글 상세``` 에서 조회할 수 있습니다.
