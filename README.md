@@ -168,14 +168,15 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 
 ### 회원탈퇴
 * ###### 마이페이지(아이디 클릭)에서 회원탈퇴가 가능합니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/396e7510-a9b1-4de5-a446-cb97df610637)
+![42(마이페이지)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/d6759c36-b218-4cf1-ac54-4be87110d98d)
+![42_2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/dc22299f-b316-48c7-b422-7ecf519ac601)
 * ###### DB 에서도 회원 데이터 정보가 삭제된 모습을 볼 수 있습니다.
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/2596d38b-dbb5-4a44-9c9e-a8ccfd0133c7)
+![43(회원탈퇴 db)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/e02b2ef0-9ec1-41f2-9e43-b949a81ebf99)
 ### 회원정보수정
 * ###### 회원정보수정
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/d0d4f231-0e36-4700-901a-4cc8d823edee)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/058a9cf0-d2f5-45f4-9122-8d95e86ecf8a)
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c252e46c-b9e7-4eb3-82c0-19d3ab4c942f)
+![44(회원정보 수정)](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/1fd243da-d796-452e-a98e-918e02cb712c)
+![44_2](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/63d7013a-0fe9-4a27-b704-8c4e48dfc095)
+![44_3](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/c8e7cc2c-260d-42b1-8f52-f9f35f019ba3)
 &nbsp;
 
 ## ELK Stack을 이용한 데이터 분석 및 시각화 기능
