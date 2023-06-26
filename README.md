@@ -203,7 +203,7 @@ https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/908e9bed-0504-419b-9
 
 ## ✓ELK
 ### Elasticsearch
-![image](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/4502c874-4ee1-4bc5-97dd-7a58d19bb642)
+![7](https://github.com/Hooddduck/BKHJ-frontend/assets/117276980/0b2065f1-8754-4fbd-85cf-c9501798afce)
 &nbsp;
 
 ## ✓ERD설계
